@@ -5,19 +5,70 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Dr. Interested - Inspiring Future Healthcare Professionals",
   description:
-    "Empowering high school students to explore careers in healthcare through education, research, and mentorship.",
+    "Dr. Interested empowers high school students to explore careers in healthcare through education, research, and mentorship. Join our community today!",
+  keywords: [
+    "healthcare education",
+    "medical careers",
+    "high school students",
+    "healthcare mentorship",
+    "medical research",
+    "Dr. Interested",
+    "healthcare internships",
+    "medical technology",
+  ],
+  authors: [{ name: "Dr. Interested Team" }],
+  creator: "Dr. Interested",
+  publisher: "Dr. Interested",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://drinterested.tech",
+    title: "Dr. Interested - Inspiring Future Healthcare Professionals",
+    description:
+      "Empowering high school students to explore careers in healthcare through education, research, and mentorship.",
+    siteName: "Dr. Interested",
+    images: [
+      {
+        url: "https://drinterested.tech/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Dr. Interested Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dr. Interested - Inspiring Future Healthcare Professionals",
+    description:
+      "Empowering high school students to explore careers in healthcare through education, research, and mentorship.",
+    images: ["https://drinterested.tech/logo.png"],
+  },
+  alternates: {
+    canonical: "https://drinterested.tech",
+    languages: {
+      "en-US": "https://drinterested.tech",
+    },
+  },
   icons: [{ rel: "icon", url: "/favicon.ico" }],
-    generator: 'v0.dev'
+  generator: "v0.dev",
+  metadataBase: new URL("https://drinterested.tech"),
+  verification: {
+    google: "google-site-verification-code",
+  },
 }
 
 export const viewport: Viewport = {
   themeColor: "#405862",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 }
 
 export default function RootLayout({
@@ -27,6 +78,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script src="https://f.convertkit.com/ckjs/ck.5.js" strategy="lazyOnload" />
+        <link rel="canonical" href="https://drinterested.tech" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="flex min-h-screen flex-col">
@@ -40,6 +95,5 @@ export default function RootLayout({
   )
 }
 
+import "./globals.css"
 
-
-import './globals.css'

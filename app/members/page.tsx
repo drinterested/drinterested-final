@@ -63,7 +63,7 @@ export default function MembersPage() {
                 <div className="grid md:grid-cols-3">
                   <div className="md:col-span-1 bg-[#f5f1eb] flex items-center justify-center">
                     <div className="relative h-full w-full aspect-square">
-                      <Image src="/images/members/adil-mukhi.jpg" alt={president.name} fill className="object-cover" />
+                      <Image src="/adil.png" alt={president.name} fill className="object-cover" />
                     </div>
                   </div>
                   <CardContent className="md:col-span-2 p-6">
@@ -94,7 +94,7 @@ export default function MembersPage() {
                           rel="noopener noreferrer"
                           className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
                         >
-                          <Linkedin className="h-5 w-5" />
+                          <Linkedin className="h-6 w-6" />
                         </Link>
                       )}
                       {president.socialLinks?.instagram && (
@@ -104,7 +104,7 @@ export default function MembersPage() {
                           rel="noopener noreferrer"
                           className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
                         >
-                          <Instagram className="h-5 w-5" />
+                          <Instagram className="h-6 w-6" />
                         </Link>
                       )}
                       {president.socialLinks?.website && (
@@ -114,7 +114,7 @@ export default function MembersPage() {
                           rel="noopener noreferrer"
                           className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
                         >
-                          <Globe className="h-5 w-5" />
+                          <Globe className="h-6 w-6" />
                         </Link>
                       )}
                     </div>
@@ -221,7 +221,7 @@ export default function MembersPage() {
                                     rel="noopener noreferrer"
                                     className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
                                   >
-                                    <Linkedin className="h-3 w-3" />
+                                    <Linkedin className="h-5 w-5" />
                                   </Link>
                                 )}
                                 {director.socialLinks?.instagram && (
@@ -231,7 +231,7 @@ export default function MembersPage() {
                                     rel="noopener noreferrer"
                                     className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
                                   >
-                                    <Instagram className="h-3 w-3" />
+                                    <Instagram className="h-5 w-5" />
                                   </Link>
                                 )}
                               </div>
@@ -284,7 +284,7 @@ export default function MembersPage() {
                                   rel="noopener noreferrer"
                                   className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
                                 >
-                                  <Linkedin className="h-3 w-3" />
+                                  <Linkedin className="h-5 w-5" />
                                 </Link>
                               )}
                               {department.director.socialLinks?.instagram && (
@@ -294,7 +294,7 @@ export default function MembersPage() {
                                   rel="noopener noreferrer"
                                   className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
                                 >
-                                  <Instagram className="h-3 w-3" />
+                                  <Instagram className="h-5 w-5" />
                                 </Link>
                               )}
                             </div>
@@ -365,7 +365,7 @@ export default function MembersPage() {
                                     rel="noopener noreferrer"
                                     className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
                                   >
-                                    <Linkedin className="h-3 w-3" />
+                                    <Linkedin className="h-4 w-4" />
                                   </Link>
                                 )}
                                 {member.socialLinks?.instagram && (
@@ -375,7 +375,7 @@ export default function MembersPage() {
                                     rel="noopener noreferrer"
                                     className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
                                   >
-                                    <Instagram className="h-3 w-3" />
+                                    <Instagram className="h-4 w-4" />
                                   </Link>
                                 )}
                               </div>
@@ -407,7 +407,9 @@ export default function MembersPage() {
             community.
           </p>
           <Link
-            href="/sign-up"
+            href="https://forms.gle/i3Y6vazF5TErGBxG7"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-md bg-white px-6 py-3 text-sm font-medium text-[#405862] shadow-md hover:shadow-lg hover:bg-slate-100 transition-all"
           >
             Apply Now
