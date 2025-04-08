@@ -89,6 +89,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "An in-depth look at the crucial role nurses play in elder care facilities, their responsibilities, challenges, and the impact they make on patients' lives.",
     content: `
+
 # The Growing Importance of Nurses in Elder Care
 
 Nurses in elder care centers play a vital role in providing comprehensive care to older adults. These specialized healthcare professionals combine clinical expertise with compassion to address the unique needs of the elderly population.
@@ -137,6 +138,7 @@ What is a geriatric nurse?. Fortis Colleges & Institutes: Accredited Career Trai
     excerpt:
       "Discover the specialized world of pediatric nursing, where healthcare professionals dedicate their careers to caring for children from infancy through adolescence.",
     content: `
+
 # The Critical Role of Pediatric Nurses in Modern Healthcare:
 
 Pediatric nurses play a vital role in healthcare by providing specialized medical care to children from infancy through adolescence. Despite the presence of 1.9 million pediatric nurses in the U.S., only 3.7% of nurse practitioners hold pediatric certification, highlighting a growing demand for specialized healthcare workers. The U.S. Bureau of Labor Statistics projects a 6% growth in registered nursing positions from 2023 to 2033, emphasizing the need for pediatric nurses to ensure children's well-being. Among them, Pediatric Intensive Care Unit (PICU) nurses hold the highest specialization, managing critically ill children facing life-threatening conditions.
@@ -250,7 +252,7 @@ Endocrinologists play a crucial role in diagnosing and treating hormone-related 
     readingTime: "8 min read",
   },
 
-  // Cancer
+  // Coley tox
 {
   slug: "coleys-toxins",
   title: "Coley's Toxins",
@@ -273,7 +275,8 @@ Despite showing promise in some cases, Coley’s toxins were met with skepticism
 
 Although Coley’s toxins are no longer used, their impact on cancer treatment remains significant. His innovative approach demonstrated the potential of the immune system in fighting cancer, paving the way for today’s immunotherapies. While his treatment was not widely accepted in his time, it helped inspire modern breakthroughs that continue to improve cancer care.
 
- `,
+
+  `,
   coverImage: "/coleytoxins.png",
   date: "April 12, 2025",
   author: authors["shaza-ali"],
@@ -336,7 +339,7 @@ Cancer is fundamentally a genetic disease, primarily driven by mutations that di
 Cancers are categorized based on the specific tissues or cells from which they originate. Common types include carcinoma, arising in epithelial cells such as those lining organs; sarcoma, originating in bone and soft tissues; leukemia, affecting blood-forming tissues like bone marrow; lymphoma, starting in lymphocytes of the immune system; and melanoma, beginning in pigment-producing melanocytes. Each type of cancer has distinct characteristics and may require different approaches to treatment.
 
 This structured overview provides a comprehensive understanding of cancer, encompassing its nature, characteristics of cancerous cells, factors contributing to its development, and the diverse types of cancer that can affect the human body.
-  `,
+ `,
   coverImage: "/logo.png",
   date: "April 5, 2025",
   author: authors["muhammad-lari"],

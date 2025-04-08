@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Instagram, Linkedin, ArrowUp, FileText } from "lucide-react"
+import NewsletterForm from "./newsletter-form"
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -19,7 +20,7 @@ export default function Footer() {
           {/* Column 1: Logo and Description */}
           <div>
             <div className="mb-4">
-              <Image src="/images/logo.png" alt="Dr. Interested Logo" width={150} height={150} className="mb-2" />
+              <Image src="/logo.png" alt="Dr. Interested Logo" width={150} height={150} className="mb-2" />
             </div>
             <p className="text-sm mb-4">
               Inspiring the next generation of healthcare professionals through education, collaboration, and meaningful
@@ -29,16 +30,25 @@ export default function Footer() {
               <Link
                 href="https://www.instagram.com/dr.interested/"
                 className="text-white hover:text-[#4ecdc4] transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Instagram className="h-6 w-6" />
               </Link>
               <Link
                 href="https://www.linkedin.com/company/dr-interested"
                 className="text-white hover:text-[#4ecdc4] transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Linkedin className="h-6 w-6" />
               </Link>
-              <Link href="https://discord.gg/pzbGRgsGXY" className="text-white hover:text-[#4ecdc4] transition-colors">
+              <Link
+                href="https://discord.gg/pzbGRgsGXY"
+                className="text-white hover:text-[#4ecdc4] transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -83,6 +93,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/blog" className="text-sm hover:text-[#4ecdc4] transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
                 <Link href="/members" className="text-sm hover:text-[#4ecdc4] transition-colors">
                   Members
                 </Link>
@@ -93,14 +108,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/gallery" className="text-sm hover:text-[#4ecdc4] transition-colors">
-                  Gallery
-                </Link>
-              </li>
-              <li>
                 <Link href="/terms" className="text-sm hover:text-[#4ecdc4] transition-colors flex items-center gap-1">
                   <FileText className="h-3 w-3" />
                   Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/privacy-policy"
+                  className="text-sm hover:text-[#4ecdc4] transition-colors flex items-center gap-1"
+                >
+                  <FileText className="h-3 w-3" />
+                  Privacy Policy
                 </Link>
               </li>
             </ul>
@@ -147,34 +166,11 @@ export default function Footer() {
               <div className="w-12 h-1 bg-[#4ecdc4] mt-2"></div>
             </h3>
             <p className="text-sm mb-4">Subscribe to our newsletter for the latest events and opportunities.</p>
-            <form className="space-y-2" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="w-full px-4 py-2 rounded-md bg-[#4f6b75] border-none text-white placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4ecdc4]"
-              />
-              <button
-                type="submit"
-                className="w-full bg-[#4ecdc4] text-white py-2 px-4 rounded-md flex items-center justify-center hover:bg-[#3dbdb5] transition-colors"
-              >
-                Sign Up
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="ml-2 h-5 w-5"
-                >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </button>
-            </form>
+
+            {/* Use our newsletter component with compact styling for the footer */}
+            <div className="bg-[#405862] p-3 md:p-4 rounded">
+              <NewsletterForm darkMode={true} showFirstName={false} compact={true} />
+            </div>
           </div>
         </div>
 

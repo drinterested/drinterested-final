@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
@@ -13,17 +13,39 @@ const routes = [
   { href: "/", label: "Home" },
   { href: "/our-work", label: "Our Work" },
   { href: "/events", label: "Events" },
+  { href: "/blog", label: "Blog" },
   { href: "/members", label: "Members" },
   { href: "/contact", label: "Contact" },
-  { href: "/gallery", label: "Gallery" },
 ]
 
 export default function Navbar() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  // Add scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
+    <header
+      className={cn(
+        "sticky top-0 z-50 w-full border-b backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-200",
+        scrolled ? "bg-background/95 shadow-md" : "bg-background border-transparent",
+      )}
+    >
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -36,20 +58,24 @@ export default function Navbar() {
             <SheetContent side="left" className="w-[240px] sm:w-[300px]">
               <div className="flex flex-col gap-4 py-4">
                 <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-                  <Image src="/images/logo.png" alt="Dr. Interested Logo" width={100} height={100} />
+                  <Image src="/logo.png" alt="Dr. Interested Logo" width={100} height={100} />
                 </Link>
-                <nav className="flex flex-col gap-2">
+                <nav className="flex flex-col gap-4">
                   {routes.map((route) => (
                     <Link
                       key={route.href}
                       href={route.href}
                       onClick={() => setIsOpen(false)}
                       className={cn(
-                        "flex items-center px-2 py-1.5 text-sm font-medium transition-colors hover:text-[#405862]",
-                        pathname === route.href ? "text-[#405862] font-bold" : "text-muted-foreground",
+                        "flex items-center px-3 py-2 text-sm font-medium transition-colors hover:text-[#405862] rounded-md",
+                        pathname === route.href || pathname?.startsWith(`${route.href}/`)
+                          ? "text-[#405862] font-bold bg-[#f5f1eb]"
+                          : "text-muted-foreground",
                       )}
                     >
-                      {pathname === route.href && <div className="w-1 h-4 bg-[#405862] mr-2 rounded-full"></div>}
+                      {(pathname === route.href || pathname?.startsWith(`${route.href}/`)) && (
+                        <div className="w-1 h-4 bg-[#405862] mr-2 rounded-full"></div>
+                      )}
                       {route.label}
                     </Link>
                   ))}
@@ -58,39 +84,37 @@ export default function Navbar() {
             </SheetContent>
           </Sheet>
           <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/images/logo.png"
-              alt="Dr. Interested Logo"
-              width={40}
-              height={40}
-              className="hidden md:block"
-            />
+            <Image src="/logo.png" alt="Dr. Interested Logo" width={40} height={40} className="hidden md:block" />
             <div className="font-semibold text-lg">
               <span className="text-[#405862]">Dr.</span> Interested
             </div>
           </Link>
         </div>
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-10">
           {routes.map((route) => (
             <Link
               key={route.href}
               href={route.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-[#405862] relative py-1",
-                pathname === route.href ? "text-[#405862] font-bold" : "text-muted-foreground",
+                "text-base font-medium transition-colors hover:text-[#405862] relative py-1.5 px-2",
+                pathname === route.href || pathname?.startsWith(`${route.href}/`)
+                  ? "text-[#405862] font-bold"
+                  : "text-muted-foreground hover:bg-[#f5f1eb]/50 rounded-md",
               )}
             >
               {route.label}
-              {pathname === route.href && (
-                <span className="absolute -bottom-[5px] left-0 w-full h-0.5 bg-[#405862]"></span>
+              {(pathname === route.href || pathname?.startsWith(`${route.href}/`)) && (
+                <span className="absolute -bottom-[6px] left-0 w-full h-1 bg-[#405862] rounded-full"></span>
               )}
             </Link>
           ))}
         </nav>
         <div className="flex items-center gap-4">
           <Link
-            href="https://discord.gg/pzbGRgsGXY"
-            className="hidden md:inline-flex bg-[#405862] text-white hover:bg-[#334852] px-4 py-2 rounded-md text-sm font-medium transition-all hover:shadow-md"
+            href="https://forms.gle/i3Y6vazF5TErGBxG7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex bg-[#405862] text-white hover:bg-[#334852] px-4 py-2 rounded-md text-sm font-medium transition-all hover:shadow-md btn-hover-effect"
           >
             Interested?
           </Link>
