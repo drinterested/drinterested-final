@@ -509,7 +509,7 @@ Moreover, eosinophils improve **tumor blood flow** and reduce vascular leakiness
 In conclusion, eosinophils are far more than simple defenders against parasites and allergens. Their involvement in cancer highlights their **dual nature**—capable of both hindering and helping tumor progression, depending on the context. As our understanding of these versatile cells deepens, eosinophils could hold promise not only as markers of prognosis but also as potential targets or tools in future cancer therapies.
 `,
     coverImage: "/logo.png",
-    date: "April 8, 2025",
+    date: "April 13, 2025",
     author: authors["shaza-ali"],
     topic: "Types of Doctors",
     readingTime: "11 min read",
