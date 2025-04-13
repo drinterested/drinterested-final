@@ -511,7 +511,7 @@ In conclusion, eosinophils are far more than simple defenders against parasites 
     coverImage: "/eosinophils.png",
     date: "April 13, 2025",
     author: authors["shaza-ali"],
-    topic: "Types of Doctors",
+    topic: "Cancer",
     readingTime: "11 min read",
   },
   
