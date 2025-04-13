@@ -132,6 +132,7 @@ What is a geriatric nurse?. Fortis Colleges & Institutes: Accredited Career Trai
     readingTime: "8 min read",
     featured: true,
   },
+//PICU
   {
     slug: "pediatric",
     title: "Pediatric Nurses",
@@ -214,6 +215,7 @@ improved, and her rashes started to fade. Thanks to the teamwork between the int
     readingTime: "9 min read",
     featured: true,
   },
+//Endocrinologist
   {
     slug: "endocrinologists",
     title: "The Role of Endocrinologists",
@@ -283,6 +285,7 @@ Although Coley’s toxins are no longer used, their impact on cancer treatment r
   topic: "Cancer",
   readingTime: "7 min read",
 },
+//Immunotherapy
 {
   slug: "immunotherapy",
   title: "Immunotherapy",
@@ -309,6 +312,7 @@ Immunotherapy offers a promising alternative to traditional cancer treatments. B
   readingTime: "9 min read",
   featured: true,
 },
+//Cancer
 {
   slug: "cancer",
   title: "Cancer",
@@ -346,6 +350,7 @@ This structured overview provides a comprehensive understanding of cancer, encom
   topic: "Cancer",
   readingTime: "10 min read",
 },
+// anaplastic thyroid cancer
 {
   slug: "anaplastic-thyroid-cancer",
   title: "Anaplastic Thyroid Cancer",
@@ -402,6 +407,7 @@ Anaplastic Thyroid Cancer | Columbia University Department of Surgery. (n.d.). C
   topic: "Cancer",
   readingTime: "8 min read",
 },
+//Chemotherapy and effects
 {
   slug: "effects-chemotherapy",
   title: "The History and Impact of Chemotherapy",
@@ -435,6 +441,7 @@ Anaplastic Thyroid Cancer | Columbia University Department of Surgery. (n.d.). C
   topic: "Cancer",
   readingTime: "11 min read",
 },
+// Nephrologist
 {
   slug: "nephrologist",
   title: "Nephrologist",
@@ -469,6 +476,45 @@ Nephrologists play a vital role in managing kidney health and preventing complic
   topic: "Cancer",
   readingTime: "9 min read",
 },
+//Eosinophils	
+{
+   slug: "eosinophils",
+  title: "Once Known Only for Fighting Allergies and Parasites, Eosinophils Are Now Emerging as Unexpected Players in the Cancer Battlefield—Sometimes Helping, Sometimes Harming. Could These Immune Cells Hold the Key to Future Cancer Therapies?",
+  excerpt: "Explore how eosinophils, once known for their role in allergies and parasites, are now influencing cancer outcomes—sometimes acting as defenders, other times as accomplices in tumor progression.",
+  content: `
+# Can Allergy Cells Fight Cancer? The Surprising Role of Eosinophils
+
+The immune system is our body’s first line of defense against infections and abnormal cell growth, including cancer. Among its many components are **eosinophils**, which play a crucial role not only in fighting parasites and allergens but also in influencing cancer outcomes. Recent studies have revealed their surprising involvement in the **tumor microenvironment**, positioning eosinophils as both potential defenders and accomplices in cancer progression.
+
+## Meet Eosinophils: Tiny Cells with Big Responsibilities
+
+Eosinophils are a type of white blood cell that belong to the **granulocyte** family, alongside neutrophils and basophils. They are characterized by bright red-orange granules filled with toxic proteins and account for about 5% of the body’s white blood cells. Found in the blood, bone marrow, lungs, skin, fat, and digestive tract, eosinophils are best known for combating **parasitic infections** and participating in allergic reactions. They also help regulate inflammation by releasing **cytokines** and **signaling molecules**.
+
+## What Is Cancer? Understanding the Basics
+
+Cancer refers to a group of diseases characterized by the uncontrolled division of abnormal cells, which can invade nearby tissues and spread to other parts of the body. It often results from **genetic mutations** that disrupt the normal processes of cell growth and death. While some cancers form solid tumors, others, like **leukemia**, do not. Treatments vary widely and may include surgery, chemotherapy, radiation therapy, immunotherapy, or targeted drugs.
+
+## Eosinophils and Cancer: A Complex Relationship
+
+Though eosinophils and cancer might seem unrelated at first glance, research has revealed a **complex and dynamic relationship** between the two. Eosinophils can infiltrate tumors and directly engage with cancer cells, releasing cytotoxic proteins such as **reactive oxygen species (ROS)**, **major basic protein (MBP)**, and **eosinophil cationic protein (ECP)**. These substances can induce tumor cell death, suggesting a possible **tumor-suppressive role** for eosinophils.
+
+## The Impact of Eosinophils on Tumor Growth
+
+Beyond their direct attack on cancer cells, eosinophils influence the tumor environment by secreting **cytokines** and **growth factors**. Interestingly, while some of these molecules—such as **interleukin-6 (IL-6)** and **APRIL**—can promote tumor growth, others support immune activation. Eosinophils also interact with other immune cells, presenting antigens to T cells, guiding their activation, and releasing chemokines to recruit more immune cells to the tumor site. These activities can potentially strengthen the body’s anti-cancer response.
+
+Moreover, eosinophils improve **tumor blood flow** and reduce vascular leakiness, which may enhance the effectiveness of therapies. For example, in **colorectal cancer**, higher eosinophil levels within tumors have been associated with better outcomes, reinforcing their potential as key players in cancer defense.
+
+## Conclusion: The Dual Nature of Eosinophils in Cancer
+
+In conclusion, eosinophils are far more than simple defenders against parasites and allergens. Their involvement in cancer highlights their **dual nature**—capable of both hindering and helping tumor progression, depending on the context. As our understanding of these versatile cells deepens, eosinophils could hold promise not only as markers of prognosis but also as potential targets or tools in future cancer therapies.
+`,
+    coverImage: "/logo.png",
+    date: "April 8, 2025",
+    author: authors["maliha-metla"],
+    topic: "Types of Doctors",
+    readingTime: "11 min read",
+  },
+  
 ]
 
 // Helper functions
