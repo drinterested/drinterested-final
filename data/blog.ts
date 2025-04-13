@@ -479,7 +479,7 @@ Nephrologists play a vital role in managing kidney health and preventing complic
 //Eosinophils	
 {
    slug: "eosinophils",
-  title: "Once Known Only for Fighting Allergies and Parasites, Eosinophils Are Now Emerging as Unexpected Players in the Cancer Battlefield—Sometimes Helping, Sometimes Harming. Could These Immune Cells Hold the Key to Future Cancer Therapies?",
+  title: "Once Known Only for Fighting Allergies and Parasites, Eosinophils Are Now Emerging as Unexpected Players in the Cancer Battlefield!",
   excerpt: "Explore how eosinophils, once known for their role in allergies and parasites, are now influencing cancer outcomes—sometimes acting as defenders, other times as accomplices in tumor progression.",
   content: `
 # Can Allergy Cells Fight Cancer? The Surprising Role of Eosinophils
@@ -508,7 +508,7 @@ Moreover, eosinophils improve **tumor blood flow** and reduce vascular leakiness
 
 In conclusion, eosinophils are far more than simple defenders against parasites and allergens. Their involvement in cancer highlights their **dual nature**—capable of both hindering and helping tumor progression, depending on the context. As our understanding of these versatile cells deepens, eosinophils could hold promise not only as markers of prognosis but also as potential targets or tools in future cancer therapies.
 `,
-    coverImage: "/logo.png",
+    coverImage: "/eosinophils.png",
     date: "April 13, 2025",
     author: authors["shaza-ali"],
     topic: "Types of Doctors",
