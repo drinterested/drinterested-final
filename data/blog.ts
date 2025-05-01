@@ -125,7 +125,7 @@ Greenall, G. (2025, January 10). Registered nurse jobs (with salaries) in Canada
 Lisa Lagace. (2024, December 10). Demand for nurses in Canada still high as talent shortage ... Indeed. https://ca.indeed.com/career-advice/news/high-demand-for-nurses#:~:text=While demand has slowed in,searched by employers throughout 2023.
 What is a geriatric nurse?. Fortis Colleges & Institutes: Accredited Career Training Programs. (2023, December 11). https://www.fortis.edu/blog/nursing/what-is-a-geriatric-nurse-.html#:~:text=They’re%20registered%20nurses%20(RNs,may%20monitor%20patients’%20daily%20mobility
 `,
-    coverImage: "/logo.png",
+    coverImage: "/Elder-healthcare.png",
     date: "April 10, 2025",
     author: authors["muhammad-lari"],
     topic: "Types of Nurses",
@@ -162,7 +162,7 @@ With the increasing demand for pediatric healthcare services, more nurses must s
 
 
 `,
-    coverImage: "/logo.png",
+    coverImage: "/PediatricNurse.png",
     date: "March 25, 2025",
     author: authors["shaza-ali"],
     topic: "Types of Nurses",
@@ -208,7 +208,7 @@ chemotherapy, a treatment used to fight blood cancer. Over time, the patient’s
 improved, and her rashes started to fade. Thanks to the teamwork between the internal medicine and dermatology departments, the doctors were able to correctly diagnose and treat her condition. This case highlights the critical role that internal medicine doctors play in healthcare. While general practitioners focus on common illnesses, internists are trained to diagnose and manage complex medical conditions. Sweet’s Syndrome is just one example of how an internist’s expertise can make a huge difference. By investigating rare diseases, connecting symptoms to hidden causes, and working with specialists, internists help patients get the right treatment even when the diagnosis is extremely challenging.
 
 `,
-    coverImage: "/logo.png",
+    coverImage: "/Internist.png",
     date: "April 8, 2025",
     author: authors["maliha-metla"],
     topic: "Types of Doctors",
@@ -247,7 +247,7 @@ Since the cancer was already at an advanced stage, surgery was not a viable opti
 Endocrinologists play a crucial role in diagnosing and treating hormone-related diseases. The case study of the 88-year-old man underscores how an endocrinologist’s expertise led to the detection of medullary thyroid cancer through abnormal hormone levels. Although surgery was not an option, ongoing treatment has successfully controlled the disease, allowing the patient to maintain his independence and quality of life. This case highlights the importance of early detection and specialized medical care in managing complex endocrine disorders.
 
 `,
-    coverImage: "/logo.png",
+    coverImage: "/endocrinologist.png",
     date: "March 30, 2025",
     author: authors["manha"],
     topic: "Types of Doctors",
@@ -305,7 +305,7 @@ There are several types of immunotherapy, each designed to boost the immune syst
 Immunotherapy offers a promising alternative to traditional cancer treatments. By enhancing the body’s natural defenses, it can improve survival rates and reduce the side effects often caused by chemotherapy and radiation. As research continues, immunotherapy is expected to play an even larger role in the fight against cancer.
 
   `,
-  coverImage: "/logo.png",
+  coverImage: "/Immunotherapy.png",
   date: "April 8, 2025",
   author: authors["maliha-metla"],
   topic: "Cancer",
@@ -344,7 +344,7 @@ Cancers are categorized based on the specific tissues or cells from which they o
 
 This structured overview provides a comprehensive understanding of cancer, encompassing its nature, characteristics of cancerous cells, factors contributing to its development, and the diverse types of cancer that can affect the human body.
  `,
-  coverImage: "/logo.png",
+  coverImage: "/cancer.png",
   date: "April 5, 2025",
   author: authors["muhammad-lari"],
   topic: "Cancer",
@@ -401,7 +401,7 @@ Anaplastic thyroid Cancer (ATC). (2025, March 19). Cleveland Clinic.
 Anaplastic Thyroid Cancer | Columbia University Department of Surgery. (n.d.). Columbiasurgery.org. 
   https://columbiasurgery.org/conditions-and-treatments/anaplastic-thyroid-cancer
   `,
-  coverImage: "/logo.png",
+  coverImage: "/Anaplastic.png",
   date: "April 5, 2025",
   author: authors["muhammad-lari"],
   topic: "Cancer",
@@ -435,7 +435,7 @@ Anaplastic Thyroid Cancer | Columbia University Department of Surgery. (n.d.). C
  Chemotherapy has a long and evolving history. From its accidental discovery during wartime to the targeted treatments used today, it has revolutionized cancer care. While chemotherapy still has side effects, continuous research has improved its effectiveness and reduced its risks. Today, chemotherapy remains a critical tool in the fight against cancer, saving and prolonging lives around the world.
 
 `,
-  coverImage: "/logo.png",
+  coverImage: "/Chemo.png",
   date: "April 3, 2025",
   author: authors["maliha-metla"],
   topic: "Cancer",
@@ -470,7 +470,7 @@ When a 57-year-old man was diagnosed with subacute bacterial endocarditis caused
 ## Conclusion
 Nephrologists play a vital role in managing kidney health and preventing complications that affect other organs. Their expertise extends to various subspecialties, from pediatric care to kidney transplants. While nephrology often involves non-surgical treatments, advancements in the field continue to improve outcomes for patients with complex kidney disorders.
 `,
-  coverImage: "/logo.png",
+  coverImage: "/Nephrologist.png",
   date: "April 1, 2025",
   author: authors["shaza-ali"],
   topic: "Types of Doctors",
@@ -568,6 +568,144 @@ Often, SRS is used as part of a multimodal treatment plan, complementing other t
     topic: "Cancer",
     readingTime: "5 min read",
   },
+	// Granulocytes
+{
+   slug: "Granulocytes",
+  title: "Paul Ehrlich and the Discovery of Granulocytes: Pioneering Immunology",
+  excerpt: "Paul Ehrlich's innovative dye techniques helped identify and differentiate granulocytes, key white blood cells involved in immune responses. His work laid the foundation for modern immunology and our understanding of immune cell functions.",
+  content: `
+# Paul Ehrlich’s Contribution to Granulocyte Research
+
+## Who was Paul Ehrlich?
+
+Paul Ehrlich (1854–1915) was a super important scientist who helped start the field of immunology and was one of the first to work with chemotherapy. Even though he didn’t like school tests and wasn’t the best student, he made a huge impact in medicine. He worked in a bunch of different areas like chemistry, blood studies, and medicine. What really got him interested was how dyes stuck to body tissues, and that curiosity helped him come up with early ideas about how the immune system works.
+## What are Granulocytes?
+
+ Granulocytes are the most common type of white blood cells. They have tiny dots (called granules) inside them that release chemicals when your body is under attack, like during infections, allergic reactions, or asthma. These cells are made in your bone marrow and usually only live a few days.
+## What did Ehrlich do with them?
+
+ Between 1879 and 1880, Ehrlich figured out how to stain (or color) blood cells using dyes made from coal tar. This helped scientists finally tell the different types of white blood cells apart. He used acidic and basic dyes to find eosinophils and basophils; two types of granulocytes. This work built on his earlier discovery of something called mast cells, which he had written about in his PhD paper.
+ Later, Ehrlich made a neutral dye that helped him spot special granules inside neutrophils (another white blood cell with oddly-shaped nuclei). He also made guesses, most of which were correct, about how neutrophils and eosinophils form, what they do, and what happens to them over time.
+
+ ## What came before Ehrlich?
+ 
+ Even though Ehrlich did a lot, other scientists had noticed some things about white blood cells before him. William Hewson studied blood and lymph. People like Alfred Donné, John Hughes Bennett, and Rudolf Virchow had already described leukemia. William Addison, Friedrich von Recklinghausen, and Julius Cohnheim had looked into how inflammation works.
+Eosinophils may have even been seen earlier. In 1846, Thomas Wharton Jones talked about “granule blood-cells” in humans and animals. Julius Vogel also saw these types of cells in inflamed areas. Vogel knew about Gottlieb Gluge, who had noticed “compound inflammatory globules” in pus that looked a lot like eosinophils.
+Almost 20 years before Ehrlich’s staining work, Max Johann Schultze had done tests with heat and a microscope and saw that these granular cells could move and eat other things, just like immune cells do.
+But even with all those earlier discoveries, it was Ehrlich’s special dye work that kicked off modern research on white blood cells and how they relate to sickness.
+`,
+    coverImage: "/Granulocytes.png",
+    date: "April 20, 2025",
+    author: authors["manha"],
+    topic: "Cancer",
+    readingTime: "8 min read",
+  },
+	//Vascular surgeons
+{
+   slug: "vascular-surgeons",
+  title: "Vascular Surgeons",
+  excerpt: "Vascular surgeons treat diseases of arteries and veins using medicine, surgery, or special tools. Their expertise saves lives and keeps blood flowing properly throughout the body.",
+  content: `
+# Vascular Surgeons: Lifesavers for Blood Vessel Health
+
+## What Vascular Surgeons Do and Why They Are Important
+
+A vascular surgeon is a doctor who treats problems with blood vessels. Blood vessels include arteries and veins, which carry blood throughout the body. When someone has a disease that blocks or weakens these blood vessels, it can cause serious health problems. Vascular surgeons help fix these problems. They can use medicine, do surgeries, or use special tools to treat the disease without needing to open the body.
+Some of the main problems they treat are aneurysms (which are bulges in blood vessels), peripheral artery disease (PAD), carotid artery disease (which can cause strokes), and deep vein thrombosis (DVT), which are blood clots. Vascular surgeons are trained to find these problems early, treat them the best way possible, and help patients recover safely. They are the only doctors who can give all types of treatment for blood vessel diseases from medicine to open surgery.
+## Training and Certification to Become a Vascular Surgeon
+Becoming a vascular surgeon takes many years of school and training. First, a person has to finish college and usually take a test called the MCAT to get into medical school. Then they go to medical school for four years. After that, they do five more years of training in a hospital. Some choose to do even more training to become experts in vascular surgery. After all that, they still have to pass two hard tests, one written and one oral, to become certified. This means they are officially allowed to work as a vascular surgeon.
+
+## Real-Life Case: Saving a Life Without Blood Transfusion
+
+There was a case at Johns Hopkins Hospital where a vascular surgeon helped an 81-year-old woman who had a very dangerous aneurysm. She was a Jehovah’s Witness, so she could not receive a blood transfusion, which made the surgery much harder. Dr. James Black used a special method called endovascular repair. It took seven hours, but he was able to fix the problem with very little blood loss. The blood she did lose was saved and put back in her body. She got better quickly and left the hospital after eight days without any problems.
+
+## Conclusion: Why Vascular Surgeons Matter
+In conclusion, vascular surgeons are very important doctors who help people with serious blood vessel problems. They have to go through a lot of training and learning to do their job. They save lives using both medicine and surgery. Thanks to them, many people with dangerous health issues can live longer and healthier lives.
+
+
+
+`,
+    coverImage: "/vascular.png",
+    date: "April 27, 2025",
+    author: authors["muhammad-lari"],
+    topic: "Types of Doctors",
+    readingTime: "5 min read",
+  },
+	//Neurosurgeon:
+{
+  slug: "neurosurgeon",
+  title: "Neurosurgeon",
+  excerpt:
+    "Neurosurgeons treat life-changing brain and spine conditions with precision and care. From years of training to complex surgeries, they stand at the crossroads of science, skill, and compassion.",
+  content: `
+# Neurosurgeons: Masters of the Mind and Spine
+
+
+## What Are Neurosurgeons?
+
+Neurosurgeons are highly trained medical doctors who diagnose and treat conditions affecting the brain, spinal cord, and nerves. Often referred to as "brain surgeons," they specialize in surgical solutions for complex neurological problems like strokes, tumors, and degenerative diseases. The path to becoming a neurosurgeon is long and demanding, requiring intense education, training, and dedication.
+
+## The Journey to Becoming a Neurosurgeon
+
+The journey to becoming a neurosurgeon typically spans about 16 years. It begins with a four-year bachelor's degree, followed by four years of medical school. Afterward, doctors complete a year-long general surgery internship and seven years of neurosurgery residency. Some neurosurgeons pursue fellowships in specialties like pediatric neurosurgery or spinal surgery. Competition is fierce; in 2020, only 74.3% of U.S. medical graduates applying for neurosurgery successfully matched into a residency program, much lower than other specialties. Despite the challenges, those who persevere are rewarded with a deeply impactful career.
+
+## Neurologists vs. Neurosurgeons
+
+Though they both work with the nervous system, neurologists and neurosurgeons serve different roles. Neurologists diagnose and medically manage conditions such as epilepsy, migraines, and multiple sclerosis but do not perform surgery. When surgical intervention is needed, they refer patients to neurosurgeons. Neurosurgeons are trained to operate and manage surgical cases, making the collaboration between the two specialties essential for comprehensive neurological care.
+
+## Case Study: Bloodless Neurosurgery in a Pediatric Patient:
+
+An 11-year-old girl, part of a Jehovah’s Witness family, was admitted with progressive leg weakness and abdominal pain. Imaging revealed an S1 extradural tumor pressing on her spinal nerves. Due to religious beliefs prohibiting blood transfusions, her family sought treatment at Johns Hopkins Hospital, renowned for expertise in bloodless surgery. Surgeons performed a hemilaminectomy, carefully removing part of the vertebra to access the tumor with minimal blood loss. Post-surgery, she recovered well, aided by iron supplements and medications to manage pain and nerve discomfort, successfully avoiding transfusions while respecting her family's beliefs.
+
+## The Lasting Impact of Neurosurgeons
+Neurosurgeons play an essential role in treating life-altering conditions of the nervous system. Their extensive training, surgical skill, and ability to collaborate with other specialists like neurologists ensure that patients receive the best possible care. As seen in the case of the young girl, neurosurgeons can even adapt their procedures to honor patients' cultural and religious needs, showing that medicine is not just about science but also compassion.
+`,
+  coverImage: "/Neurosurgeon.jpg",
+  date: "April 27, 2025",
+  author: authors["shaza-ali"],
+  topic: "Types of Doctors",
+  readingTime: "9 min read",
+},
+	//Opthalmic surgeons
+{
+  slug: "opthalmic_surgeons",
+  title: "Opthalmic_surgeons",
+  excerpt:
+    "Ophthalmic surgeons diagnose and treat complex eye conditions through both medical and surgical care. From cataracts to retinal disorders, their work helps restore vision and improve quality of life. This article explores their role, the path to becoming one, and a real case of sight-saving surgery in a teen with a rare condition.",
+  content: `
+# Ophthalmic Surgeons: Restoring Sight Through Precision
+
+## What is an Ophthalmic Surgeon?
+
+An ophthalmic surgeon is a medical doctor who specializes in doing surgeries on the eyes and the visual system. They diagnose eye problems, treat them, and perform surgeries to fix or manage different eye conditions, diseases, and injuries.
+
+## What Do Ophthalmic Surgeons Do?
+
+Ophthalmic surgeons do eye exams to check for any issues. They perform many kinds of surgeries, including cataract removal, fixing the retina, and doing corneal transplants. They also teach patients about how to take care of their eyes and how to recover after surgery.
+
+##  How to Become an Ophthalmic Surgeon
+
+To become an ophthalmic surgeon, a person usually starts by getting a Bachelor’s Degree in a science-related field. After that, they go to medical school for four years to become a doctor. Then, they must complete an ophthalmology residency, which is three to four years of special training focused on the eyes. Some surgeons also do a fellowship, which is an extra one to two years, to get even more specialized training, like learning more about retinal surgery or oculoplastics. After all of this, they have to pass medical board exams and get a license to be a doctor in their region. They also need to become board certified in ophthalmology, like through the American Board of Ophthalmology or similar boards in other countries. The path can be a little different depending on where in the world someone is studying.
+
+##  Case Study: Persistent Fetal Vasculature (PFV) in a 15-Year-Old
+### What is PFV?
+Persistent Fetal Vasculature, or PFV, is a condition that happens when certain blood vessels in the eye, which are supposed to disappear before birth, don’t go away as they should. These leftover vessels can cause problems inside the eye, like making the lens cloudy, which is known as a cataract.
+
+### The Patient's Situation
+
+In this case, a 15-year-old patient had PFV in one eye. The condition led to the development of a cataract, which made it hard for the patient to see clearly.
+
+### The Surgical Procedure
+To help the patient see better, a surgeon performed a cataract removal surgery. During the operation, the surgeon carefully took out the cloudy lens and addressed the issues caused by the persistent blood vessels.
+### Outcome and Recovery
+After the surgery, the patient needed time to heal and follow-up care to ensure the eye recovered properly. The goal was to improve vision and prevent any further problems related to PFV.
+`,
+  coverImage: "/Opthalmicsurgeon.png",
+  date: "April 28, 2025",
+  author: authors["manha"],
+  topic: "Types of Doctors",
+  readingTime: "9 min read",
+},
   
 ]
 
