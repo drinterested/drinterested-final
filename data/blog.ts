@@ -53,6 +53,12 @@ export const authors: Record<string, Author> = {
     bio: "Creating content that highlights the achievements and experiences of our members.",
     twitter: "https://twitter.com/manha",
   },
+  "velan-mangai": {
+    name: "Velan Mangai Sivakumar",
+    image: "/velan.png",
+    bio: "Velan Mangai Sivakumar is a Grade 10 student in Glenforest Secondary School. He is extremely passionate about STEM and biological sciences in particular. He has volunteered for many STEM organizations such as the Rosalind Franklin Institute. He is a trainer for HOSA (Health Occupation Students of America). His best result in STEM contests would be getting top 25 nationally and qualifying for the national camp in the Junior Science Olympiad of Canada. He also plays chess and his best results include qualifying for the Canadian Youth Chess Championship U16 twice and getting 4th in the Canadian Chess League Twice.",
+    linkedIn: "https://linkedin.com",
+  },
 }
 
 // Blog Topics
@@ -82,7 +88,118 @@ export const blogTopics: BlogTopic[] = [
 
 // Blog Posts
 export const blogPosts: BlogPost[] = [
-  // Types of Nurses
+  {
+    slug: "doctors",
+    title: "Understanding the Role of an Occupational Therapist",
+    excerpt:
+      "An occupational therapist (OT) is a healthcare professional who helps people of all ages improve their ability to do everyday activities. These people may have physical, mental, or developmental challenges that make daily tasks difficult. Occupational therapists work to support patients in important parts of life, such as self-care, work, school, and free time activities.",
+    content: `
+
+# Understanding the Role of an Occupational Therapist
+
+An occupational therapist (OT) is a healthcare professional who helps people of all ages improve their ability to do everyday activities. These people may have physical, mental, or developmental challenges that make daily tasks difficult. Occupational therapists work to support patients in important parts of life, such as self-care, work, school, and free time activities.
+
+## What Does an Occupational Therapist Do?
+
+Occupational therapists help their patients by creating treatment plans that are designed for each person’s needs. These plans help patients improve their independence and confidence. Their main tasks include:
+
+- **Creating Treatment Plans:** The OT studies the patient’s condition and decides what
+steps are needed to help the patient improve.
+
+- **Communicating with the Patient:** OTs spend time listening to the patient and helping
+them solve problems in their daily routines.
+
+- **Recommending Tools or Devices:** If needed, the OT may suggest special tools that
+make tasks easier at home, school, or work.
+
+The overall goal is to help each patient live as independently and safely as possible.
+
+## How to Become an Occupational Therapist
+
+To become an occupational therapist, a person usually needs:
+
+- A Bachelor’s Degree: This is usually in a field like health sciences, psychology, or
+biology.
+
+- A Master’s Degree in Occupational Therapy: This degree includes both classwork and
+real-life training with patients.
+
+- Clinical Placements: These are hands-on experiences during the degree, where students
+practice helping real patients.
+
+- Certification or Licensing: Depending on the country, OTs must pass a test to become
+licensed to work.
+
+The path to becoming an OT may change depending on where a person lives, but these steps are
+usually required.
+
+## Case Study: Andrew’s Story
+
+Andrew was in a serious car accident at age 13 and experienced a major brain injury. Years later,
+at age 22, he was referred to an occupational therapist to help him become more independent.
+The OT worked with Andrew on daily routines, personal care, and skills to help him take part in
+the community. Through therapy, Andrew learned how to manage his time and complete tasks
+that made his life easier and more organized. This case shows how important occupational
+therapy can be. With the help of an OT, Andrew was able to improve his skills and feel more
+confident in his daily life.
+
+
+## Conclusion
+
+Occupational therapists make a big difference in the lives of people who face everyday
+challenges. They help others build independence and confidence, even after serious injuries or
+long-term conditions. The work they do shows how important it is to support people in living
+meaningful and independent lives.
+
+
+`,
+    coverImage: "/Internist.png",
+    date: "May 13, 2025",
+    author: authors["velan-mangai"],
+    topic: "Types of Doctors",
+    readingTime: "6 min read",
+    featured: true,
+  },
+  // Psychiatrists
+    {
+    slug: "psychiatrists",
+    title: "Psychiatrists: Guiding Minds Toward Healing",
+    excerpt:
+      "Psychiatrists are medical doctors who specialize in understanding and treating mental health disorders. Combining medicine, psychology, and neuroscience, they help individuals navigate emotional turmoil through therapy, medication, and compassionate care. ",
+    content: `
+
+# Psychiatrists: Guiding Minds Toward Healing
+
+Imagine your mind as a storm, thoughts racing, emotions overwhelming, and sleep slipping through your grasp. You may go through the motions of daily life, hiding the chaos within. This is where psychiatrists step in: not just as listeners, but as trained professionals who can untangle the mental and emotional turmoil that weighs people down.
+
+## Who Are Psychiatrists?
+
+Psychiatrists are medical doctors who specialize in diagnosing, treating, and preventing mental health disorders. They undergo rigorous training that combines medicine, psychology, and neuroscience to understand the complex relationship between the brain and behavior. Unlike therapists or counselors, psychiatrists can prescribe medications, offer psychotherapy, and monitor how both the mind and body respond to treatment. Whether it’s anxiety, depression, obsessive-compulsive disorder (OCD), bipolar disorder, or schizophrenia, psychiatrists are equipped to treat a wide range of mental health conditions.
+
+
+## What Do They Actually Do?
+The role of a psychiatrist is both scientific and deeply personal. Suppose someone is experiencing panic attacks. A psychiatrist begins by having a detailed conversation to explore symptoms, triggers, and lifestyle factors. Based on their findings, they may recommend therapy, lifestyle changes, and in many cases, medication to ease symptoms. The process doesn't stop there. They continue to check in, adjust treatments, and track progress to ensure real, lasting improvement.
+Psychiatrists work in various settings: hospitals, clinics, private practices, and even online platforms. Their job also involves collaboration with psychologists, social workers, and primary care physicians to offer holistic care to their patients.
+
+## Why They Matter:
+
+Mental health still carries stigma in many societies. Phrases like “just snap out of it” or “be strong” can minimize the real struggles people face. Psychiatrists provide a safe space where individuals don’t have to mask their emotions. They validate experiences, normalize seeking help, and guide patients toward healing. With rising awareness around mental health, especially in the wake of global crises, their role has become more essential than ever.
+
+## Behind the White Coat:
+
+The work of psychiatrists is not without challenges. They often carry the emotional weight of their patients’ pain, navigate shortages in the profession, and contend with societal misconceptions about therapy. Despite this, they continue to show up, driven by compassion and the hope of healing.
+
+## A Final Thought:
+Psychiatrists aren’t here to “fix” people. They are guides, helping individuals navigate the darkest parts of their minds, rediscover their strength, and reclaim control over their lives. In the quiet space between chaos and calm, psychiatrists help us find our way back to ourselves.
+
+`,
+    coverImage: "/Psychiatrists.png",
+    date: "May 13, 2025",
+    author: authors["velan-mangai"],
+    topic: "Types of Doctors",
+    readingTime: "6 min read",
+    featured: true,
+  },
   {
     slug: "geriatric",
     title: "Nurses In Elder Care Centers",
@@ -132,6 +249,7 @@ What is a geriatric nurse?. Fortis Colleges & Institutes: Accredited Career Trai
     readingTime: "8 min read",
     featured: true,
   },
+  
 //PICU
   {
     slug: "pediatric",
