@@ -1,8 +1,10 @@
 "use client"
 
+import type React from "react"
+
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation"
 import { useIsMobile } from "@/hooks/use-mobile"
 
 export default function NewsletterForm({
@@ -16,8 +18,13 @@ export default function NewsletterForm({
   showFirstName?: boolean
   compact?: boolean
 }) {
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [email, setEmail] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const router = useRouter()
   const isMobile = useIsMobile()
 
   // Add useEffect to load ConvertKit script
@@ -32,110 +39,120 @@ export default function NewsletterForm({
     }
   }, [])
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setError(null)
+
+    // Simulate form submission
+    setTimeout(() => {
+      router.push("/thank-you")
+    }, 500)
+  }
+
   const textColor = darkMode ? "text-white" : "text-[#405862]"
   const inputBgColor = darkMode ? "bg-[#4f6b75]" : "bg-white"
-  const inputBorderColor = darkMode ? "border-[#5a7682]" : "border-[#405862]"
+  const inputBorderColor = darkMode ? "border-[#5a7682]" : "border-[#405862]/20"
   const inputTextColor = darkMode ? "text-white" : "text-[#405862]"
-  const inputPlaceholderColor = darkMode ? "placeholder:text-gray-300" : "placeholder:text-gray-500"
-  const linkColor = darkMode ? "text-white hover:text-[#4ecdc4]" : "text-[#405862] hover:text-[#4ecdc4]"
+  const inputPlaceholderColor = darkMode ? "placeholder:text-white/60" : "placeholder:text-gray-500"
+  const linkColor = darkMode ? "text-white/80 hover:text-[#4ecdc4]" : "text-[#405862]/80 hover:text-[#4ecdc4]"
 
   // Adjust heading sizes for compact mode
   const headingClass = compact
-    ? `text-xl font-bold mb-2 text-center ${textColor}`
-    : `text-3xl md:text-3xl font-bold mb-4 text-center ${textColor}`
+    ? `text-lg font-bold mb-2 ${textColor}`
+    : `text-2xl font-bold mb-3 ${textColor} flex items-center`
 
   const descriptionClass = compact
-    ? `text-center mb-4 text-sm ${textColor}`
-    : `text-center mb-6 md:mb-8 text-base md:text-lg ${textColor}`
+    ? `mb-3 text-sm ${darkMode ? "text-white/80" : "text-[#405862]/80"}`
+    : `mb-5 text-base ${darkMode ? "text-white/80" : "text-[#405862]/80"}`
 
   // Adjust input padding for mobile
-  const inputPadding = isMobile ? "px-3 py-2.5" : "px-4 py-3"
-  const buttonPadding = isMobile ? "px-4 py-2.5" : "px-6 py-3"
+  const inputPadding = isMobile || compact ? "px-3 py-2" : "px-4 py-2.5"
+  const buttonPadding = isMobile || compact ? "px-4 py-2" : "px-5 py-2.5"
 
   return (
     <div className={`w-full ${className}`}>
       <div className="mx-auto max-w-md">
         {!compact && (
           <>
-            <h2 className={headingClass}>Stay Updated</h2>
+            <h2 className={headingClass}>
+              {!compact && <span className="w-2 h-6 bg-[#4ecdc4] mr-3 hidden md:block"></span>}
+              Stay Updated
+            </h2>
             <p className={descriptionClass}>
               Stay updated on Dr. Interested and other exciting healthcare opportunities for high schoolers!
             </p>
           </>
         )}
 
-        {isSubmitted ? (
-          <div className="text-center p-4 bg-[#4ecdc4]/10 rounded-lg border border-[#4ecdc4]">
-            <h3 className={`text-lg font-bold mb-2 ${textColor}`}>Thank You!</h3>
-            <p className={`mb-4 text-sm ${textColor}`}>Check your email to confirm your subscription.</p>
-            <Button
-              onClick={() => setIsSubmitted(false)}
-              className="bg-[#4ecdc4] hover:bg-[#3dbdb5] text-white text-sm py-2"
-            >
-              Subscribe Another Email
-            </Button>
-          </div>
-        ) : (
-          <form
-            action="https://app.kit.com/forms/7869628/subscriptions"
-            className="seva-form formkit-form space-y-2"
-            method="post"
-            data-sv-form="7869628"
-            data-uid="fc097f686e"
-            data-format="inline"
-            data-version="5"
-          >
-            <div data-style="clean">
-              <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
-              <div data-element="fields" data-stacked="false" className="formkit-fields space-y-2">
-                {showFirstName && (
+        <form onSubmit={handleSubmit} className="seva-form formkit-form space-y-2">
+          <div data-style="clean">
+            <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+            <div data-element="fields" data-stacked="false" className="formkit-fields space-y-2">
+              {showFirstName && (
+                <>
                   <div className="formkit-field">
                     <input
-                      className={`${inputPadding} rounded-md border ${inputBorderColor} ${inputBgColor} ${inputTextColor} ${inputPlaceholderColor} focus:outline-none focus:ring-2 focus:ring-[#4ecdc4] w-full text-base`}
+                      className={`${inputPadding} rounded-md border ${inputBorderColor} ${inputBgColor} ${inputTextColor} ${inputPlaceholderColor} focus:outline-none focus:ring-2 focus:ring-[#4ecdc4] w-full text-sm`}
                       aria-label="First Name"
                       name="fields[first_name]"
                       placeholder="First Name"
                       type="text"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
                     />
                   </div>
-                )}
-                <div className="formkit-field">
-                  <input
-                    className={`${inputPadding} rounded-md border ${inputBorderColor} ${inputBgColor} ${inputTextColor} ${inputPlaceholderColor} focus:outline-none focus:ring-2 focus:ring-[#4ecdc4] w-full text-base`}
-                    name="email_address"
-                    aria-label="Email Address"
-                    placeholder="Email Address"
-                    required
-                    type="email"
-                  />
-                </div>
-                <button
-                  data-element="submit"
-                  className={`formkit-submit formkit-submit bg-[#4ecdc4] hover:bg-[#3dbdb5] text-white ${buttonPadding} rounded-md font-medium w-full flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 text-base`}
-                >
-                  <div className="formkit-spinner">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                  <div className="formkit-field">
+                    <input
+                      className={`${inputPadding} rounded-md border ${inputBorderColor} ${inputBgColor} ${inputTextColor} ${inputPlaceholderColor} focus:outline-none focus:ring-2 focus:ring-[#4ecdc4] w-full text-sm`}
+                      aria-label="Last Name"
+                      name="fields[last_name]"
+                      placeholder="Last Name"
+                      type="text"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                    />
                   </div>
-                  <span>Subscribe</span>
-                </button>
+                </>
+              )}
+              <div className="formkit-field">
+                <input
+                  className={`${inputPadding} rounded-md border ${inputBorderColor} ${inputBgColor} ${inputTextColor} ${inputPlaceholderColor} focus:outline-none focus:ring-2 focus:ring-[#4ecdc4] w-full text-sm`}
+                  name="email_address"
+                  aria-label="Email Address"
+                  placeholder="Email Address"
+                  required
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </div>
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={`formkit-submit formkit-submit bg-[#4ecdc4] hover:bg-[#3dbdb5] text-white ${buttonPadding} rounded-md font-medium w-full flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300 text-sm`}
+              >
+                <div className="formkit-spinner">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <span>{isSubmitting ? "Subscribing..." : "Subscribe"}</span>
+              </button>
             </div>
-            <p className={`text-center text-xs md:text-sm mt-2 ${textColor}/70`}>
-              By subscribing, you agree to our{" "}
-              <Link href="/terms" className={`${linkColor} transition-colors underline`}>
-                Terms
-              </Link>{" "}
-              and{" "}
-              <Link href="/privacy-policy" className={`${linkColor} transition-colors underline`}>
-                Privacy Policy
-              </Link>
-            </p>
-          </form>
-        )}
+          </div>
+          <p className={`text-center text-xs mt-1.5 ${darkMode ? "text-white/60" : "text-[#405862]/60"}`}>
+            By subscribing, you agree to our{" "}
+            <Link href="/terms" className={`${linkColor} transition-colors underline`}>
+              Terms
+            </Link>{" "}
+            and{" "}
+            <Link href="/privacy-policy" className={`${linkColor} transition-colors underline`}>
+              Privacy Policy
+            </Link>
+          </p>
+        </form>
       </div>
     </div>
   )
 }
-
