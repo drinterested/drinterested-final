@@ -14,6 +14,16 @@ export type EventType = {
 // Upcoming events data
 export const upcomingEvents: EventType[] = [
   {
+    title: "Podcast Collaboration with BioMedizone",
+    date: "June 2025",
+    location: "Virtual",
+    description: "Join our exciting podcast collaboration with BioMedizone to explore cutting-edge topics in healthcare and medical innovation. Sign-ups to make the podcast with us are now open!",
+    image: "/biomedpodcast.png",
+    status: "open",
+    link: "https://forms.gle/2Dxui6bq1Xdgpz5M8",
+    featured: true,
+  },
+  {
     title: "Healthcare Media Promotion Event",
     date: "March 2025 - Ongoing",
     time: "Ongoing",
@@ -28,6 +38,17 @@ export const upcomingEvents: EventType[] = [
 
 // Past events data
 export const pastEvents: EventType[] = [
+    {
+    title: "Podcast Collaboration with Health Beyond Borders",
+    date: "May 2025",
+    location: "Virtual",
+    description:
+      "A collaborative podcast with Health Beyond Borders, featuring discussions on youth engagement in global health equity. Check out the recap!",
+    image: "/hbbpodcast.png",
+    status: "completed",
+    link: "https://www.instagram.com/p/DJzlI2ouJ8R/?img_index=1",
+    featured: false,
+  },
   {
     title: "The Resilient Minds Project",
     date: "April 27, 2025",
@@ -36,9 +57,9 @@ export const pastEvents: EventType[] = [
     description:
       "A virtual initiative aimed at empowering youth with practical strategies to improve mental, emotional, and physical well-being. Through engaging workshops, interactive activities, and expert insights, participants will gain valuable skills in stress management, resilience-building, and self-care.",
     image: "/mindsproject.png",
-    status: "open",
+    status: "completed",
     link: "https://www.instagram.com/p/DI9yuL0u8SK/?img_index=1",
-    featured: true,
+    featured: false,
   },
   {
     title: "Dr. Interested Medical-Technological Compitition",

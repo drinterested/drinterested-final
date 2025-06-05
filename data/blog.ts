@@ -65,6 +65,12 @@ export const authors: Record<string, Author> = {
       bio: "Manasvi is a sophomore at Alliance Academy for Innovation with a strong passion for business and a growing interest in healthcare.",
       linkedIn: "https://linkedin.com",
     },
+"dabosmita": {
+  name: "Dabosmita",
+  image: "/dabosmita.jpg",
+  bio: "Dabosmita is a Year 12 student who is endlessly curious and excited to explore new ideas. She actively engages with the latest developments in technology and medicine, while also enjoying deep, contemplative discussions in philosophy. Her interdisciplinary mindset and passion for learning drive her to seek knowledge beyond the classroom.",
+  linkedIn: "https://linkedin.com", // Replace with her actual LinkedIn if available
+},
 }
 
 // Blog Topics
@@ -90,6 +96,14 @@ export const blogTopics: BlogTopic[] = [
       "Discover the latest research, treatments, and insights into cancer, one of the most challenging medical conditions of our time.",
     image: "/logo.png",
   },
+{
+  name: "Healthcare Law",
+  slug: "healthcare-law",
+  description:
+    "Dive into the legal aspects of medicine, from malpractice to medical ethics and patients' rights.",
+  image: "/logo.png",
+}
+
 ]
 
 // Blog Posts
@@ -876,7 +890,236 @@ After the surgery, the patient needed time to heal and follow-up care to ensure 
   topic: "Types of Doctors",
   readingTime: "9 min read",
 },
-  
+{
+    slug: "medical-malpractice",
+    title: "Understanding Medical Malpractice: Key Concepts and Canadian Case Studies [Dr. Interested x Youth Law Advocates]",
+    excerpt:
+      "Medical malpractice occurs when a healthcare provider delivers substandard care that causes harm to a patient. This post explores what qualifies as malpractice, contributing factors, and landmark cases in Canadian medical law.",
+    content: `
+
+# Understanding Medical Malpractice: Key Concepts and Canadian Case Studies
+## What is Medical Malpractice?
+
+Medical malpractice occurs when a doctor or healthcare provider neglects a patient by failing to provide appropriate treatment or delivers care that falls below the accepted standard, potentially causing harm.
+
+## What is Medical Malpractice Law?
+
+Medical malpractice law is a branch of *tort law* focused on negligence in healthcare. It allows patients to seek compensation for harm caused by substandard medical treatment, even in the absence of a broken contract or criminal act.
+
+## Common Causes of Medical Malpractice
+
+- **Delayed diagnosis** – leads to incorrect treatment and worsening conditions.
+- **Medication errors** – prescribing or administering incorrect dosages.
+- **Surgical mistakes** – performing wrong procedures or damaging other organs.
+- **Poor communication** – between healthcare staff, causing treatment errors.
+
+## Key Factors for a Valid Claim
+
+- A failure to provide appropriate care.
+- Harm or injury directly resulting from negligence.
+- Substantial damage, such as:
+  - Chronic pain
+  - Loss of income
+  - Permanent disability
+
+---
+
+## Landmark Case: *Sylvester v. Crits et al. (1956)*
+
+This landmark Canadian case helped define the standard of care expected from medical professionals.
+
+> “Every medical practitioner must bring to his task a reasonable degree of skill and knowledge and must exercise a reasonable degree of care…”
+
+### What Happened?
+
+- A 5-year-old patient was given anesthesia via a mixture of ether and oxygen.
+- When complications arose, the mixture was stopped temporarily.
+- Upon re-administering, an explosion occurred due to leaked ether-oxygen vapors and static electricity, severely injuring the child.
+- Dr. Sylvester was found **negligent** for not fully stopping oxygen flow and for using a non-standard procedure.
+
+### Ruling:
+
+Because this technique was not proven to be a **standard hospital practice**, and appeared to be Dr. Sylvester’s own approach, the court ruled in favor of the patient and awarded compensation.
+
+---
+
+## Recent Case: *Boyd et al. v. Edington et al.*
+
+### Background
+
+- **Danielle Boyd**, 24, visited Hanover Hospital with high blood pressure and severe headaches.
+- Diagnosed with a migraine, hypertensive crisis, and alcohol use by **Dr. Richard Edington**.
+- Symptoms worsened; Dr. Edington delayed re-evaluation for 3 hours.
+
+### Diagnosis & Outcome
+
+- Boyd had a **vertebral artery dissection (VAD)**, leading to a **massive stroke** and **paralysis below the neck**.
+- VAD is rare, and its symptoms are often mistaken for migraines or alcohol intoxication.
+- Dr. Edington was found **liable for negligence** and ordered to pay **$15 million** to Boyd and her family.
+
+---
+
+## Conclusion
+
+Medical malpractice law ensures accountability in healthcare. While human error is natural, the law requires medical professionals to uphold a standard of care that prioritizes safety and proper treatment. These cases remind us of the importance of diligence, communication, and ongoing medical education.
+
+## Sources
+
+- Engel, K. G., & Hunt, E. A. (2009). *Medical malpractice and pediatric sedation: An overview*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC2628513/)
+- Medical News Today. (2020, June 11). *What is medical malpractice?* [Link](https://www.medicalnewstoday.com/articles/248175)
+- Morrissey Legal Group. (2024, February). *4 factors contributing to medical malpractice*. [Link](https://www.morrisseylegalgroup.com/blog/2024/02/4-factors-contributing-to-medical-malpractice/)
+- CanLII Connects. (n.d.). *Medical malpractice and the standard of care*. [Link](https://canliiconnects.org/en/commentaries/73992)
+- Pacific Medical Law. (2020). *Medical malpractice: An overview (Rev. 2)*. [Link](https://www.pacificmedicallaw.ca/wp-content/uploads/2020/08/165_Medical_Malpractice_REV2.pdf)
+- Supreme Court of Canada. (1956). *Sylvester v. Crits*, 1956 CanLII 29 (SCC). [Link](https://www.canlii.org/en/ca/scc/doc/1956/1956canlii29/1956canlii29.html)
+- Halifax Medical Malpractice Lawyer Blog. (2014, March). *Defence experts crossed the line*. [Link](https://www.halifaxmedicalmalpracticelawyerblog.com/2014/03/defence_experts_crossed_the_li/)
+- Lexpert. (n.d.). *The five costliest examples of medical negligence*. [Link](https://www.lexpert.ca/news/legal-faq/the-five-costliest-examples-of-medical-negligence/378409)
+- Healthy Debate. (2014, April). *Medical malpractice*. [Link](https://healthydebate.ca/2014/04/about-healthy-debate/opinions-about-healthy-debate/medical-malpractice/)
+
+`,
+    coverImage: "/malpractice-cover.png", // Replace with the correct path to your image
+    date: "June 1, 2025",
+    author: authors["dabosmita"],
+    topic: "Healthcare Law",
+    readingTime: "7 min read",
+    featured: true,
+  },
+  {
+  slug: "healthcare-law",
+  title: "CRISPR, Gene Editing, and the He Jiankui Case: A Healthcare Law Perspective [Dr. Interested x Youth Law Advocates]",
+  excerpt:
+    "The controversial gene-editing experiment by Dr. He Jiankui shocked the global scientific community. This article explores the ethical, legal, and policy violations surrounding the world’s first gene-edited babies and the implications for healthcare law.",
+  content: `
+
+# CRISPR, Gene Editing, and the He Jiankui Case: A Healthcare Law Perspective
+
+## 1. Bioethics 101: Who Guards the Boundaries of Science?
+
+Bioethics examines the moral, legal, and social questions that arise in medicine and the life sciences. It guides how we handle new technologies like gene editing, ensuring that scientific progress doesn't come at the cost of human rights.
+
+> “The systematic study of the moral dimensions—including moral vision, decisions, conduct, and policies—of life sciences and healthcare.”  
+— *Beauchamp & Childress, Principles of Biomedical Ethics*
+
+## 2. Laws That Shape Life: The Global Code Behind Genetic Research
+
+Healthcare law and bioethics rely on global agreements and legal documents, including:
+
+- **Nuremberg Code (1947):** Emphasizes informed consent and voluntary participation.
+- **Belmont Report (1979):** Establishes principles of respect, beneficence, and justice in human subject research.
+- **Oviedo Convention (1997):** Prohibits heritable genetic modification for non-therapeutic reasons.
+- **China's Biosecurity Law (2020):** Enacted in direct response to gene-editing misuse, mandating ethical review and government oversight.
+
+## 3. CRISPR Babies: The Gene-Edited Twins That Shook the World
+
+In 2018, Chinese scientist Dr. He Jiankui announced the birth of twin girls, “Lulu” and “Nana,” whose embryos had been edited using CRISPR-Cas9 to disable a gene (CCR5) associated with HIV susceptibility. Though presented as a medical breakthrough, the act sparked widespread outrage.
+
+## 4. Crossing the Line: The Legal and Ethical Failures of Dr. He Jiankui
+
+He Jiankui’s actions violated multiple principles of healthcare law and ethics:
+
+- **No Medical Necessity:** The children were not at direct risk of HIV; safer alternatives like sperm washing already existed.
+- **Coerced Consent:** Participants were misled, documents were poorly translated, and incentives were offered.
+- **Unregulated Germline Editing:** Changes were heritable and could not be consented to by future generations.
+- **Unproven Technology Use:** CRISPR is not yet precise enough for safe use in human embryos, increasing the risk of unintended mutations.
+
+## 5. From Lab Coat to Courtroom: How the Law Responded
+
+In 2019, a Chinese court sentenced He to three years in prison for conducting illegal medical procedures. His collaborators were also penalized. In response, China enacted its **Biosecurity Law**, requiring stricter ethical approval and oversight for genetic and biomedical research.
+
+## 6. Science vs. Ethics: Can the Law Keep Up with the Lab?
+
+This case triggered a global re-evaluation of how law and science intersect. Key questions include:
+
+- How do we enforce international bioethical standards?
+- Who should regulate emerging technologies like CRISPR?
+- What safeguards should protect future generations?
+
+## 7. A Cautionary Tale for the Genetic Age
+
+The He Jiankui case is a landmark example of healthcare law in action. It highlights the importance of aligning medical innovation with legal accountability and ethical integrity.
+
+> Science without legal and ethical guardrails can lead to irreversible harm.
+
+## 8. References & Further Reading
+
+- [Oxford Practical Ethics Blog (2018)](https://blog.practicalethics.ox.ac.uk/2018/11/the-fundamental-ethical-flaw-in-jiankui-hes-alleged-gene-editing-experiment/)
+- [Edinburgh Mason Institute (2022)](https://blogs.ed.ac.uk/mason-institute/2022/07/06/dawn-of-the-designer-baby-the-he-jiankui-affair-and-implications-for-future-ethical-editing-by-julia-corcoran/)
+- [Scientific American (2019)](https://www.scientificamerican.com/article/what-crispr-baby-prison-sentences-mean-for-research/)
+- [The Guardian (2024)](https://www.theguardian.com/science/2024/apr/01/crispr-cas9-he-jiankui-genome-gene-editing-babies-scientist-back-in-lab)
+- [NCBI (2020)](https://pmc.ncbi.nlm.nih.gov/articles/PMC7294836/)
+
+`,
+  coverImage: "/crispr.png",
+  date: "June 2, 2025",
+  author: authors["manasvi"],
+  topic: "Healthcare Law",
+  readingTime: "8 min read",
+  featured: true,
+},
+{
+  slug: "healthcare-law",
+  title: "The Ontario Mental Health Act: A Pillar of Mental Health Law [Dr. Interested x Youth Law Advocates]",
+  excerpt:
+    "Explore the evolution, legal framework, and patient rights embedded in Ontario’s Mental Health Act—a cornerstone in balancing care and autonomy for individuals with mental illness.",
+  content: `
+
+# The Ontario Mental Health Act: A Pillar of Mental Health Law
+
+## Historical Development and Evolution
+
+The Ontario Mental Health Act has evolved significantly since its inception in the mid-20th century. Originally, detention in mental hospitals was based primarily on the presence of psychiatric disorders requiring observation and treatment. The 1967 Act introduced provisions for involuntary admission when hospitalization was essential for safety, either of the individual or others. A major shift came in 1978 when amendments replaced the “need to treat” philosophy with a focus on determinable risk factors. This transition marked a societal move from paternalism toward respecting individual rights and freedoms in mental health care.
+
+## Key Provisions and Legislative Framework
+
+The Act sets clear rules governing voluntary and involuntary admissions to psychiatric hospitals, specifying when intervention is lawful—particularly if an individual poses a danger due to a mental disorder. It also introduces Community Treatment Orders (CTOs), allowing some patients to receive treatment in the community under specific conditions instead of hospitalization.
+
+The Mental Health Act works in tandem with other critical legislation, such as the Health Care Consent Act—which governs informed consent—and the Substitute Decisions Act, which outlines the roles of substitute decision-makers when patients lack capacity.
+
+## Involuntary Admission Forms and Procedures
+
+To balance crisis intervention with respect for rights, the Act uses two important forms:
+
+- **Form 1:** Completed by a physician, it permits detention for up to 72 hours for psychiatric evaluation when the individual poses serious harm risks.
+- **Form 2:** Issued by a justice of the peace, it enables police to bring an individual to hospital for assessment when the person refuses or is unable to seek help voluntarily.
+
+These safeguards aim to respect autonomy while ensuring timely care.
+
+## Patient Rights and Advocacy Systems
+
+Protecting patient rights is central to the Act. Individuals detained under the Mental Health Act have the right to understand why and to appeal their detention through a review board.
+
+Supporting this framework is the **Psychiatric Patient Advocate Office (PPAO)**, which provides education, advocacy, and legal assistance to patients and families. This helps balance the inherent power disparities in psychiatric treatment and reinforces legal protections.
+
+## Social Significance and Contemporary Concerns
+
+The Mental Health Act plays a critical role in balancing necessary psychiatric care with individual freedoms. As mental healthcare shifts increasingly towards community-based models, the Act clarifies when institutional intervention is justified.
+
+Nevertheless, challenges remain—such as resource shortages that sometimes funnel individuals with mental illness into the criminal justice system rather than appropriate healthcare. This ongoing issue highlights the need for effective legislation and sufficient resources to promote care in the least restrictive settings.
+
+## Balancing Care and Individual Autonomy
+
+The Ontario Mental Health Act reflects a mature, balanced approach to mental health law. Moving beyond paternalistic “need to treat” philosophies, it integrates respect for individual autonomy with necessary treatment.
+
+By establishing clear criteria and review processes, the Act provides guidance for healthcare professionals and protections for vulnerable individuals alike. Understanding these provisions is essential not only for providers but also for patients, families, and advocates navigating Ontario’s mental health system.
+
+This legislation remains a foundational pillar in preserving dignity and rights while addressing severe mental health needs.
+
+## References & Further Reading
+
+- [Ontario Ministry of the Attorney General. Mental Health Act, R.S.O. 1990, c. M.7](https://www.ontario.ca/laws/statute/90m07)
+- [Ontario Ministry of Health. Information Guide – Rights Advice under the Mental Health Act (2024)](https://www.ontario.ca/files/2024-05/moh-information-guide-rights-advice-under-mental-health-act-en-2024-05-21.pdf)
+- [Ontario Ministry of Health. Psychiatric Patient Advocate Office (PPAO)](https://www.ontario.ca/page/psychiatric-patient-advocate-office)
+- [Ontario Hospital Association & Borden Ladner Gervais LLP. A Practical Guide to Mental Health and the Law in Ontario](https://www.oha.com/news/a-practical-guide-to-mental-health-and-the-law-in-ontario)
+- [Centre for Addiction and Mental Health. Your Rights](https://www.camh.ca/en/patients-and-families/information-for-patients/your-rights)
+
+`,
+  coverImage: "/mental-health-act.png",
+  date: "June 1, 2025",
+  author: authors["muhammad-lari"],
+  topic: "Healthcare Law",
+  readingTime: "7 min read",
+  featured: true,
+},
+	
 ]
 
 // Helper functions
