@@ -136,7 +136,25 @@ export const departments: DepartmentType[] = [
         name: "Ganesh Kartik Nagasubramanian",
         role: "Outreach Member",
         image: "/logo.png", // Need Image
+        bio: "Ganesh Kartik Nagasubramanian is a Grade 10 student at Glenforest enrolled in the IB Program at Glenforest Secondary School.",
+        socialLinks: {
+        },
+      },
+      {
+        id: "outreach-mem3",
+        name: "Malak Zawra",
+        role: "Outreach Member",
+        image: "/logo.png", // Need Image
         bio: "Developing strategies to increase our presence in high schools across the region.",
+        socialLinks: {
+        },
+      },
+      {
+        id: "outreach-mem4",
+        name: "Maria Mohamed",
+        role: "Outreach Member",
+        image: "/logo.png", // Need Image
+        bio: "Hi, I am Maria Mohamed. I am a high school student with a passion for medicine and a dream of becoming a surgeon. I joined Dr. Interested as a member of the outreach team because I want to help others learn about healthcare and connect with opportunities that can shape their future.",
         socialLinks: {
         },
       },
@@ -192,7 +210,25 @@ export const departments: DepartmentType[] = [
         name: "Aaron Sethi",
         role: "Research Member",
         image: "/Aaron.png",
-        bio: "Developing resources to help students understand and engage in medical research.",
+        bio: "Designing educational resources to help students explore and participate in medical research.",
+        socialLinks: {},
+      },
+      {
+        id: "research-mem6",
+        name: "Sameera Hussain",
+        role: "Research Member",
+        image: "/logo.png",
+        bio: "Sameera Hussain is a Grade 11 student at Castlebrooke Secondary School with a growing interest in public health and law. She aspires to pursue a career that will allow her to reform laws and systems in order to build a more equitable healthcare system for all. Sameera consistently demonstrates a strong work ethic both inside and outside the classroom. She actively contributes to her community through part-time work, volunteerism, and ongoing involvement in various service initiatives. Passionate about growth and impact, she regularly engages in passion projects that strengthen her skills in research, planning, and coordination. Sameera's dedication to her commitments, attention to detail, and drive to challenge herself have fostered the development of strong leadership qualities. She is eager to contribute to the innovative and meaningful work of Dr. Interested and looks forward to being part of initiatives that inspire real change.",
+        socialLinks: {
+          instagram: "https://www.instagram.com/sameerahussain53/",
+        },
+      },
+      {
+        id: "research-mem7",
+        name: "Adhi Ammanath",
+        role: "Research Member",
+        image: "/logo.png",
+        bio: "Providing learning aids to guide students in understanding and contributing to medical research",
         socialLinks: {},
       },
     ],
@@ -312,6 +348,16 @@ export const departments: DepartmentType[] = [
           instagram: "https://www.instagram.com/misti.bobade/",
         },
       },
+      {
+        id: "publications-mem5",
+        name: "Raine Waverka",
+        role: "Publications Member",
+        image: "/raine.jpg",
+        bio: "Raine Waverka is a sophomore originating from Florida, currently enrolled in Cumberland County High School TN. With a deep interest in bacteriophage research and CRISPR-CAS, Raine is dedicated to increasing medical literacy and contributing to phage genomics. She is currently studying under Vanderbilt University’s SHE oncology program, and researching CRISPR in BU’s SummerLab program. Eager to make a meaningful contribution to the scientific field, Raine seeks to find genuine connections and form useful publications.",
+        socialLinks: {
+          instagram: "https://www.instagram.com/b.iird/",
+        },
+      },
     ],
   },
   {
@@ -377,6 +423,17 @@ export const departments: DepartmentType[] = [
         image: "/soham.png", // Updated path
         bio: "Developing networking opportunities to help students build connections in the healthcare field.",
         socialLinks: {},
+      },
+      {
+        id: "events-mem3",
+        name: "Christian Cortés ",
+        role: "Events Member",
+        image: "/Christian Cortés.jpeg", // Updated path
+        bio: "Christian Cortés is a second-year medical student with a strong commitment to making medical knowledge more human, accessible, and socially relevant. His passion for science communication, health education, and youth-led collaboration motivates him to join Dr. Interested, an organization that reflects the values he stands for: responsible communication, active participation, and social transformation through knowledge. He has been involved in projects at the intersection of medicine and the humanities, the application of artificial intelligence to biological signal analysis, and the creation of spaces where young people can learn, lead, and develop impactful health initiatives.",
+        socialLinks: {
+          linkedin: "https://www.linkedin.com/in/christian-cortes-armijo/",
+          instagram: "https://www.instagram.com/kris_coa/",
+        },
       },
     ],
   },
