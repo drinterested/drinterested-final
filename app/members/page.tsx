@@ -6,7 +6,7 @@ import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Instagram, Linkedin, Globe, ChevronDown, ChevronUp } from "lucide-react"
-import { president, departments, vicePresidents } from "@/data/members"
+import { president, departments, vicePresidents, advisors } from "@/data/members"
 import ScrollToTop from "@/components/scroll-to-top"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
@@ -55,9 +55,10 @@ export default function MembersPage() {
       <section className="py-8 bg-white">
         <div className="container">
           <Tabs defaultValue="leadership" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-6">
+            <TabsList className="grid w-full grid-cols-4 mb-6">
               <TabsTrigger value="leadership">Leadership</TabsTrigger>
               <TabsTrigger value="departments">Departments</TabsTrigger>
+              <TabsTrigger value="advisors">Advisors</TabsTrigger>
               <TabsTrigger value="join">Join Us</TabsTrigger>
             </TabsList>
 
@@ -439,6 +440,90 @@ export default function MembersPage() {
                   </div>
                 </div>
               ))}
+            </TabsContent>
+
+            <TabsContent value="advisors" className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold mb-4 text-center text-[#405862]">Medical Student Advisors</h3>
+                <p className="text-center text-[#405862]/80 mb-6 max-w-2xl mx-auto text-sm">
+                  Our medical student advisors provide valuable guidance and mentorship, helping bridge the gap between
+                  high school and medical education.
+                </p>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {advisors.map((advisor) => (
+                    <Card
+                      key={advisor.id}
+                      className="overflow-hidden border-[#405862]/20 shadow-sm hover:shadow-md transition-shadow"
+                    >
+                      <div className="bg-[#f5f1eb] flex items-center justify-center p-4">
+                        <div className="relative h-32 w-32 rounded-full overflow-hidden">
+                          <Image
+                            src={advisor.image || "/placeholder.svg"}
+                            alt={advisor.name}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                      </div>
+                      <CardContent className="p-4">
+                        <h4 className="text-base font-semibold text-[#405862]">{advisor.name}</h4>
+                        <p className="text-sm text-[#405862]/75 mb-2">{advisor.role}</p>
+                        <p className="text-sm text-[#405862] mb-3">
+                          {expandedBios[advisor.id] ? advisor.bio : truncateBio(advisor.bio, 120)}
+                        </p>
+                        {advisor.bio.length > 120 && (
+                          <button
+                            onClick={() => toggleBio(advisor.id)}
+                            className="text-[#405862] text-sm font-medium hover:text-[#4ecdc4] transition-colors mb-3 flex items-center"
+                          >
+                            {expandedBios[advisor.id] ? (
+                              <>
+                                Show Less <ChevronUp className="h-4 w-4 ml-1" />
+                              </>
+                            ) : (
+                              <>
+                                See More <ChevronDown className="h-4 w-4 ml-1" />
+                              </>
+                            )}
+                          </button>
+                        )}
+                        <div className="flex space-x-3">
+                          {advisor.socialLinks?.linkedin && (
+                            <Link
+                              href={advisor.socialLinks.linkedin}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
+                            >
+                              <Linkedin className="h-5 w-5" />
+                            </Link>
+                          )}
+                          {advisor.socialLinks?.instagram && (
+                            <Link
+                              href={advisor.socialLinks.instagram}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
+                            >
+                              <Instagram className="h-5 w-5" />
+                            </Link>
+                          )}
+                          {advisor.socialLinks?.website && (
+                            <Link
+                              href={advisor.socialLinks.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
+                            >
+                              <Globe className="h-5 w-5" />
+                            </Link>
+                          )}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
             </TabsContent>
 
             <TabsContent value="join">

@@ -1,81 +1,79 @@
-// SEO utility functions for structured data and metadata
 import type { Metadata } from "next"
 
-type SeoProps = {
+export interface SEOConfig {
   title: string
   description: string
-  url: string
-  ogImage?: string
+  keywords?: string[]
+  image?: string
+  url?: string
   type?: "website" | "article"
   publishedTime?: string
   modifiedTime?: string
-  authors?: string[]
-  tags?: string[]
+  author?: string
+  section?: string
 }
 
-export function generateSeoMetadata({
-  title,
-  description,
-  url,
-  ogImage = "/circle-logo.png",
-  type = "website",
-  publishedTime,
-  modifiedTime,
-  authors,
-  tags,
-}: SeoProps): Metadata {
-  return {
+export function generateSeoMetadata(config: SEOConfig): Metadata {
+  const {
     title,
     description,
+    keywords = [],
+    image = "/android-chrome-512x512.png",
+    url,
+    type = "website",
+    publishedTime,
+    modifiedTime,
+    author,
+    section,
+  } = config
+
+  const metadata: Metadata = {
+    title,
+    description,
+    keywords: keywords.join(", "),
     openGraph: {
       title,
       description,
+      type: type === "article" ? "article" : "website",
       url,
-      siteName: "Dr. Interested",
       images: [
         {
-          url: ogImage,
-          width: 1200,
-          height: 630,
+          url: image,
+          width: 512,
+          height: 512,
           alt: title,
         },
       ],
+      siteName: "Dr. Interested",
       locale: "en_US",
-      type,
-      ...(type === "article" && {
-        article: {
-          publishedTime,
-          modifiedTime,
-          authors: authors?.map((author) => `https://drinterested.tech/members#${author}`),
-          tags,
-        },
-      }),
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [ogImage],
+      images: [image],
       creator: "@DrInterested",
     },
-    alternates: {
-      canonical: url,
-    },
-    keywords: [
-      "healthcare education",
-      "medical careers",
-      "high school students",
-      "healthcare mentorship",
-      "medical research",
-      "Dr. Interested",
-      "healthcare internships",
-      "medical technology",
-      "high school club",
-      "volunteer hours",
-      "healthcare volunteer",
-      "student-led organization",
-    ].concat(tags || []),
   }
+
+  if (type === "article" && publishedTime) {
+    metadata.openGraph = {
+      ...metadata.openGraph,
+      type: "article",
+      publishedTime,
+      modifiedTime,
+      authors: author ? [author] : undefined,
+      section,
+    }
+  }
+
+  if (url) {
+    metadata.alternates = {
+      canonical: url,
+    }
+  }
+
+  return metadata
 }
 
 export function generateOrganizationSchema() {
@@ -83,103 +81,78 @@ export function generateOrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Dr. Interested",
+    description:
+      "Empowering high school students to explore careers in healthcare through education, research, and mentorship.",
     url: "https://drinterested.tech",
-    logo: "https://drinterested.tech/logo.png",
+    logo: "https://drinterested.tech/android-chrome-512x512.png",
+    foundingDate: "2020",
     sameAs: [
       "https://www.instagram.com/dr.interested/",
-      "https://www.linkedin.com/company/dr-interested",
-      "https://discord.gg/pzbGRgsGXY",
+      "https://www.linkedin.com/company/dr-interested/",
+      "https://twitter.com/DrInterested",
     ],
-    description:
-      "Dr. Interested is a student-led organization empowering high school students to explore careers in healthcare through education, research, and mentorship.",
     contactPoint: {
       "@type": "ContactPoint",
-      email: "admin@drinterested.tech",
-      contactType: "customer service",
+      contactType: "General Inquiry",
+      email: "hello@drinterested.tech",
     },
-    keywords: "healthcare education, medical careers, high school students, volunteer hours, healthcare mentorship",
-  }
-}
-
-export function generateEventSchema(event: {
-  name: string
-  description: string
-  startDate: string
-  endDate?: string
-  location: string
-  url: string
-  image?: string
-  organizer?: string
-}) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    name: event.name,
-    description: event.description,
-    startDate: event.startDate,
-    ...(event.endDate && { endDate: event.endDate }),
-    location: {
-      "@type": "Place",
-      name: event.location,
-      ...(event.location.toLowerCase().includes("virtual") && {
-        "@type": "VirtualLocation",
-      }),
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "Global",
     },
-    organizer: {
+    memberOf: {
       "@type": "Organization",
-      name: event.organizer || "Dr. Interested",
-      url: "https://drinterested.tech",
+      name: "Healthcare Education Community",
     },
-    image: event.image || "https://drinterested.tech/logo.png",
-    url: event.url,
+    knowsAbout: [
+      "Healthcare Education",
+      "Medical Careers",
+      "Student Mentorship",
+      "Healthcare Research",
+      "Medical Technology",
+      "Healthcare Leadership",
+    ],
   }
 }
 
 export function generateArticleSchema(article: {
-  headline: string
+  title: string
   description: string
-  image: string
-  datePublished: string
-  dateModified?: string
-  authorName: string
-  authorUrl?: string
-  publisherName?: string
-  publisherLogo?: string
+  author: string
+  publishedDate: string
+  modifiedDate?: string
+  image?: string
   url: string
-  keywords?: string[]
 }) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: article.headline,
+    headline: article.title,
     description: article.description,
-    image: article.image,
-    datePublished: article.datePublished,
-    dateModified: article.dateModified || article.datePublished,
     author: {
       "@type": "Person",
-      name: article.authorName,
-      url:
-        article.authorUrl ||
-        `https://drinterested.tech/members#${article.authorName.toLowerCase().replace(/\s+/g, "-")}`,
+      name: article.author,
     },
     publisher: {
       "@type": "Organization",
-      name: article.publisherName || "Dr. Interested",
+      name: "Dr. Interested",
       logo: {
         "@type": "ImageObject",
-        url: article.publisherLogo || "https://drinterested.tech/circle-logo.png",
+        url: "https://drinterested.tech/android-chrome-512x512.png",
       },
     },
+    datePublished: article.publishedDate,
+    dateModified: article.modifiedDate || article.publishedDate,
+    image: article.image || "https://drinterested.tech/android-chrome-512x512.png",
+    url: article.url,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": article.url,
     },
-    keywords: article.keywords?.join(", ") || "healthcare education, medical careers, high school students",
   }
 }
 
-export function generateBreadcrumbSchema(items: { name: string; url: string }[]) {
+export function generateBreadcrumbSchema(items: Array<{ name: string; url: string }>) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -188,21 +161,6 @@ export function generateBreadcrumbSchema(items: { name: string; url: string }[])
       position: index + 1,
       name: item.name,
       item: item.url,
-    })),
-  }
-}
-
-export function generateFAQSchema(questions: { question: string; answer: string }[]) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: questions.map((q) => ({
-      "@type": "Question",
-      name: q.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: q.answer,
-      },
     })),
   }
 }

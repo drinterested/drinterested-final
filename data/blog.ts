@@ -34,6 +34,7 @@ export const authors: Record<string, Author> = {
     image: "/adil.png",
     bio: "I started Dr. Interested after seeing too many youth struggle to navigate med school paths or build core skills like research and public speaking. This platform exists to change that—by giving students the tools and guidance they need to thrive.",
     linkedIn: "https://adilmukhi.vercel.app/",
+    instagram: "https://instagram.com/adilm.0",
   },
   "muhammad-lari": {
     name: "Muhammad Ibrahim Lari",
@@ -75,19 +76,16 @@ export const authors: Record<string, Author> = {
   },
   "dabosmita-das": {
     name: "Dabosmita Das",
-    image: "/dabosmita.jpg",
+    image: "/Dabosmita.jpg",
     bio: "Dabosmita is a Year 12 student who is endlessly curious and excited to explore new ideas. She actively engages with the latest developments in technology and medicine, while also enjoying deep, contemplative discussions in philosophy. Her interdisciplinary mindset and passion for learning drive her to seek knowledge beyond the classroom.",
     linkedIn: "https://linkedin.com",
   },
   "manasvi-bobade": {
-  name: "Manasvi Bobade",
-  role: "Student Contributor",
-  bio: "Manasvi Bobade is a sophomore at Alliance Academy for Innovation with a strong passion for business and a growing interest in healthcare. She writes to explore the intersection of science, innovation, and youth engagement.",
-  linkedin: "https://www.linkedin.com/in/manasvi-bobade-6695a0330/",
-  twitter: "",
+    name: "Manasvi Bobade",
+    image: "/Manasvi.jpg",
+    bio: "Manasvi Bobade is a sophomore at Alliance Academy for Innovation with a strong passion for business and a growing interest in healthcare. She writes to explore the intersection of science, innovation, and youth engagement.",
+    linkedIn: "https://www.linkedin.com/in/manasvi-bobade-6695a0330/",
 },
-
-  
 }
 
 // Blog Topics
@@ -130,6 +128,43 @@ export const blogTopics: BlogTopic[] = [
 
 // Blog Posts (Ordered from Most Recent to Oldest)
 export const blogPosts: BlogPost[] = [
+  {
+  slug: "maurice-hilleman-vaccine-legacy",
+  title: "Maurice Hilleman and His Vaccine Legacy",
+  excerpt:
+    "Meet Maurice Hilleman, the man behind over 40 vaccines that have saved millions of lives. Discover how a boy from Montana became one of the greatest minds in medical history.",
+  content: `
+# Maurice Hilleman and His Vaccine Legacy
+
+## Who Was Maurice Hilleman?
+
+Maurice Hilleman was a scientist who changed the world of medicine with his work on vaccines. He was born in Montana in 1919 and had a tough start in life after losing both his mother and twin sister at birth. He grew up on a farm and later studied science in college. He earned his PhD and made a name for himself by figuring out that chlamydia was actually caused by bacteria, not a virus. Even though people wanted him to work at a university, he chose to work in vaccine development because he wanted to make a bigger difference in people’s lives.
+
+## What Did Hilleman Do?
+
+Hilleman worked on vaccines for many serious diseases. Early in his career, he helped protect soldiers in World War II from a disease called Japanese encephalitis. Later on, he studied how flu viruses change over time, which helped doctors predict and prepare for future outbreaks. When a big flu outbreak hit in 1957, he and his team worked fast to make millions of vaccine doses to stop it from spreading.
+
+He spent most of his career at a company called Merck, where he helped create vaccines for measles, mumps, rubella, chickenpox, hepatitis A and B, pneumonia, meningitis, and more. One of his most famous moments was when he took a sample of the mumps virus from his own sick daughter, Jeryl Lynn, and turned it into a vaccine that’s still used today. He also came up with the idea to combine the measles, mumps, and rubella shots into one vaccine, which became known as the MMR shot. Later, he helped create the world’s first genetically made vaccine for hepatitis B.
+
+## Why It Matters
+
+Hilleman made over 40 vaccines during his lifetime. Eight of them are part of the regular set of vaccines that kids still get today. Because of his work, it’s estimated that around eight million lives are saved every year. His vaccines have helped prevent deadly illnesses and stopped major outbreaks before they could spread. Many scientists say that no one in history has saved more lives than he did.
+
+## Later Life and Recognition
+
+Even after retiring, Hilleman kept helping scientists around the world. He worked with global health organizations and gave advice on making new vaccines. He won a lot of big awards during his life, including the National Medal of Science. Many top scientists, including Anthony Fauci, called him one of the greatest minds in medicine.
+
+## His Ongoing Impact
+
+Maurice Hilleman’s work is still helping people today. His name is remembered through labs and awards dedicated to vaccine research. His mission to protect people from disease lives on in every shot that saves a life. He wasn’t in it for fame, he just wanted to stop kids from dying. And that’s exactly what he did.
+  `,
+  coverImage: "/maurice-hilleman.png", // Replace with actual image path
+  date: "July 4, 2025",
+  author: authors["manha-atiq"],
+  topic: "Doctors",
+  readingTime: "5 min read",
+  featured: false
+},
   {
   slug: "history-of-mrna-vaccines",
   title: "The History of mRNA Vaccines: From Scientific Curiosity to Global Breakthrough",
