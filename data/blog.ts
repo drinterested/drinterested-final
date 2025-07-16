@@ -86,6 +86,11 @@ export const authors: Record<string, Author> = {
     bio: "Manasvi Bobade is a sophomore at Alliance Academy for Innovation with a strong passion for business and a growing interest in healthcare. She writes to explore the intersection of science, innovation, and youth engagement.",
     linkedIn: "https://www.linkedin.com/in/manasvi-bobade-6695a0330/",
 },
+"raine-waverka": {
+  name: "Raine Waverka",
+  image: "/raine.jpg", 
+  bio: "Raine Waverka is a budding phage researcher exploring CRISPR and oncology through elite science programs at Vanderbilt and Boston University."
+},
 }
 
 // Blog Topics
@@ -124,10 +129,76 @@ export const blogTopics: BlogTopic[] = [
       "Discover the latest research, treatments, and insights into cancer, one of the most challenging medical conditions of our time.",
     image: "/logo.png",
   },
+  {
+  name: "Medical Innovation",
+  slug: "medical-innovation",
+  description: "Explore groundbreaking research, futuristic treatments, and the technologies shaping the next era of healthcare.",
+  image: "/logo.png"
+  },
+  {
+  name: "Recent News",
+  slug: "recent-news",
+  description: "Stay informed with the latest developments, discoveries, and updates from the world of healthcare and medical science.",
+  image: "/logo.png"
+  },
 ]
 
 // Blog Posts (Ordered from Most Recent to Oldest)
 export const blogPosts: BlogPost[] = [
+  
+  {
+  slug: "cps1-crispr-breakthrough",
+  title: "From Diagnosis to Hope: A Medical Milestone in Gene Editing",
+  excerpt:
+    "A historic CRISPR breakthrough gives an infant with a rare genetic disorder a second chance at life—ushering in a new era of personalized medicine.",
+  content: `
+## Overview of CPS1 Deficiency
+
+Carbamoyl phosphate synthetase 1 (CPS1) deficiency is a rare, inherited genetic disorder where the body lacks a critical liver enzyme. Without it, nitrogen cannot be processed, leading to a dangerous buildup of ammonia in the bloodstream. This neurotoxin can cause severe damage to the brain and spinal cord if left untreated.
+
+## Defying a Death Sentence
+
+On May 15, 2025, a research team at the Children’s Hospital of Philadelphia revealed a groundbreaking personalized gene editing therapy for a critically ill infant, nicknamed “KJ,” who was diagnosed with CPS1 deficiency. Using the CRISPR gene editing platform, scientists developed a treatment customized to target only non-reproductive (somatic) cells. This marks the **first known case of CRISPR-based therapy** tailored to a specific individual and administered to a living patient—offering hope for thousands facing genetic disorders.
+
+## Importance of the Breakthrough
+
+Doctors and researchers around the world hailed this moment as a **milestone in modern medicine**. By treating KJ soon after birth, the team prevented irreversible neurological damage. As Dr. Rebecca Ahrens-Nicklas noted, the success came after “years and years of progress” in gene editing. Until now, liver transplant was the only possible intervention for CPS1 deficiency—one often unfeasible for newborns due to rapid ammonia accumulation.
+
+This personalized treatment offers a new path forward for patients facing life-threatening genetic disorders once deemed untreatable.
+
+## Ethical & Practical Challenges
+
+While revolutionary, this development raises important questions:
+
+- **Long-term safety**: CRISPR's precision is unmatched, but off-target edits may have unintended consequences. KJ must be closely monitored throughout life.
+- **Cost and accessibility**: Custom treatments like this require months of development and millions of dollars—posing serious questions about healthcare equity.
+- **Ethics of gene editing**: Although this therapy only alters somatic cells, experts warn about potential future misuse of gene editing for non-medical enhancements.
+- **Delivery limitations**: The liver is relatively easy to target, but many genetic diseases affect the brain or heart—where safe delivery of gene editors remains a scientific challenge.
+
+These concerns underscore the importance of ethical oversight, transparency, and sustained investment in equitable access.
+
+## Outcome
+
+This treatment is a **landmark achievement**: the first successful personalized CRISPR gene therapy in a living patient. It opens doors to future innovations in treating genetic conditions from birth. Despite challenges, it provides real hope to families like KJ’s—proof that scientific advancement can rewrite what once seemed a death sentence into a story of survival and strength.
+
+---
+
+### Works Cited
+
+- Children’s Hospital of Philadelphia. (2025, May 15). *World’s first patient treated with personalized CRISPR gene editing therapy*. [Link](https://www.chop.edu/news/worlds-first-patient-treated-personalized-crispr-gene-editing-therapy-childrens-hospital)
+- He, X., & Zhao, W. (2020). *Advances in CRISPR/Cas-based gene therapy in human genetic diseases*. Frontiers in Genetics, 11, 567. [Link](https://pmc.ncbi.nlm.nih.gov/articles/PMC7129066/)
+- National Institutes of Health. (2025, May 15). *Infant with rare, incurable disease is first to successfully receive personalized gene therapy treatment*. [Link](https://www.nih.gov/news-events/news-releases/infant-rare-incurable-disease-first-successfully-receive-personalized-gene-therapy-treatment)
+- Sample, I. (2025, May 15). *US doctors rewrite DNA of infant with severe genetic disorder in medical first*. The Guardian. [Link](https://www.theguardian.com/science/2025/may/15/us-doctors-rewrite-dna-of-infant-with-severe-genetic-disorder-in-medical-first)
+- Roth, B. L. (2009). *DSM-IV: Diagnosis and classification of mental disorders*. Clinical Neuroscience Research, 6(3–4), 131–137. [Link](https://pubmed.ncbi.nlm.nih.gov/19104924/)
+  `,
+  coverImage: "/cps1-gene-editing.png", 
+  date: "July 10, 2025",
+  author: authors["raine-waverka"],
+  topic: "Medical Innovation", 
+  readingTime: "6 min read",
+  featured: true
+},
+  
   {
   slug: "maurice-hilleman-vaccine-legacy",
   title: "Maurice Hilleman and His Vaccine Legacy",
@@ -158,7 +229,7 @@ Even after retiring, Hilleman kept helping scientists around the world. He worke
 
 Maurice Hilleman’s work is still helping people today. His name is remembered through labs and awards dedicated to vaccine research. His mission to protect people from disease lives on in every shot that saves a life. He wasn’t in it for fame, he just wanted to stop kids from dying. And that’s exactly what he did.
   `,
-  coverImage: "/maurice-hilleman.png", // Replace with actual image path
+  coverImage: "/maurice-hilleman.png", 
   date: "July 4, 2025",
   author: authors["manha-atiq"],
   topic: "Doctors",
@@ -217,7 +288,7 @@ Even if mRNA platforms face challenges in a post-COVID world, they remain one of
 - ClinicalTrials.gov. “Study of mRNA-4157 With Pembrolizumab in Participants With High-Risk Melanoma.” 2022.  
 - “mRNA Vaccines: A Turning Point in the Fight Against Disease.” *Nature*, 2021.
 `,
-  coverImage: "/mrna-history.png", // Replace with actual image path
+  coverImage: "/mrna-history.png", 
   date: "June 24, 2025",
   author: authors["manasvi-bobade"],
   topic: "Healthcare Law",
@@ -635,7 +706,7 @@ Occupational therapists make a big difference in the lives of people who face ev
 `,
     coverImage: "/Internist.png",
     date: "May 13, 2025",
-    author: authors["velan-mangai"],
+    author: authors["maliha-metla"],
     topic: "Types of Doctors",
     readingTime: "6 min read",
     featured: true,
@@ -674,11 +745,64 @@ Psychiatrists aren't here to "fix" people. They are guides, helping individuals 
 `,
     coverImage: "/Psychiatrists.png",
     date: "May 13, 2025",
-    author: authors["manasvi-kale"],
+    author: authors["shaza-ali"],
     topic: "Types of Doctors",
     readingTime: "6 min read",
     featured: true,
   },
+  {
+  slug: "bacteriophages-antimicrobial-resistance",
+  title: "Bacteriophages: The Future of Antimicrobial Resistance?",
+  excerpt:
+    "As antibiotic resistance surges, bacteriophages—viruses that prey on bacteria—may offer a targeted, sustainable, and powerful solution to combat superbugs.",
+  content: `
+In the microscopic world, bacteria evolve as cunning tacticians, rapidly outpacing the drugs invented to restrain them. Antibiotic resistance has recast into a war of attrition—and the microbes are winning. Despite humanity meeting its Waterloo in the race between the tortoise and the hare, humanity's parasitic friends, bacteriophages, emerge as a promising solution to this escalating crisis.
+
+Antibiotics have been widely recognized as a "silent pandemic," as most of the population remains oblivious to the eroding state of antibiotic care. Like Darwin's finches, bacteria quickly utilize natural selection to combat antibiotics. Prescriptions extinguish the bulk of all microorganisms, permitting the minute survivors left to mutate and acquire a defense inimical to antibiotics, forming superbugs. In addition, a study tested 137 strains of *E. coli* in UTIs, and *"the results showed widespread resistance (51.1 – 91.2%)"* (Olorunmola, et al.). There are millions of bacteria worldwide, and the pathogens will grow if unchecked. The pandemic operates as an indomitable blaze, where water only fuels the flames.
+
+### What Are Bacteriophages?
+
+One promising avenue is bacteriophage therapy. Derived from *bacterio-* (bacteria) and the Greek word *phagein* (to devour), bacteriophages are viruses that specifically target and destroy bacteria.
+
+Incredibly abundant, *“it’s estimated there are more than 10³¹ bacteriophages on the planet… more than every other organism on Earth, including bacteria, combined”* (Scott and Buschman). They contain a decahedron head full of DNA, spikes to latch onto their prey, and a baseplate to inject DNA. As ubiquitous as they are plentiful, they are found in soil, water, skin, and virtually all environments.
+
+Discovered in 1896 by Ernest Hanbury Hankin and advanced by George Eliava, phages infect bacterial cells, replicate inside, and lyse them to release their progeny. Their specificity ensures they attack only one bacterial species, leaving human cells and helpful microbes untouched.
+
+As a master’s student in biology put it: *“These deadly viruses provide a multitude of opportunities for the scientific field; the hardest part is ensuring society recognizes it.”*
+
+### Advantages Over Antibiotics
+
+Unlike antibiotics, which target all bacteria indiscriminately, each phage is built to target a specific bacterial species. Unlike antibiotics, which often struggle against bacterial biofilms—fortress-like structures protecting bacteria—phages can penetrate these barriers (Sapkota).
+
+They can clear biofilms by *“actively penetrating their way into biofilms by lysing one bacterial layer at a time, or due to the display of biofilm exopolymer-degrading depolymerases”* (Loc-Carrillo). Phages also have a natural "auto-dosing" ability, making them self-regulating treatments (Abedon).
+
+Are phages safe? Research confirms that bacteriophages are non-toxic and have no side effects (Liu, Dan, et al.). Treatments are also up to 50% cheaper than antibiotics (Verbeken, Gilbert, et al.).
+
+As bacteria evolve resistance, phages evolve alongside them, creating a natural arms race. Interestingly, bacteria that evade phage attacks often become more vulnerable to antibiotics—a molecular catch-22 (Li, et al.).
+
+### Conclusion
+
+Bacteriophages offer a sustainable, precise, and powerful response to antimicrobial resistance. As superbugs rise, phage therapy may be the key to revolutionizing healthcare and ensuring humanity stays ahead in the battle against microbial threats.
+
+---
+
+### Works Cited
+
+- A.B. Shabbir, Muhammad, et al. “Bacteria vs. Bacteriophages: Parallel Evolution of Immune Arsenals.” *Frontiers*, 7:1292. [https://www.frontiersin.org/articles/10.3389/fmicb.2016.01292/full](https://www.frontiersin.org/articles/10.3389/fmicb.2016.01292/full)
+- Liu, Dan, et al. “The Safety and Toxicity of Phage Therapy: A Review of Animal and Clinical Studies.” *Viruses*, vol. 13,7 1268. [https://www.mdpi.com/1999-4915/13/7/1268](https://www.mdpi.com/1999-4915/13/7/1268)
+- Loc-Carrillo, Catherine, and Stephen T. Abedon. “Pros and cons of phage therapy.” *Bacteriophage*, vol. 1,2: 111–114. DOI:10.4161/bact.1.2.14590
+- Olorunmola, Felix Oluwasola, et al. “Antibiotic resistance and virulence properties in Escherichia coli strains from cases of urinary tract infections.” *African Journal of Infectious Diseases*, vol. 7,1: 1–7. [https://www.ajol.info/index.php/ajid/article/view/85474](https://www.ajol.info/index.php/ajid/article/view/85474)
+- Sapkota, Anupama. “Bacteriophage – Definition, Structure, Life Cycles, Applications, Phage Therapy.” *Microbe Notes*. [https://microbenotes.com/bacteriophage/](https://microbenotes.com/bacteriophage/)
+- Verbeken, Gilbert, et al. “Taking bacteriophage therapy seriously: a moral argument.” *BioMed Research International*, 621316. [https://onlinelibrary.wiley.com/doi/10.1155/2014/621316](https://onlinelibrary.wiley.com/doi/10.1155/2014/621316)
+  `,
+  coverImage: "/bacteriophage-article.png",
+  date: "May 7, 2025",
+  author: authors["raine-waverka"],
+  topic: "Medical Innovation", 
+  readingTime: "6 min read",
+  featured: true
+},
+
   {
     slug: "neurosurgeon-masters-mind-spine",
     title: "Neurosurgeon",
@@ -753,7 +877,7 @@ After the surgery, the patient needed time to heal and follow-up care to ensure 
 `,
     coverImage: "/Opthalmicsurgeon.png",
     date: "April 28, 2025",
-    author: authors["manha-atiq"],
+    author: authors["maliha-metla"],
     topic: "Types of Doctors",
     readingTime: "9 min read",
   },
@@ -785,7 +909,7 @@ In conclusion, vascular surgeons are very important doctors who help people with
 `,
     coverImage: "/vascular.png",
     date: "April 27, 2025",
-    author: authors["muhammad-lari"],
+    author: authors["maliha-metla"],
     topic: "Types of Doctors",
     readingTime: "5 min read",
   },
@@ -1284,10 +1408,84 @@ Endocrinologists play a crucial role in diagnosing and treating hormone-related 
 `,
     coverImage: "/endocrinologist.png",
     date: "March 30, 2025",
-    author: authors["manha-atiq"],
+    author: authors["maliha-metla"],
     topic: "Types of Doctors",
     readingTime: "8 min read",
   },
+  {
+  slug: "what-is-chemotherapy",
+  title: "What is Chemotherapy?",
+  excerpt:
+    "Chemotherapy is a treatment that targets fast-growing cancer cells using powerful drugs. Learn how it works, its different types, side effects, and how it’s administered.",
+  content: `
+## What is Chemotherapy?
+
+Chemotherapy is a type of **cancer treatment** that uses drugs to kill cancer cells. These drugs target cells that grow and divide quickly. Since cancer cells grow faster than most normal cells, chemotherapy focuses on stopping them. However, some healthy cells—like those in the hair, digestive system, and bone marrow—also divide quickly, so they can be affected too. This leads to side effects like **hair loss**, **nausea**, **tiredness**, and a **higher risk of infections**.
+
+---
+
+## How Chemotherapy Works
+
+Chemotherapy drugs interfere with how cancer cells grow and divide. Since cancer cells multiply without control, these drugs are designed to **slow or stop this growth**. Unfortunately, because the drugs also affect healthy fast-dividing cells, side effects often occur in other parts of the body.
+
+---
+
+## Types of Chemotherapy
+
+There are several classes of chemotherapy drugs, each working in unique ways:
+
+- **Alkylating agents**: Damage DNA to stop replication (e.g., cyclophosphamide, cisplatin)
+- **Antimetabolites**: Mimic cell building blocks and disrupt DNA formation (e.g., methotrexate, 5-fluorouracil)
+- **Anti-tumor antibiotics**: Prevent DNA from unwinding and replicating (e.g., doxorubicin)
+- **Mitotic inhibitors**: Stop cell division by targeting microtubules (e.g., paclitaxel, vincristine)
+- **Topoisomerase inhibitors**: Block enzymes that help DNA replicate (e.g., etoposide, irinotecan)
+
+---
+
+## Uses of Chemotherapy
+
+Chemotherapy is used in various ways:
+
+- **Curative chemotherapy**: Aims to completely eliminate cancer.
+- **Adjuvant chemotherapy**: Given after surgery/radiation to kill leftover cancer cells.
+- **Neoadjuvant chemotherapy**: Given before surgery/radiation to shrink tumors.
+- **Palliative chemotherapy**: Used to relieve symptoms and improve comfort in advanced cancer cases.
+
+---
+
+## Side Effects of Chemotherapy
+
+Because chemotherapy impacts healthy fast-growing cells, common side effects include:
+
+- **Hair loss** due to affected hair follicles.
+- **Nausea and vomiting** from digestive tract irritation.
+- **Fatigue**, often due to lower red blood cell counts.
+- **Weakened immunity** from reduced white blood cells.
+- **Mouth sores** and **neuropathy** (tingling or numbness in hands/feet).
+
+---
+
+## How Chemotherapy Is Given
+
+Chemotherapy can be administered in different forms:
+
+- **Intravenous (IV)** infusion into a vein.
+- **Oral** tablets or capsules.
+- **Injection** into muscles or under the skin.
+- **Topical** creams for skin cancers.
+- **Intrathecal** (into the spinal fluid) or **intraperitoneal** (into the abdomen) routes for certain cases.
+
+---
+
+Chemotherapy remains a powerful tool in the fight against cancer, and ongoing research continues to improve its precision and reduce its side effects.
+  `,
+  coverImage: "/chemotherapy-cover.jpg",
+  date: "March 29, 2025",
+  author: authors["manha-atiq"],
+  topic: "Cancer",
+  readingTime: "5 min read",
+  featured: false
+},
   {
     slug: "pediatric-nurses-critical-role",
     title: "Pediatric Nurses",
@@ -1320,6 +1518,128 @@ With the increasing demand for pediatric healthcare services, more nurses must s
     topic: "Types of Nurses",
     readingTime: "7 min read",
   },
+  {
+  slug: "what-do-cardiologists-do",
+  title: "What Do Cardiologists Really Do?",
+  excerpt:
+    "From chest pain to complex procedures, cardiologists play a crucial role in diagnosing and treating heart conditions. Learn how they work and why they matter.",
+  content: `
+## What Is a Cardiologist?
+
+Cardiologists are doctors who specialize in the **cardiovascular system**, which includes the heart and blood vessels. If you’ve ever had chest pain, high blood pressure, or other heart-related issues, a cardiologist is the specialist you’d likely see.
+
+## How Cardiologists Diagnose Heart Conditions
+
+Cardiologists use various tools to diagnose heart problems. These include:
+
+- **Electrocardiogram (EKG)**: A test that checks your heart's electrical signals.
+- **Echocardiogram**: An ultrasound of the heart that helps evaluate how well it's pumping.
+- **Stress tests, CT scans, and MRIs** may also be used depending on symptoms.
+
+Once a diagnosis is made, cardiologists might prescribe medications, recommend lifestyle changes, or in more severe cases, refer patients to **cardiothoracic surgeons**.
+
+## Types of Cardiologists
+
+Cardiology has many sub-specialties. Some of the most common include:
+
+- **Pediatric Cardiologists**: Focused on heart conditions in children, including congenital heart defects.
+- **Interventional Cardiologists**: Perform minimally invasive procedures like angioplasty using catheters.
+- **Clinical Cardiologists**: Deal with diagnosis and ongoing treatment of heart disease.
+- **Heart Failure Specialists**: Treat patients with weakened heart function.
+- **Cardio-Oncologists**: Manage heart complications from cancer treatments.
+- **Congenital Heart Specialists**: Focus on birth defects in the heart.
+- **Cardiac Imaging Specialists**: Use advanced imaging tools to assess heart function.
+
+## The Long Road to Becoming a Cardiologist
+
+Becoming a board-certified cardiologist requires **at least 10 years** of post-secondary education:
+
+1. **4 years of medical school**
+2. **3 years of internal medicine residency**
+3. **3 years of cardiology fellowship**
+4. **Passing the Cardiovascular Disease Exam** by the American Board of Internal Medicine (ABIM)
+
+## A Real-World Innovation: The Super GACHON Technique
+
+Cardiologists don't just treat—they innovate. A recent case involved a man with a dangerous leg clot. Traditional clot-removal methods failed, so doctors invented a novel approach called the **"Super Grab A Clot and Hold ON (Super GACHON)"** technique to save the patient's limb. This highlights how cardiologists continuously develop **new techniques** to tackle complex cases.
+
+## Conclusion
+
+Cardiologists are essential to maintaining cardiovascular health. From diagnosing early-stage hypertension to performing life-saving interventions, they blend **advanced technology** with a **deep understanding of heart physiology**. With new innovations emerging regularly, cardiology remains a dynamic and vital field in modern medicine.
+  `,
+  coverImage: "/cardiologists.jpg",
+  date: "February 20, 2025",
+  author: authors["shaza-ali"],
+  topic: "Doctors",
+  readingTime: "5 min read",
+  featured: false
+},
+  {
+  slug: "understanding-hepatology",
+  title: "Understanding Hepatology",
+  excerpt:
+    "Explore what hepatologists do, what conditions they treat, and how integrative approaches like Ayurveda may help manage chronic liver conditions.",
+  content: `
+## What Conditions Does a Hepatologist Treat?
+
+A hepatologist is a medical specialist who focuses on diagnosing and treating diseases related to the **liver, gallbladder, bile ducts, and pancreas**. A healthcare provider may refer patients for conditions such as:
+
+- **Viral hepatitis** (B or C)
+- **Alcohol-induced hepatitis and steatohepatitis**
+- **Non-alcoholic fatty liver disease (NAFLD)**
+- **Cholestasis**
+- **Biliary stricture**
+- **Primary sclerosing cholangitis**
+- **Primary biliary cholangitis**
+- **Bile duct cancer**
+
+---
+
+## Education and Training of a Hepatologist
+
+Becoming a hepatologist requires extensive medical training:
+
+1. **4 years** in medical school (MD or DO)
+2. **3 years** of internal medicine residency
+3. **3 years** of gastroenterology fellowship
+4. **1 year** advanced transplant hepatology fellowship *or* a **combined 3-year program**
+5. Certification by the **American Board of Internal Medicine**
+
+---
+
+## Case Study: Integrative Ayurveda Treatment for Liver Cirrhosis
+
+Liver cirrhosis causes scarring in liver tissue, and reversing it with conventional medicine is difficult. A study explored **Ayurveda**, a traditional Indian healing system, in managing this condition.
+
+Three patients with **decompensated liver cirrhosis** received:
+
+- Internal Ayurvedic medications
+- **Panchakarma therapy** (detox and rejuvenation)
+- Special diets with **salt and fluid control**
+
+All three reported:
+
+- Improved **quality of life**
+- Less **abdominal pain**
+- Reduced **fatigue and swelling**
+- Better **liver function test results**
+
+While cirrhosis may not be fully reversible, this case suggests fibrosis may improve when **Ayurvedic treatment is combined with modern monitoring**.
+
+---
+
+## Conclusion
+
+**Hepatology** addresses some of the most critical health challenges involving the liver and digestive system. As research grows and integrative approaches like Ayurveda gain visibility, hepatologists are at the forefront of both innovation and patient care. With continued study, novel therapies could reshape how we approach chronic liver disease.
+  `,
+  coverImage: "/hepatology-cover.jpg", 
+  date: "February 16, 2025",
+  author: authors["muhammad-lari"],
+  topic: "Doctors",
+  readingTime: "4 min read",
+  featured: false
+},
+  
 ]
 
 // Helper functions

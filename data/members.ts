@@ -61,10 +61,10 @@ export const vicePresidents: MemberType[] = [
 
 export const advisors: Member[] = [
   {
-    id: "kate-tucker",
-    name: "Kate Tucker",
+    id: "Chinthala-Trisha-goud",
+    name: "Chinthala Trisha Goud",
     role: "Medical Student Advisor",
-    bio: "Kate Tucker is a dedicated medical student who provides valuable guidance and mentorship to Dr. Interested members. Her expertise in medical education and passion for teaching help shape our programs and ensure they align with current healthcare standards.",
+    bio: "Chinthala Trisha Goud is a dedicated medical student who provides valuable guidance and mentorship to Dr. Interested members. Her expertise in medical education and passion for teaching help shape our programs and ensure they align with current healthcare standards.",
     image: "/logo.png",
     socialLinks: {},
   },
@@ -130,6 +130,17 @@ export const departments: DepartmentType[] = [
           instagram: "https://www.instagram.com/madina_ ",
         },
       },
+      {
+        id: "tech-mem3",
+        name: "Ouedraogo Boukary",
+        role: "Technology Member",
+        image: "/logo.png",
+        bio: "Supporting the technology team with expertise in frontend development and user experience design..",
+        socialLinks: {
+          linkedin: "https://www.linkedin.com/in/madina-behboode-88a334270?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
+          instagram: "https://www.instagram.com/madina_ ",
+        },
+      },
     ],
   },
 
@@ -153,10 +164,10 @@ export const departments: DepartmentType[] = [
     members: [
       {
         id: "marketing-mem1",
-        name: "Adam Alchihneh",
+        name: "Jawwad Ahmad",
         role: "Marketing Member",
         image: "/logo.png",
-        bio: "Adam is a dedicated Grade 11 student enrolled in the IB Diploma Programme at Erindale Secondary School. During Adam’s free time, he enjoys going for walks and runs, spending time with family and friends, coding and gaming. Passionate about the health sciences, Adam wishes to go into the medical field in the future. ",
+        bio: "Managing brand identity across platforms and campaigns.",
         socialLinks: {},
       },
       {
@@ -185,10 +196,26 @@ export const departments: DepartmentType[] = [
       },
       {
         id: "marketing-mem5",
-        name: "Jeevn Grewal",
+        name: "Avishi Jain",
         role: "Marketing Member",
         image: "/logo.png",
-        bio: "Jeevn is a Grade 11 student at Sherwood Heights with a strong interest in the sciences and medicine. As a member of the marketing team for the Dr. Interested program, she is excited to be part of an initiative that encourages exploration in the medical field. Jeevn’s ultimate career goal is to become a biomedical engineer, combining her passion for technology and healthcare to improve lives.",
+        bio: "Designing promotional content that captures attention and builds interest.",
+        socialLinks: {},
+      },
+      {
+        id: "marketing-mem6",
+        name: "Keyaan Wali Chowdhury",
+        role: "Marketing Member",
+        image: "/logo.png",
+        bio: "Running campaigns to grow awareness and reach.",
+        socialLinks: {},
+      },
+      {
+        id: "marketing-mem7",
+        name: "Emily Do",
+        role: "Marketing Member",
+        image: "/logo.png",
+        bio: "Creating content tailored to our audience’s needs and interests.",
         socialLinks: {},
       },
     ],
@@ -226,7 +253,7 @@ export const departments: DepartmentType[] = [
       socialLinks: {},
       },
       {
-        id: "publications-mem2",
+        id: "publications-mem1",
         name: "Maliha Metla",
         role: "Publications Member",
         image: "/Maliha.JPG",
@@ -236,7 +263,7 @@ export const departments: DepartmentType[] = [
         },
       },
       {
-        id: "publications-mem3",
+        id: "publications-mem2",
         name: "Manha Atiq",
         role: "Publications Member",
         image: "/logo.png",
@@ -244,7 +271,7 @@ export const departments: DepartmentType[] = [
         socialLinks: {},
       },
       {
-        id: "publications-mem4",
+        id: "publications-mem3",
         name: "Manasvi Bobade",
         role: "Publications Member",
         image: "/Manasvi.jpg",
@@ -255,44 +282,52 @@ export const departments: DepartmentType[] = [
         },
       },
       {
-        id: "publications-mem5",
-        name: "Raine Waverka",
+        id: "publications-mem4",
+        name: "Iosef Isaac Perez",
         role: "Publications Member",
-        image: "/raine.jpg",
-        bio: "Raine Waverka is a sophomore originating from Florida, currently enrolled in Cumberland County High School TN. With a deep interest in bacteriophage research and CRISPR-CAS, Raine is dedicated to increasing medical literacy and contributing to phage genomics. She is currently studying under Vanderbilt University’s SHE oncology program, and researching CRISPR in BU’s SummerLab program. Eager to make a meaningful contribution to the scientific field, Raine seeks to find genuine connections and form useful publications.",
+        image: "/logo.png",
+        bio: "Ensuring consistent tone, style, and accuracy in all materials.",
         socialLinks: {
           instagram: "https://www.instagram.com/b.iird/",
         },
       },
       {
-        id: "research-mem1",
+        id: "publications-mem5",
         name: "Gaeun Lee",
-        role: "Research Member",
+        role: "Publications Member",
         image: "/logo.png", // Need Image
         bio: "Supporting research projects and mentorship programs for aspiring medical researchers.",
         socialLinks: {},
       },
       {
-        id: "research-mem2",
+        id: "publications-mem6",
         name: "Dabosmita Parial",
-        role: "Research Member",
+        role: "Publications Member",
         image: "/Dabosmita.jpg",
         bio: "Dabosmita is a year 12 student who is curious and excited to learn new things all the time- whether it be about the latest developments in tech, medicine, or random contemplative philosophical ideas. She is passionate about leadership and public speaking- which she demonstrates at her school by being a prefect and also being part of the school's debate team that regularly takes part in interschool debates organised by Qatar Debate. Alongside debate, she takes part in MUN conferences and speech competitions within and outside her school. She is a member of publications at Cosmic-Us, a student-led organization and works as a research team member at Dr.Interested. Dabosmita will always look forward to future projects to develop her skills and discover her potential further!",
         socialLinks: {},
       },
       {
-        id: "research-mem3",
+        id: "publications-mem7",
         name: "Prithi Balaji",
-        role: "Research Member",
+        role: "Publications Member",
         image: "/logo.png", // Need Image
         bio: "Prithi brings a unique blend of STEM and medicinal knowledge to the mix of strengths here at the FireGuard cause. Currently a 10th grader in Charlotte, NC, Prithi is ranked 1st in a class of 686 students, with a weighted GPA of 4.55. She is deeply involved in both academics and extracurricular activities, showcasing leadership in various roles. Prithi's academic focus spans subjects like AP Computer Science, Honors Biomedical Sciences, and AP Psychology, with a particular interest in the application of AI in healthcare. She is currently working on a research paper exploring the use of CNN-LSTM AI models for diagnosing melanoma, combining her technical skills and passion for medical innovation. She also placed Gold for NCSO Regionals, and continues to compete in events related to disease detection, anatomy, and experimental design. As an intern with ThinkNeuro, Prithi has had the opportunity to engage in various professional development initiatives, including contributing to the development of neurologic curriculum reforms and working on complex marketing logistics. Finally, she has had the opportunity to represent her impact on her community by giving back to the middle schoolers through volunteering, committing to a subcommittee of 4H where she actively volunteers, and being a proofreader for a global set of users at Project Gutenberg. Ultimately, these experiences have all led Prithi to become a motivated, inspired, and resilient individual, who will strive to improve her knowledge whilst contributing to the excellent atmosphere that is the Academy of Sciences.",
       },
       {
-        id: "research-mem4",
+        id: "publications-mem8",
         name: "Manasvi Kale",
-        role: "Research Member",
+        role: "Publications Member",
         image: "/logo.png", // Need Image
         bio: "Developing resources to help students understand and engage in medical research.",
+        socialLinks: {},
+      },
+      {
+        id: "publications-mem9",
+        name: "Avika Tyagi",
+        role: "Publications Member",
+        image: "/logo.png", // Need Image
+        bio: "Producing articles, blogs, and printed materials for distribution.",
         socialLinks: {},
       },
     ],
@@ -305,7 +340,7 @@ export const departments: DepartmentType[] = [
     director: {
         id: "hr-dir",
         name: "Yumeth Wickramasinghe",
-        role: "HR Member",
+        role: "Director of Human Resources",
         image: "/yumeth.png",
         bio: "Yumeth Wickramasinghe is a grade 10 IB student at Glenforest Secondary School. He has been a part of many volunteering activities around the community,  such as the Egyptian Coptic festival and making cards for Kids during the Christmas season. He also volunteers in his school every week, helping out some of his peers with Mathematics and sometimes English. Some of his hobbies include reading, playing tennis and badminton as well as playing board games. He has been involved in the Junior Tennis Team at Glenforest and won Junior Athlete of the Month. He looks forward to continuing to develop his leadership skills and to succeed in new adventures in the future.",
         socialLinks: {
@@ -314,9 +349,17 @@ export const departments: DepartmentType[] = [
     },
     members: [
       {
-        id: "hr-dir",
+        id: "hr-dep-dir",
+        name: "Vicky Shi",
+        role: "Assistant Director of HR (Ambassador Program)",
+        image: "/logo.png", 
+        bio: "Handling team feedback, conflict resolution, and peer support.",
+        socialLinks: {},
+      },
+      {
+        id: "hr-mem1",
         name: "Aayan Shivji",
-        role: "Director of Human Resources",
+        role: "Human Resources Member",
         image: "/logo.png", 
         bio: "Aayan Shivji is a hardworking high school student at St. Francis Xavier Secondary School with a passion for learning and community involvement. He enjoys exploring science and mathematics, constantly challenging himself with new concepts and problem-solving opportunities. Beyond academics, Aayan is deeply involved in extracurricular activities and loves volunteering. Whether organizing school events, mentoring younger students, or participating in community service, he is always eager to make a positive impact. His enthusiasm extends to sports, where he really enjoys table tennis and tennis, embracing both the competitive and team aspects of the game. With a strong work ethic and a drive to grow, Aayan continues to seek new experiences that shape his skills and character. He is truly looking forward to working with Dr. Interested and having a meaningful learning experience that will help him grow both academically and professionally.",
         socialLinks: {},
@@ -324,9 +367,41 @@ export const departments: DepartmentType[] = [
       {
         id: "hr-mem2",
         name: "Koraya Whyte-Smith",
-        role: "HR Member",
+        role: "Human Resources Member",
         image: "/logo.png",
         bio: "Supporting the onboarding process and creating resources for new members.",
+        socialLinks: {},
+      },
+      {
+        id: "hr-mem3",
+        name: "Dwarakamaye Bolla",
+        role: "Human Resources Member",
+        image: "/logo.png",
+        bio: "Managing member information and departmental records.",
+        socialLinks: {},
+      },
+      {
+        id: "hr-mem4",
+        name: "Srikar Reddy",
+        role: "Human Resources Member",
+        image: "/logo.png",
+        bio: "Maintaining clear communication between leadership and team members.",
+        socialLinks: {},
+      },
+      {
+        id: "hr-mem5",
+        name: "Joanne Lee",
+        role: "Human Resources Member",
+        image: "/logo.png",
+        bio: "Coordinating recruitment, onboarding, and internal communications.",
+        socialLinks: {},
+      },
+      {
+        id: "hr-mem6",
+        name: "Mariam Azzam",
+        role: "Human Resources Member",
+        image: "/logo.png",
+        bio: "Promoting a positive and inclusive team culture.",
         socialLinks: {},
       },
     ],
@@ -339,7 +414,7 @@ export const departments: DepartmentType[] = [
     director: {
       id: "outreach-dir",
       name: "Ali Salman",
-      role: "Director of Outreach",
+      role: "Director of Events",
       image: "/ali-salman.jpeg", 
       bio: "Ali Salman is a Grade 10 student at Glenforest Secondary School pursuing the IB program. He is deeply passionate about engineering, robotics, and computer science, demonstrated through his involvement in school and external initiatives. At school, he serves as the Secretary and Trainer of the Computer Science Club and was part of the pit-crew team for the FRC Robotics Club before it disbanded. Outside of school, he is a logistics member at a STEM nonprofit, writes for prominent student-led science journals, and is part of the mechanical sub-team for one of Ontario's top 10 ranked FRC robotics teams. His most prominent achievements include being recognized as a global finalist at the prestigious New York Academy of Sciences Junior Academy Ethical AI competition.",
       socialLinks: {
@@ -364,9 +439,9 @@ export const departments: DepartmentType[] = [
         socialLinks: {},
       },
       {
-        id: "outreach-mem1",
+        id: "events-mem3",
         name: "Keenan Johnson",
-        role: "Outreach Member",
+        role: "Events Member",
         image: "/keenan.jpg", // Need Image
         bio: "Hi! I'm Keenan! I am a dedicated high school student with a passion for leadership, STEM exploration, and community engagement. Through my involvement in extracurricular activities such as the Athletic Council and STEM Fellowship programs, I have developed strong communication, teamwork, and problem-solving skills. I am committed to fostering positive, inclusive environments and inspiring young children to grow through creative activities. My curiosity and initiative drive me to explore various fields of knowledge, from physics to graphic design and video editing.",
         socialLinks: {
@@ -374,22 +449,45 @@ export const departments: DepartmentType[] = [
         },
       },
       {
-        id: "outreach-mem2",
+        id: "events-mem4",
         name: "Ganesh Kartik Nagasubramanian",
-        role: "Outreach Member",
+        role: "Events Member",
         image: "/logo.png", // Need Image
         bio: "Ganesh Kartik Nagasubramanian is a Grade 10 student at Glenforest enrolled in the IB Program at Glenforest Secondary School.",
         socialLinks: {
         },
       },
       {
-        id: "outreach-mem4",
+        id: "events-mem5",
         name: "Maria Mohamed",
-        role: "Outreach Member",
+        role: "Events Member",
         image: "/logo.png", // Need Image
         bio: "Hi, I am Maria Mohamed. I am a high school student with a passion for medicine and a dream of becoming a surgeon. I joined Dr. Interested as a member of the outreach team because I want to help others learn about healthcare and connect with opportunities that can shape their future.",
-        socialLinks: {
-        },
+        socialLinks: {},
+      },
+      {
+        id: "events-mem6",
+        name: "Ajitesh Sankara Narayanan",
+        role: "Events Member",
+        image: "/logo.png", // Need Image
+        bio: "Planning engaging events that align with our mission and goals.",
+        socialLinks: {},
+      },
+      {
+        id: "events-mem7",
+        name: "Olivia McIntosh",
+        role: "Events Member",
+        image: "/logo.png", // Need Image
+        bio: "Developing creative themes and ideas for upcoming events.",
+        socialLinks: {},
+      },
+      {
+        id: "events-mem8",
+        name: "Cindy Cao",
+        role: "Events Member",
+        image: "/logo.png", // Need Image
+        bio: "Collecting feedback and analyzing success post-event.",
+        socialLinks: {},
       },
     ],
   },
@@ -413,6 +511,46 @@ export const departments: DepartmentType[] = [
         role: "Finance Member",
         image: "/akeer.png",
         bio: "Researching grant opportunities and developing compelling proposals.",
+        socialLinks: {},
+      },
+      {
+        id: "grants-mem2",
+        name: "Agathiya Ramalingam",
+        role: "Finance Member",
+        image: "/logo.png",
+        bio: "Preparing and overseeing budgets for various initiatives.",
+        socialLinks: {},
+      },
+      {
+        id: "grants-mem3",
+        name: "Priyansh Sharma",
+        role: "Finance Member",
+        image: "/logo.png",
+        bio: "Tracking expenses and managing reimbursements.",
+        socialLinks: {},
+      },
+      {
+        id: "grants-mem4",
+        name: "Vedanshi Raheja",
+        role: "Finance Member",
+        image: "/logo.png",
+        bio: "Ensuring financial transparency through regular reporting.",
+        socialLinks: {},
+      },
+      {
+        id: "grants-mem5",
+        name: "Liam Lacey",
+        role: "Finance Member",
+        image: "/logo.png",
+        bio: "Identifying cost-saving opportunities across departments.",
+        socialLinks: {},
+      },
+      {
+        id: "grants-mem6",
+        name: "Nidhish Vijaya Ragavan",
+        role: "Finance Member",
+        image: "/logo.png",
+        bio: "Coordinating funding requests and approval processes.",
         socialLinks: {},
       },
     ],
