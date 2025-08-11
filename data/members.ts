@@ -59,7 +59,7 @@ export const vicePresidents: MemberType[] = [
   },
 ]
 
-export const advisors: Member[] = [
+export const advisors: MemberType[] = [
   {
     id: "Chinthala-Trisha-goud",
     name: "Chinthala Trisha Goud",
@@ -167,8 +167,11 @@ export const departments: DepartmentType[] = [
         name: "Jawwad Ahmad",
         role: "Marketing Member",
         image: "/logo.png",
-        bio: "Managing brand identity across platforms and campaigns.",
-        socialLinks: {},
+        bio: "Hi, my name is Jawwad. I’m a Grade 11 IB student who has an interest in Engineering, Robotics and STEM. I have participated in many volunteering activities like Peer Helpers and at the YMCA. I have also participated in clubs like DECA and Peer Helpers. I look forward to collaborating on cutting edge ideas that push the boundaries of what's possible.",
+        socialLinks: {
+          linkedin: "https://www.linkedin.com/in/jawwad-ahmad-15197b32a/",
+          instagram: "https://www.instagram.com/jawwad0806/",
+        },
       },
       {
         id: "marketing-mem2",
@@ -199,23 +202,27 @@ export const departments: DepartmentType[] = [
         name: "Avishi Jain",
         role: "Marketing Member",
         image: "/logo.png",
-        bio: "Designing promotional content that captures attention and builds interest.",
-        socialLinks: {},
+        bio: "Hi, I’m Avishi. 16. I build soulful things—from startups to podcasts to midnight Canva brainstorms powered by banana chips. Obsessed with creativity, emotional truth, and mango season metaphors (I might’ve compared love to Alphonso pulp once. No regrets). Purpose is my vibe. Impact is my goal. I’ve accidentally created aesthetic spreadsheets that made people cry (in a good way). I believe in journaling under trees, healing through memes, and occasionally naming my Notion pages like they’re characters in a fantasy novel.🥭✨🧃",
+        socialLinks: {
+          instagram: "https://www.instagram.com/selfmade_avi/",
+        },
       },
       {
         id: "marketing-mem6",
         name: "Keyaan Wali Chowdhury",
         role: "Marketing Member",
         image: "/logo.png",
-        bio: "Running campaigns to grow awareness and reach.",
-        socialLinks: {},
+        bio: "Keyaan Wali Chowdhury is a Grade 12 student at TL Kennedy Secondary School in Mississauga, Ontario, with a strong background in academics, leadership, advocacy, and technology. He has led his school’s science club, contributed to environmental action through HNP Canada, and championed international development as an advocate with Results Canada by engaging policymakers and publishing letters in support of global health equity. He also has a passion for education and community service, having volunteered as a math tutor with the Global Share Support Youth Association (GSSYA), where he helped students build confidence and improve their skills. With a keen interest in innovation, he has built a small computer network using Raspberry Pi and is currently developing Triviabot, an interactive trivia chatbot. His work reflects a commitment to using technology, education, and civic engagement to create a meaningful impact.",
+        socialLinks: {
+          linkedin: "www.linkedin.com/in/keyaan-chowdhury-46487936a"
+        },
       },
       {
         id: "marketing-mem7",
         name: "Emily Do",
         role: "Marketing Member",
         image: "/logo.png",
-        bio: "Creating content tailored to our audience’s needs and interests.",
+        bio: "Hi! My name is Emily, I am a senior in high school with plans to pursue a career in dentistry in the future. I’m someone who naturally cares about people and likes to create a comfortable space for others to feel heard and supported. I’m curious, hardworking, and open to challenges, especially when they help me grow or make a positive difference in someone’s life. Whether it’s through academics, volunteering, or mentorship, I’m always looking for ways to connect with others and contribute to something meaningful.",
         socialLinks: {},
       },
     ],
@@ -237,7 +244,7 @@ export const departments: DepartmentType[] = [
     },
     members: [
       {
-      id: "research-dir",
+      id: "1-deputy-dir",
       name: "Manmeet Singh",
       role: "Assistant Director of Publications (Research)",
       image: "/manmeet.png", 
@@ -245,7 +252,7 @@ export const departments: DepartmentType[] = [
       socialLinks: {},
       },
       {
-      id: "podcast-dir",
+      id: "2-deputy-dir",
       name: "Adhi Ammanath",
       role: "Assistant Director of Publications (Podcast)",
       image: "/logo.png", 
@@ -269,17 +276,6 @@ export const departments: DepartmentType[] = [
         image: "/logo.png",
         bio: "Developing educational resources to help students understand medical concepts and career paths.",
         socialLinks: {},
-      },
-      {
-        id: "publications-mem3",
-        name: "Manasvi Bobade",
-        role: "Publications Member",
-        image: "/Manasvi.jpg",
-        bio: "Manasvi is a sophomore at Alliance Academy for Innovation with a strong passion for business and a growing interest in healthcare. She’s actively pursuing both fields and has already started several initiatives in business. With an entrepreneurial mindset, she serves as the Director of Marketing & Outreach for EcoWave Foundation, a nonprofit focused on environmental conservation, particularly ocean cleanup. Manasvi also works as a social media marketing intern for an Airbnb rental, where she’s building her skills in digital marketing. With a remarkable academic turnaround and determination, she aims to make a positive impact through her work and plans to continue growing both professionally and personally.",
-        socialLinks: {
-          linkedin: "https://www.linkedin.com/in/manasvi-bobade-6695a0330/",
-          instagram: "https://www.instagram.com/misti.bobade/",
-        },
       },
       {
         id: "publications-mem4",
@@ -315,19 +311,19 @@ export const departments: DepartmentType[] = [
         bio: "Prithi brings a unique blend of STEM and medicinal knowledge to the mix of strengths here at the FireGuard cause. Currently a 10th grader in Charlotte, NC, Prithi is ranked 1st in a class of 686 students, with a weighted GPA of 4.55. She is deeply involved in both academics and extracurricular activities, showcasing leadership in various roles. Prithi's academic focus spans subjects like AP Computer Science, Honors Biomedical Sciences, and AP Psychology, with a particular interest in the application of AI in healthcare. She is currently working on a research paper exploring the use of CNN-LSTM AI models for diagnosing melanoma, combining her technical skills and passion for medical innovation. She also placed Gold for NCSO Regionals, and continues to compete in events related to disease detection, anatomy, and experimental design. As an intern with ThinkNeuro, Prithi has had the opportunity to engage in various professional development initiatives, including contributing to the development of neurologic curriculum reforms and working on complex marketing logistics. Finally, she has had the opportunity to represent her impact on her community by giving back to the middle schoolers through volunteering, committing to a subcommittee of 4H where she actively volunteers, and being a proofreader for a global set of users at Project Gutenberg. Ultimately, these experiences have all led Prithi to become a motivated, inspired, and resilient individual, who will strive to improve her knowledge whilst contributing to the excellent atmosphere that is the Academy of Sciences.",
       },
       {
-        id: "publications-mem8",
-        name: "Manasvi Kale",
-        role: "Publications Member",
-        image: "/logo.png", // Need Image
-        bio: "Developing resources to help students understand and engage in medical research.",
-        socialLinks: {},
-      },
-      {
         id: "publications-mem9",
         name: "Avika Tyagi",
         role: "Publications Member",
         image: "/logo.png", // Need Image
         bio: "Producing articles, blogs, and printed materials for distribution.",
+        socialLinks: {},
+      },
+      {
+        id: "publications-mem10",
+        name: "Saniyah Sajjad",
+        role: "Publications Member",
+        image: "/logo.png", // Need Image
+        bio: "Hi, I am an incoming first-year Psychology student at Western with an AEO status. I am passionate about business and psychology, and I aim to enter the marketing field in the future. ",
         socialLinks: {},
       },
     ],
@@ -349,7 +345,7 @@ export const departments: DepartmentType[] = [
     },
     members: [
       {
-        id: "hr-dep-dir",
+        id: "3-deputy-dir",
         name: "Vicky Shi",
         role: "Assistant Director of HR (Ambassador Program)",
         image: "/logo.png", 
@@ -422,6 +418,22 @@ export const departments: DepartmentType[] = [
       },
     },
     members: [
+      {
+        id: "4-deputy-dir",
+        name: "Rameen Usman",
+        role: "Deputy Director of Events",
+        image: "/logo.png",
+        bio: "Hello, I'm Rameen Usman, a Year 11 student currently living in Lahore- Pakistan. I have a strong passion for STEM and love working behind the scenes to organize and manage events. I am a three-time scholarship recipient from institutions like Dartmouth, Harvard and Polygence which have allowed me to explore more within the pre-med field and gain exposure to real-world applications of science. In my free time I enjoy writing as a creative outlet. I’m deeply committed to closing the gender gap in STEM and helping create space for more women to lead in this field.",
+        socialLinks: {},
+      },
+      {
+        id: "5-deputy-dir",
+        name: "Amina Assanova",
+        role: "Deputy Director of Events",
+        image: "/logo.png",
+        bio: "Planning and executing workshops that provide hands-on learning experiences.",
+        socialLinks: {},
+      },
       {
         id: "events-mem1",
         name: "Andrew Wang",
@@ -505,6 +517,16 @@ export const departments: DepartmentType[] = [
       socialLinks: {},
     },
     members: [
+      {
+        id: "grants-mem7",
+        name: "Ishanth Shantmoorthy",
+        role: "Deputy Director of Finance",
+        image: "/logo.png",
+        bio: "I’m Ishanth Shantmoorthy, a Grade 12 student at an IB school in Arizona with a strong passion for biomedical engineering and the intersection of healthcare and technology. My academic interests motivate me to explore how innovation can improve medical care and patient outcomes. To support this passion, I currently serve as Deputy Director of Finance for Dr. Interested, where I manage the club’s finances and contribute to STEM outreach initiatives. I also serve as treasurer of the National Honor Society, which has helped me develop valuable skills in budgeting and leadership.In addition to these roles, I’m co-captain of my school’s robotics team and the sub-team lead for engineering. These leadership positions allow me to guide design projects and organize technical outreach efforts, combining my interests in engineering and community engagement. I also compete in FBLA, where I placed 2nd in Coding & Programming at Regionals, ranked in the Top 10 for Accounting at States, and qualified for Nationals. Alongside these experiences, I have published two biomedical research papers and gained real-world insight by shadowing professionals in biomedical engineering. Outside of academics and leadership, I volunteer at Banner Health in both the supply chain department and the laboratory, where I assist with essential operations that support patient care. I also co-host a student-run medical podcast and have developed Money Plant, a personal finance app designed to help students build strong money management skills. My current coursework reflects my diverse interests and includes HL Biology, SL Psychology, HL History, HL Language & Literature, SL Spanish, HL Math, and Anatomy and Physiology.",
+        socialLinks: {
+          linkedin:"https://www.linkedin.com/in/ishanth-shantmoorthy-baab73359/ ",
+        },
+      },
       {
         id: "grants-mem1",
         name: "Akeer Kuol Malual Nyok",
