@@ -63,9 +63,9 @@ export default function MembersPage() {
             </TabsList>
 
             <TabsContent value="leadership" className="space-y-6">
-              {/* President */}
+              {/* Executive Director */}
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-center text-[#405862]">President</h3>
+                <h3 className="text-lg font-semibold mb-4 text-center text-[#405862]">Executive Director</h3>
                 <div className="max-w-2xl mx-auto">
                   <Card className="overflow-hidden border-[#405862]/20 shadow-sm hover:shadow-md transition-shadow">
                     <div className="grid md:grid-cols-3">
@@ -132,9 +132,9 @@ export default function MembersPage() {
                 </div>
               </div>
 
-              {/* Vice Presidents */}
+              {/* Deputy Executive Directors */}
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-center text-[#405862]">Vice Presidents</h3>
+                <h3 className="text-lg font-semibold mb-4 text-center text-[#405862]">Deputy Executive Directors</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   {vicePresidents.map((vp) => (
                     <Card

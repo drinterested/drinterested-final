@@ -225,28 +225,28 @@ export default function OurWorkPage() {
           >
             <motion.div variants={fadeIn}>
               <div className="bg-white p-4 rounded-lg shadow-sm text-center border border-[#405862]/10 hover:border-[#4ecdc4]/30 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
-                                <div className="text-2xl font-bold text-[#4ecdc4] mb-1">55,000+</div>
+                                <div className="text-2xl font-bold text-[#4ecdc4] mb-1">60,000+</div>
                 <div className="text-[#405862]/80 text-sm">Students Engaged</div>
               </div>
             </motion.div>
 
             <motion.div variants={fadeIn}>
               <div className="bg-white p-4 rounded-lg shadow-sm text-center border border-[#405862]/10 hover:border-[#4ecdc4]/30 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
-                <div className="text-2xl font-bold text-[#4ecdc4] mb-1">65+</div>
+                <div className="text-2xl font-bold text-[#4ecdc4] mb-1">70+</div>
                 <div className="text-[#405862]/80 text-sm">Countries Reached</div>
               </div>
             </motion.div>
 
             <motion.div variants={fadeIn}>
               <div className="bg-white p-4 rounded-lg shadow-sm text-center border border-[#405862]/10 hover:border-[#4ecdc4]/30 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
-                <div className="text-2xl font-bold text-[#4ecdc4] mb-1">350k+</div>
+                <div className="text-2xl font-bold text-[#4ecdc4] mb-1">Over 1M</div>
                 <div className="text-[#405862]/80 text-sm">Marketing Reach</div>
               </div>
             </motion.div>
 
             <motion.div variants={fadeIn}>
               <div className="bg-white p-4 rounded-lg shadow-sm text-center border border-[#405862]/10 hover:border-[#4ecdc4]/30 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
-                <div className="text-2xl font-bold text-[#4ecdc4] mb-1">550+</div>
+                <div className="text-2xl font-bold text-[#4ecdc4] mb-1">900+</div>
                 <div className="text-[#405862]/80 text-sm">Members</div>
               </div>
             </motion.div>
