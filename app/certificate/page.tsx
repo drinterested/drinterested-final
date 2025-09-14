@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
 const templateMap: Record<string, string> = {
@@ -25,18 +24,34 @@ function CertificateForm() {
   };
 
   const handleDownload = async () => {
-    const element = document.getElementById("certificate");
-    if (!element) return;
-
-    const canvas = await html2canvas(element);
-    const imgData = canvas.toDataURL("image/png");
+    if (!template) return;
 
     const pdf = new jsPDF("landscape", "pt", "a4");
-    const width = pdf.internal.pageSize.getWidth();
-    const height = pdf.internal.pageSize.getHeight();
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = pdf.internal.pageSize.getHeight();
 
-    pdf.addImage(imgData, "PNG", 0, 0, width, height);
-    pdf.save(`${name}-certificate.pdf`);
+    const img = new Image();
+    img.src = template;
+    img.onload = () => {
+      
+      const ratio = Math.min(pdfWidth / img.width, pdfHeight / img.height);
+      const imgWidth = img.width * ratio;
+      const imgHeight = img.height * ratio;
+      const imgX = (pdfWidth - imgWidth) / 2;
+      const imgY = (pdfHeight - imgHeight) / 2;
+
+      
+      pdf.addImage(img, "PNG", imgX, imgY, imgWidth, imgHeight);
+
+      
+      pdf.setFontSize(32);
+      pdf.setFont("helvetica", "bold");
+      pdf.text(name, pdfWidth / 2, pdfHeight / 2 + 60, {
+        align: "center",
+      });
+
+      pdf.save(`${name}-certificate.pdf`);
+    };
   };
 
   return (
