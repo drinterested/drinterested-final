@@ -44,7 +44,7 @@ function CertificateForm() {
       
       pdf.setFontSize(32);
       pdf.setFont("helvetica", "bold");
-      pdf.text(name, pdfWidth / 2, pdfHeight / 2 + 10, {
+      pdf.text(name, pdfWidth / 2, pdfHeight / 2, {
         align: "center",
       });
 
