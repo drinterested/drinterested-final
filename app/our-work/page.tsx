@@ -46,7 +46,7 @@ export default function OurWorkPage() {
         <div className="container relative z-10 max-w-5xl mx-auto">
           <motion.div className="text-center" initial="hidden" animate="visible" variants={fadeIn}>
             <motion.a
-              href="https://impact.drinterested.org"
+              href="https://impact2025.drinterested.org"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#4ecdc4]/20 text-[#4ecdc4] px-4 py-2 rounded-full text-sm font-medium mb-4 hover:bg-[#4ecdc4]/30 transition-colors cursor-pointer"

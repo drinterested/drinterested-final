@@ -207,6 +207,17 @@ export default function MembersPage() {
                   ))}
                 </div>
               </div>
+
+              <div className="mt-8 p-6 bg-[#4ecdc4]/10 border border-[#4ecdc4]/30 rounded-lg text-center">
+                <h3 className="text-lg font-semibold text-[#405862] mb-2">Interested in Joining Our Team?</h3>
+                <p className="text-[#405862]/80 mb-3">
+                  Check out the <span className="font-semibold text-[#4ecdc4]">Join Us</span> tab above to learn about
+                  executive opportunities and apply to join our leadership team!
+                </p>
+                <p className="text-sm text-[#405862]/70">
+                  Applications are open year-round and reviewed on an ongoing basis.
+                </p>
+              </div>
             </TabsContent>
 
             <TabsContent value="departments" className="space-y-6">
@@ -440,6 +451,16 @@ export default function MembersPage() {
                   </div>
                 </div>
               ))}
+              <div className="mt-8 p-6 bg-[#4ecdc4]/10 border border-[#4ecdc4]/30 rounded-lg text-center">
+                <h3 className="text-lg font-semibold text-[#405862] mb-2">Interested in Joining Our Team?</h3>
+                <p className="text-[#405862]/80 mb-3">
+                  Check out the <span className="font-semibold text-[#4ecdc4]">Join Us</span> tab above to learn about
+                  executive opportunities and apply to join our leadership team!
+                </p>
+                <p className="text-sm text-[#405862]/70">
+                  Applications are open year-round and reviewed on an ongoing basis.
+                </p>
+              </div>
             </TabsContent>
 
             <TabsContent value="advisors" className="space-y-6">
@@ -524,25 +545,81 @@ export default function MembersPage() {
                   ))}
                 </div>
               </div>
+              <div className="mt-8 p-6 bg-[#4ecdc4]/10 border border-[#4ecdc4]/30 rounded-lg text-center">
+                <h3 className="text-lg font-semibold text-[#405862] mb-2">Interested in Joining Our Team?</h3>
+                <p className="text-[#405862]/80 mb-3">
+                  Check out the <span className="font-semibold text-[#4ecdc4]">Join Us</span> tab above to learn about
+                  executive opportunities and apply to join our leadership team!
+                </p>
+                <p className="text-sm text-[#405862]/70">
+                  Applications are open year-round and reviewed on an ongoing basis.
+                </p>
+              </div>
             </TabsContent>
 
-            <TabsContent value="join">
+            <TabsContent value="join" className="space-y-6">
               <div className="py-8 bg-[#f5f1eb]/50 rounded-lg text-center">
-                <div className="max-w-2xl mx-auto px-4">
-                  <h2 className="text-2xl font-bold mb-4 text-[#405862]">Join Our Team</h2>
+                <div className="max-w-3xl mx-auto px-4">
+                  <h2 className="text-2xl font-bold mb-4 text-[#405862]">Join Our Executive Team</h2>
                   <p className="mb-6 text-[#405862]/90">
-                    Want to be part of the Dr. Interested team? We're always looking for passionate, driven students to
-                    join our community. Apply now to become a member and help inspire the next generation of healthcare
+                    Applications are open year-round and reviewed on an ongoing basis. We're looking for passionate,
+                    driven students to join our leadership team and help inspire the next generation of healthcare
                     professionals.
                   </p>
-                  <Link
-                    href="https://forms.gle/i3Y6vazF5TErGBxG7"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-md bg-[#405862] px-6 py-3 text-sm font-medium text-white shadow-md hover:shadow-lg hover:bg-[#334852] transition-all"
-                  >
-                    Apply Now
-                  </Link>
+
+                  <div className="grid md:grid-cols-3 gap-4 mb-6">
+                    <Card className="border-[#405862]/20 shadow-sm hover:shadow-md transition-shadow">
+                      <CardContent className="p-6 text-center">
+                        <h3 className="font-semibold text-[#405862] mb-3">General Executive</h3>
+                        <p className="text-sm text-[#405862]/80 mb-4">
+                          Join our core leadership team and help shape the future of Dr. Interested.
+                        </p>
+                        <Link
+                          href="https://docs.google.com/forms/d/e/1FAIpQLSdKpENvCsz0w21heZr4nn3UJJ5b46KOs6EQkUEaZ8fvlwqnxQ/viewform"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button className="w-full bg-[#405862] hover:bg-[#334852] text-white">Apply Now</Button>
+                        </Link>
+                      </CardContent>
+                    </Card>
+
+                    <Card className="border-[#405862]/20 shadow-sm hover:shadow-md transition-shadow">
+                      <CardContent className="p-6 text-center">
+                        <h3 className="font-semibold text-[#405862] mb-3">Club Ambassador</h3>
+                        <p className="text-sm text-[#405862]/80 mb-4">
+                          Represent Dr. Interested in your community and help us grow our reach.
+                        </p>
+                        <Link href="https://forms.gle/89v6zXtrdfGvMUBJ8" target="_blank" rel="noopener noreferrer">
+                          <Button className="w-full bg-[#405862] hover:bg-[#334852] text-white">Apply Now</Button>
+                        </Link>
+                      </CardContent>
+                    </Card>
+
+                    <Card className="border-[#405862]/20 shadow-sm hover:shadow-md transition-shadow">
+                      <CardContent className="p-6 text-center">
+                        <h3 className="font-semibold text-[#405862] mb-3">Podcast Team</h3>
+                        <p className="text-sm text-[#405862]/80 mb-4">
+                          Help create engaging podcast content and share healthcare stories.
+                        </p>
+                        <Link href="https://forms.gle/WX7P4Vypq4ZHMEEDA" target="_blank" rel="noopener noreferrer">
+                          <Button className="w-full bg-[#405862] hover:bg-[#334852] text-white">Apply Now</Button>
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  </div>
+
+                  <div className="text-center">
+                    <p className="text-sm text-[#405862]/80">
+                      Have questions about joining our team?{" "}
+                      <Link
+                        href="mailto:hr@drinterested.org"
+                        className="text-[#4ecdc4] hover:text-[#405862] font-medium transition-colors"
+                      >
+                        Contact us at hr@drinterested.org
+                      </Link>
+                    </p>
+                  </div>
                 </div>
               </div>
             </TabsContent>

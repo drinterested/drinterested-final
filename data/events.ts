@@ -47,17 +47,6 @@ export const upcomingEvents: EventType[] = [
     link: "https://discord.gg/pzbGRgsGXY",
   },
   {
-    title: "Dr. Interested Club Ambassador Program",
-    date: "July 2025 - Ongoing",
-    time: "Ongoing",
-    location: "Virtual",
-    description:
-      "Join our Dr. Interested Club Ambassador Program to lead and innovate in the healthcare community. Applications are now open!",
-    image: "/club-ambassador.png",
-    status: "open",
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSf3J7k3y32jncOKVkngx2MKC_QvpWCDXY3o8CP6xNRzKvlLog/viewform",
-  },
-  {
     title: "Dr. Interested Webinar Series: Certificate Stream",
     date: "August 31st to November 2nd",
     time: "11AM EST",
