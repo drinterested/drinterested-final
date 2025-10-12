@@ -29,7 +29,7 @@ export default function LinksPage() {
   }, [])
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText("https://drinterested.org/links")
+    navigator.clipboard.writeText("https://www.drinterested.org/links")
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -156,7 +156,7 @@ export default function LinksPage() {
           </p>
 
           <div className="flex items-center mt-3 text-sm bg-[#f0ebe3] rounded-full px-3 py-1.5">
-            <span className="text-[#405862]/70 mr-2">drinterested.tech/links</span>
+            <span className="text-[#405862]/70 mr-2">www.drinterested.org/links</span>
             <button
               onClick={copyToClipboard}
               className="text-[#4ecdc4] hover:text-[#3dbdb5] transition-colors"

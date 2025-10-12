@@ -44,18 +44,18 @@ export default function BlogClientPage() {
     name: "Dr. Interested Blog",
     description:
       "Explore the latest insights, research, and information about healthcare careers, medical advancements, and educational opportunities.",
-    url: "https://drinterested.tech/blog",
+    url: "https://www.drinterested.org/blog",
     isPartOf: {
       "@type": "WebSite",
       name: "Dr. Interested",
-      url: "https://drinterested.tech",
+      url: "https://www.drinterested.org",
     },
     mainEntity: {
       "@type": "ItemList",
       itemListElement: filteredPosts.slice(0, 10).map((post, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        url: `https://drinterested.tech/blog/${post.slug}`,
+        url: `https://www.drinterested.org/blog/${post.slug}`,
         name: post.title,
       })),
     },
@@ -152,7 +152,7 @@ export default function BlogClientPage() {
               <p className="text-[#405862]/70 mb-6">Try adjusting your search or browse all topics</p>
               <Button
                 variant="outline"
-                className="border-[#405862] text-[#405862] hover:bg-[#405862] hover:text-white"
+                className="border-[#405862] text-[#405862] hover:bg-[#405862] hover:text-white bg-transparent"
                 onClick={() => {
                   setSearchTerm("")
                   setSelectedTopic(null)

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import HomePage from "./home-page"
-import { ImpactPopup } from "@/components/impact-popup"
+import { DomainAnnouncementPopup } from "@/components/domain-announcement-popup"
 
 export default function Page() {
   const [showPopup, setShowPopup] = useState(true)
@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <>
       <HomePage />
-      {showPopup && <ImpactPopup onClose={() => setShowPopup(false)} />}
+      {showPopup && <DomainAnnouncementPopup onClose={() => setShowPopup(false)} isMainPage={true} />}
     </>
   )
 }

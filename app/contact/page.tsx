@@ -70,12 +70,12 @@ export default function ContactPage() {
     name: "Contact Dr. Interested",
     description:
       "Get in touch with Dr. Interested for questions about our events, collaborations, or joining our team.",
-    url: "https://drinterested.tech/contact",
+    url: "https://www.drinterested.org/contact",
     mainEntity: {
       "@type": "Organization",
       name: "Dr. Interested",
-      email: "admin@drinterested.tech",
-      url: "https://drinterested.tech",
+      email: "admin@drinterested.org",
+      url: "https://www.drinterested.org",
       sameAs: ["https://www.instagram.com/dr.interested/", "https://www.linkedin.com/company/dr-interested"],
     },
   }
@@ -107,7 +107,7 @@ export default function ContactPage() {
           name="keywords"
           content="contact, healthcare education, high school students, medical careers, Dr. Interested"
         />
-        <link rel="canonical" href="https://drinterested.tech/contact" />
+        <link rel="canonical" href="https://www.drinterested.org/contact" />
       </Head>
 
       <SeoSchema schema={contactPageSchema} />
@@ -146,7 +146,7 @@ export default function ContactPage() {
                   <Mail className="h-5 w-5 text-[#4ecdc4] mt-0.5" />
                   <div>
                     <h3 className="font-semibold text-[#405862] text-sm">Email</h3>
-                    <p className="text-[#405862]/80 text-sm">admin@drinterested.tech</p>
+                    <p className="text-[#405862]/80 text-sm">admin@drinterested.org</p>
                     <p className="text-xs text-[#405862]/60 mt-1">We'll respond within 48 hours</p>
                   </div>
                 </div>

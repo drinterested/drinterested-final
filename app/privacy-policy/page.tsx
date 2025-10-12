@@ -47,9 +47,9 @@ export default function PrivacyPolicyPage() {
             and other details you provide when interacting with our services.
           </p>
           <p className="text-slate-600 mt-4">
-            In some cases, we may also collect demographic information through voluntary forms. This data is only used in
-            combined (aggregated) formats for reporting and analysis. If used individually, all data will remain strictly
-            anonymous and will never be linked to personally identifiable information.
+            In some cases, we may also collect demographic information through voluntary forms. This data is only used
+            in combined (aggregated) formats for reporting and analysis. If used individually, all data will remain
+            strictly anonymous and will never be linked to personally identifiable information.
           </p>
         </section>
 
@@ -65,8 +65,8 @@ export default function PrivacyPolicyPage() {
             <li>Reporting impact and trends through aggregate demographic data</li>
           </ul>
           <p className="text-slate-600 mt-4">
-            We take privacy seriously and ensure that demographic data is either combined with other responses or stripped of
-            identifiable details to maintain full anonymity.
+            We take privacy seriously and ensure that demographic data is either combined with other responses or
+            stripped of identifiable details to maintain full anonymity.
           </p>
         </section>
 
@@ -142,7 +142,7 @@ export default function PrivacyPolicyPage() {
         <section>
           <h2 className="text-xl font-semibold mb-3 text-[#405862]">11. Contact Us</h2>
           <p className="text-slate-600">
-            If you have any questions about this Privacy Policy, please contact us at admin@drinterested.tech.
+            If you have any questions about this Privacy Policy, please contact us at admin@drinterested.org.
           </p>
         </section>
       </div>

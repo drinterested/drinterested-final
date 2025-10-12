@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Dr. Interested",
   },
   description:
-    "Dr. Interested supports youth in finding their unique \"spark\" in medicine through programs & opportunities. Earn volunteer hours while building your future!",
+    'Dr. Interested supports youth in finding their unique "spark" in medicine through programs & opportunities. Earn volunteer hours while building your future!',
   keywords: [
     "healthcare education",
     "medical careers",
@@ -60,10 +60,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://drinterested.tech",
+    url: "https://www.drinterested.org",
     title: "Dr. Interested - Inspiring Future Healthcare Leaders",
     description:
-      "Dr. Interested supports youth in finding their unique \"spark\" in medicine through programs & opportunities. Earn volunteer hours while building your future!",
+      'Dr. Interested supports youth in finding their unique "spark" in medicine through programs & opportunities. Earn volunteer hours while building your future!',
     siteName: "Dr. Interested",
     images: [
       {
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dr. Interested - Inspiring Future Healthcare Leaders",
     description:
-      "Dr. Interested supports youth in finding their unique \"spark\" in medicine through programs & opportunities. Earn volunteer hours while building your future!",
+      'Dr. Interested supports youth in finding their unique "spark" in medicine through programs & opportunities. Earn volunteer hours while building your future!',
     images: {
       url: "/websitebanner.jpg",
       alt: "Dr. Interested - Pre-Med Youth Org - Supporting youth in finding their unique 'spark' in medicine!",
@@ -88,9 +88,9 @@ export const metadata: Metadata = {
     creator: "@DrInterested",
   },
   alternates: {
-    canonical: "https://drinterested.tech",
+    canonical: "https://www.drinterested.org",
     languages: {
-      "en-US": "https://drinterested.tech",
+      "en-US": "https://www.drinterested.org",
     },
   },
   icons: [
@@ -101,7 +101,7 @@ export const metadata: Metadata = {
     { rel: "manifest", url: "/site.webmanifest" },
   ],
   generator: "Next.js",
-  metadataBase: new URL("https://drinterested.tech"),
+  metadataBase: new URL("https://www.drinterested.org"),
   verification: {
     google: "google-site-verification-code",
   },
@@ -144,7 +144,7 @@ export default function RootLayout({
           `}
         </Script>
         <Script src="https://f.convertkit.com/ckjs/ck.5.js" strategy="lazyOnload" />
-        <link rel="canonical" href="https://drinterested.tech" />
+        <link rel="canonical" href="https://www.drinterested.org" />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
@@ -172,17 +172,17 @@ export default function RootLayout({
           `}
         </Script>
         <Script id="pdf-schema" type="application/ld+json" strategy="afterInteractive">
-  {`
-    {
-      "@context": "https://schema.org",
-      "@type": "MediaObject",
-      "name": "Dr Interested 2025 Impact Report",
-      "contentUrl": "drinterested.tech/dr-interested-impact-report-2025 (1).pdf",
-      "encodingFormat": "application/pdf",
-      "description": "Download and view the Dr Interested Annual 2025 Impact Report to learn about our initiatives, programs, and impact in healthcare education."
-    }
-  `}
-</Script>
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "MediaObject",
+              "name": "Dr Interested 2025 Impact Report",
+              "contentUrl": "https://www.drinterested.org/dr-interested-impact-report-2025 (1).pdf",
+              "encodingFormat": "application/pdf",
+              "description": "Download and view the Dr Interested Annual 2025 Impact Report to learn about our initiatives, programs, and impact in healthcare education."
+            }
+          `}
+        </Script>
       </body>
     </html>
   )

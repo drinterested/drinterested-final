@@ -83,8 +83,8 @@ export function generateOrganizationSchema() {
     name: "Dr. Interested",
     description:
       "Empowering high school students to explore careers in healthcare through education, research, and mentorship.",
-    url: "https://drinterested.tech",
-    logo: "https://drinterested.tech/android-chrome-512x512.png",
+    url: "https://www.drinterested.org",
+    logo: "https://www.drinterested.org/android-chrome-512x512.png",
     foundingDate: "2020",
     sameAs: [
       "https://www.instagram.com/dr.interested/",
@@ -94,7 +94,7 @@ export function generateOrganizationSchema() {
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "General Inquiry",
-      email: "hello@drinterested.tech",
+      email: "general@drinterested.org",
     },
     address: {
       "@type": "PostalAddress",
@@ -138,12 +138,12 @@ export function generateArticleSchema(article: {
       name: "Dr. Interested",
       logo: {
         "@type": "ImageObject",
-        url: "https://drinterested.tech/android-chrome-512x512.png",
+        url: "https://www.drinterested.org/android-chrome-512x512.png",
       },
     },
     datePublished: article.publishedDate,
     dateModified: article.modifiedDate || article.publishedDate,
-    image: article.image || "https://drinterested.tech/android-chrome-512x512.png",
+    image: article.image || "https://www.drinterested.org/android-chrome-512x512.png",
     url: article.url,
     mainEntityOfPage: {
       "@type": "WebPage",
