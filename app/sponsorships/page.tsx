@@ -3,7 +3,7 @@ import { Mail, Sparkles, Users, Megaphone, Award } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Sponsorships | Dr. Interested",
+  title: "Sponsorships",
   description:
     "Partner with Dr. Interested to support youth healthcare education and leadership. Gain visibility across our global community of 55,000+ engaged students.",
   openGraph: {
@@ -20,16 +20,16 @@ export default function SponsorshipsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-[#f5f1eb]/30">
       {/* Hero Section */}
-      <section className="py-16 md:py-24">
+      <section className="bg-[#f5f1eb] py-16 md:py-24">
         <div className="container max-w-4xl mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 bg-[#4ecdc4]/10 text-[#405862] px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Sparkles className="h-4 w-4" />
             Partner With Us
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#405862] mb-6 text-balance">Sponsorships</h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <p className="text-lg md:text-xl text-[#405862]/80 max-w-2xl mx-auto text-pretty">
             Support youth healthcare education and leadership while gaining visibility across our global community of
-            55,000+ engaged students.
+            60,000+ engaged students.
           </p>
         </div>
       </section>

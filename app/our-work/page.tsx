@@ -38,11 +38,7 @@ export default function OurWorkPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#405862] via-[#405862] to-[#2d4149] py-16 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-[#4ecdc4] rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#4ecdc4] rounded-full blur-3xl"></div>
-        </div>
+      <section className="bg-[#f5f1eb] py-16 relative overflow-hidden">
         <div className="container relative z-10 max-w-5xl mx-auto">
           <motion.div className="text-center" initial="hidden" animate="visible" variants={fadeIn}>
             <motion.a
@@ -55,10 +51,10 @@ export default function OurWorkPage() {
               <Sparkles className="w-4 h-4" />
               <span>Check out the First Half of 2025 Impact Report</span>
             </motion.a>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#405862] mb-4">
               Empowering the Next Generation of Healthcare Leaders
             </h1>
-            <p className="text-white/90 text-lg mb-6 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-[#405862]/80 text-lg mb-6 leading-relaxed max-w-3xl mx-auto">
               Discover how Dr. Interested is transforming youth healthcare education through innovative programs,
               mentorship, and community building across the globe.
             </p>
@@ -71,7 +67,7 @@ export default function OurWorkPage() {
               </a>
               <a
                 href="#media"
-                className="bg-white/10 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-white/20 transition-colors backdrop-blur-sm"
+                className="bg-[#405862] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#334852] transition-colors"
               >
                 Watch Our Content
               </a>

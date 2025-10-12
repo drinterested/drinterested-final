@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import MembersClient from "./MembersClient"
 
 export const metadata: Metadata = {
-  title: "Our Team | Dr. Interested",
+  title: "Our Team",
   description:
     "Meet the talented team behind Dr. Interested - 34 dedicated executives and advisors inspiring the next generation of healthcare professionals across 50+ countries.",
   keywords: [

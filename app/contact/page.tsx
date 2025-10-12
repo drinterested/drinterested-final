@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import ContactClientPage from "./contact-client-page"
 
 export const metadata: Metadata = {
-  title: "Contact Us | Dr. Interested",
+  title: "Contact Us",
   description:
     "Get in touch with Dr. Interested for questions about our events, collaborations, or joining our team. We're here to help aspiring healthcare professionals.",
   keywords: [

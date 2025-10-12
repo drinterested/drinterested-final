@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import EventsClientPage from "./EventsClientPage"
 
 export const metadata: Metadata = {
-  title: "Events | Dr. Interested",
+  title: "Events",
   description:
     "Join Dr. Interested's engaging events and initiatives designed to educate and inspire future healthcare professionals. From webinars to research competitions, find opportunities to grow.",
   keywords: [
