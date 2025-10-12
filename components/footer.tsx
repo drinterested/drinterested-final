@@ -140,7 +140,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <div className="text-[#4ecdc4] font-medium text-xs">Need our Admin?:</div>
+                <div className="text-[#4ecdc4] font-medium text-xs">Need our Admin?</div>
                 <a
                   href="mailto:admin@drinterested.org"
                   className="text-white/80 hover:text-[#4ecdc4] transition-colors"

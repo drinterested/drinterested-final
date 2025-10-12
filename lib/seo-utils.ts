@@ -81,24 +81,61 @@ export function generateOrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Dr. Interested",
+    alternateName: ["Dr Interested", "Doctor Interested", "Dr. Int"],
     description:
-      "Empowering high school students to explore careers in healthcare through education, research, and mentorship.",
+      "A youth-led global pre-med community helping students explore the vast world of healthcare, research, and advocacy. We support youth in finding their unique 'spark' in medicine through interactive programs, publishing opportunities, and leadership development.",
     url: "https://www.drinterested.org",
     logo: "https://www.drinterested.org/android-chrome-512x512.png",
-    foundingDate: "2020",
+    image: "https://www.drinterested.org/websitebanner.jpg",
+    foundingDate: "2024",
+    founder: {
+      "@type": "Person",
+      name: "Adil Mukhi",
+      jobTitle: "Founder & Executive Director",
+    },
     sameAs: [
       "https://www.instagram.com/dr.interested/",
       "https://www.linkedin.com/company/dr-interested/",
-      "https://twitter.com/DrInterested",
+      "https://www.youtube.com/@Dr.Interested",
+      "https://open.spotify.com/show/6SLlRUL6co6fPxckAdrigf",
+      "https://discord.gg/pzbGRgsGXY",
+      "https://www.facebook.com/profile.php?id=61572438387454",
+      "https://www.threads.com/@dr.interested",
+      "https://bsky.app/profile/drinterested.org",
+      "https://x.com/Dr_Interested_",
+      "https://news.drinterested.org/",
+      "https://impact2025.drinterested.org/",
     ],
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "General Inquiry",
-      email: "general@drinterested.org",
-    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "General Inquiry",
+        email: "admin@drinterested.org",
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "Human Resources",
+        email: "hr@drinterested.org",
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "Finance & Sponsorships",
+        email: "finance@drinterested.org",
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "Outreach",
+        email: "outreach@drinterested.org",
+      },
+    ],
     address: {
       "@type": "PostalAddress",
       addressCountry: "Global",
+    },
+    slogan: "Inspiring the Next Generation of Healthcare Professionals",
+    numberOfEmployees: {
+      "@type": "QuantitativeValue",
+      value: 90,
     },
     memberOf: {
       "@type": "Organization",
@@ -111,7 +148,19 @@ export function generateOrganizationSchema() {
       "Healthcare Research",
       "Medical Technology",
       "Healthcare Leadership",
+      "Pre-Medical Education",
+      "Youth Healthcare Programs",
+      "Medical Volunteering",
+      "Healthcare Advocacy",
     ],
+    areaServed: {
+      "@type": "Place",
+      name: "Worldwide",
+    },
+    audience: {
+      "@type": "EducationalAudience",
+      educationalRole: "High School Students",
+    },
   }
 }
 

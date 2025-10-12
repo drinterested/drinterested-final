@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, Instagram, Linkedin, X } from "lucide-react"
+import { Menu, Instagram, Linkedin } from "lucide-react"
 
 const routes = [
   { href: "/", label: "Home" },
@@ -15,6 +15,7 @@ const routes = [
   { href: "/events", label: "Events" },
   { href: "/blog", label: "Blog" },
   { href: "/members", label: "Members" },
+  { href: "/sponsorships", label: "Sponsorships" },
   { href: "/contact", label: "Contact" },
 ]
 
@@ -84,7 +85,7 @@ export default function Navbar() {
             </SheetTrigger>
             <SheetContent side="left" className="w-[280px] p-0" ref={sheetRef}>
               <div className="flex flex-col h-full">
-                <div className="p-4 border-b flex items-center justify-between">
+                <div className="p-4 border-b flex items-center">
                   <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
                     <Image
                       src="/circle-logo.png"
@@ -98,9 +99,6 @@ export default function Navbar() {
                       <span className="text-[#405862]">Dr.</span> Interested
                     </span>
                   </Link>
-                  <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="h-8 w-8">
-                    <X className="h-4 w-4" />
-                  </Button>
                 </div>
                 <nav className="flex flex-col gap-1 p-4 flex-1 overflow-y-auto">
                   {routes.map((route) => (

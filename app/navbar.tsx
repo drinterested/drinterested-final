@@ -14,8 +14,8 @@ const routes = [
   { href: "/our-work", label: "Our Work" },
   { href: "/events", label: "Events" },
   { href: "/members", label: "Members" },
+  { href: "/sponsorships", label: "Sponsorships" },
   { href: "/contact", label: "Contact" },
-  { href: "/gallery", label: "Gallery" },
 ]
 
 export default function Navbar() {
