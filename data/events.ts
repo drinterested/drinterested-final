@@ -27,12 +27,12 @@ export const upcomingEvents: EventType[] = [
   {
     title: "Culture & Psychology Conference",
     date: "October 11, 2025",
-    time: "TBD",
+    time: "1:30 PM - 5:30 PM EST",
     location: "York University, 169 Enterprise Blvd 3rd floor, Markham, ON L6G 0E7",
     description:
-      "Free conference with refreshments, prizes, and networking. First-come, first-served for up to 20 people. Event not confirmed yet. Register your interest here (Select Dr. Interested under 'Where did you hear about this event?')",
+      "Join us for the Culture & Psychology Conference, hosted in partnership with the Bridge of Culture, on October 18, 2025, at York University’s YSpace (Markham Campus). This exciting event brings together experts, students, and professionals for a day of talks, workshops, and discussions exploring the intersection of culture, psychology, and mental health.",
     image: "/psych-conference.png",
-    status: "open",
+    status: "full",
     link: "https://docs.google.com/forms/d/e/1FAIpQLSfzFeuorRRJIkE3FdGiPjGR2IJARzWLguG_O9Xiiblm1m6fmA/viewform",
   },
   {
@@ -57,7 +57,7 @@ export const upcomingEvents: EventType[] = [
     status: "open",
     link: "https://docs.google.com/forms/d/e/1FAIpQLSf3J7k3y32jncOKVkngx2MKC_QvpWCDXY3o8CP6xNRzKvlLog/viewform",
   },
-    {
+  {
     title: "Dr. Interested Webinar Series: Certificate Stream",
     date: "August 31st to November 2nd",
     time: "11AM EST",
@@ -69,6 +69,10 @@ export const upcomingEvents: EventType[] = [
     link: "https://forms.gle/gdr9VHdcPs21tNTM8",
     featured: true,
   },
+]
+
+// Past events data
+export const pastEvents: EventType[] = [
     {
     title: "Research Proposal Competition",
     date: "July 1 to September 1",
@@ -80,19 +84,6 @@ export const upcomingEvents: EventType[] = [
     status: "closed",
     link: "https://forms.gle/cNMth3sUa4d3AhEY8",
     featured: true,
-  },
-]
-
-// Past events data
-export const pastEvents: EventType[] = [
-  {
-    title: "Dr. Interested Executive Board Application",
-    date: "June 2025",
-    location: "Virtual",
-    description: "Applications for the Dr. Interested Executive Board are now open! Join us to lead and innovate in the healthcare community.",
-    image: "/exec-apps-june2025.png",
-    status: "closed",
-    link: "https://impact2025.drinterested.tech/",
   },
   {
     title: "Podcast Collaboration with BioMedizone",
