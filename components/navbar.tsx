@@ -215,7 +215,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="hidden md:inline-flex bg-[#405862] text-white hover:bg-[#334852] px-3 py-1.5 rounded-md text-sm font-medium transition-all hover:shadow-md hover:scale-105 duration-300"
           >
-            Join Us
+            Interested?
           </Link>
           <div className="flex items-center gap-2">
             <Link

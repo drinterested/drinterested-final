@@ -578,7 +578,7 @@ export default function OurWorkPage() {
             >
               <h2 className="text-3xl font-bold text-[#405862] mb-3">Join Our Thriving Community</h2>
               <p className="text-[#405862]/80 mb-5 text-sm leading-relaxed">
-                Our Discord server is the heart of Dr. Interested—a safe, inclusive space where 550+ members connect,
+                Our Discord server is the heart of Dr. Interested—a safe, inclusive space where 1100+ members connect,
                 collaborate, and support each other daily. With a 106% weekly growth rate, we're building something
                 special.
               </p>

@@ -7,7 +7,21 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, MapPin, Phone, Instagram, Linkedin, ArrowRight } from "lucide-react"
+import { 
+  Mail,
+  MapPin,
+  Phone,
+  Instagram,
+  Linkedin,
+  ArrowRight,
+  Youtube,
+  Music2 as Spotify,
+  MessageSquare,
+  Facebook,
+  AtSign as Threads,
+  Cloud,
+  Twitter
+} from "lucide-react"
 import SeoSchema from "@/components/seo-schema"
 import { motion } from "framer-motion"
 
@@ -140,7 +154,7 @@ export default function ContactClientPage() {
                 <div className="flex items-start gap-3 p-3 rounded-lg border border-[#405862]/10 hover:border-[#4ecdc4]/30 hover:bg-[#f5f1eb]/30 transition-all duration-300">
                   <MapPin className="h-5 w-5 text-[#4ecdc4] mt-0.5" />
                   <div>
-                    <h3 className="font-semibold text-[#405862] text-sm">Location</h3>
+                    <h3 className="font-semibold text-[#405862] text-sm">Find us on our Discord space!</h3>
                     <p className="text-[#405862]/80 text-sm">Connect with our community</p>
                   </div>
                 </div>
@@ -159,12 +173,68 @@ export default function ContactClientPage() {
                         <Instagram className="h-5 w-5" />
                       </a>
                       <a
-                        href="https://www.linkedin.com/company/dr-interested"
+                        href="https://www.linkedin.com/company/dr-interested/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-[#405862]/80 hover:text-[#4ecdc4] transition-colors hover:scale-110 duration-200"
                       >
                         <Linkedin className="h-5 w-5" />
+                      </a>
+                      <a
+                        href="https://www.youtube.com/@Dr.Interested"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#405862]/80 hover:text-[#4ecdc4] transition-colors hover:scale-110 duration-200"
+                      >
+                        <Youtube className="h-5 w-5" />
+                      </a>
+                      <a
+                        href="https://open.spotify.com/show/6SLlRUL6co6fPxckAdrigf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#405862]/80 hover:text-[#4ecdc4] transition-colors hover:scale-110 duration-200"
+                      >
+                        <Spotify className="h-5 w-5" />
+                      </a>
+                      <a
+                        href="https://discord.gg/pzbGRgsGXY"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#405862]/80 hover:text-[#4ecdc4] transition-colors hover:scale-110 duration-200"
+                      >
+                        <MessageSquare className="h-5 w-5" />
+                      </a>
+                      <a
+                        href="https://www.facebook.com/profile.php?id=61572438387454"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#405862]/80 hover:text-[#4ecdc4] transition-colors hover:scale-110 duration-200"
+                      >
+                        <Facebook className="h-5 w-5" />
+                      </a>
+                      <a
+                        href="https://www.threads.com/@dr.interested"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#405862]/80 hover:text-[#4ecdc4] transition-colors hover:scale-110 duration-200"
+                      >
+                        <Threads className="h-5 w-5" />
+                      </a>
+                      <a
+                        href="https://bsky.app/profile/drinterested.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#405862]/80 hover:text-[#4ecdc4] transition-colors hover:scale-110 duration-200"
+                      >
+                        <Cloud className="h-5 w-5" />
+                      </a>
+                      <a
+                        href="https://x.com/Dr_Interested_"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#405862]/80 hover:text-[#4ecdc4] transition-colors hover:scale-110 duration-200"
+                      >
+                        <Twitter className="h-5 w-5" />
                       </a>
                     </div>
                   </div>

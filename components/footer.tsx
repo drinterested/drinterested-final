@@ -126,7 +126,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-white/80 hover:text-[#4ecdc4] transition-colors"
                 >
-                  Dr. Int Semi-Annual Impact Report
+                  Semi-Annual Impact Report
                 </Link>
               </li>
             </ul>
@@ -146,12 +146,6 @@ export default function Footer() {
                   className="text-white/80 hover:text-[#4ecdc4] transition-colors"
                 >
                   admin@drinterested.org
-                </a>
-              </li>
-              <li>
-                <div className="text-[#4ecdc4] font-medium text-xs">Hiring related?</div>
-                <a href="mailto:hr@drinterested.org" className="text-white/80 hover:text-[#4ecdc4] transition-colors">
-                  hr@drinterested.org
                 </a>
               </li>
               <li>
