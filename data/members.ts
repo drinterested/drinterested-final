@@ -21,11 +21,11 @@ export type DepartmentType = {
   members: MemberType[]
 }
 
-// President data
-export const president: MemberType = {
-  id: "president",
+// Executive Director data
+export const executiveDirector: MemberType = {
+  id: "executive-director",
   name: "Adil Mukhi",
-  role: "President",
+  role: "Executive Director & Founder",
   image: "/adil.png",
   bio: "I started Dr. Interested after seeing too many youth struggle to navigate med school paths or build core skills like research and public speaking. This platform exists to change that—by giving students the tools and guidance they need to thrive. Beyond this, I’m a public speaker, youth advocate & changemaker! I lead initiatives that empower tens of thousands of young people, including founding Dr. Interested and contributing to the Play-to-Heal movement. I’ve supported youth-focused research and policy, including a CIHR grant with SickKids for the OPTIMAL Project and recommendations presented to the Future of Sport in Canada Commission. Passionate about mentorship, research, and leadership, I aim to create opportunities for youth to innovate and lead. If you want to learn more about me, feel free to check out my website, which I am sure is linked somewhere",
   socialLinks: {
@@ -35,20 +35,20 @@ export const president: MemberType = {
   },
 }
 
-// Vice Presidents data
-export const vicePresidents: MemberType[] = [
+// Deputy Executive Directors data
+export const deputyexecdir: MemberType[] = [
   {
-    id: "vp1",
+    id: "deputyexec1",
     name: "Velan Mangai Sivakumar",
-    role: "Vice President",
+    role: "Deputy Executive Director",
     bio: "Velan Mangai Sivakumar is a Grade 10 student in Glenforest Secondary School. He is extremely passionate about STEM and biological sciences in particular. He has volunteered for many STEM organizations such as the Rosalind Franklin Institute. He is a trainer for HOSA (Health Occupation Students of America). His best result in STEM contests would be getting top 25 nationally and qualifying for the national camp in the Junior Science Olympiad of Canada. He also plays chess and his best results include qualifying for the Canadian Youth Chess Championship U16 twice and getting 4th in the Canadian Chess League Twice.",
     image: "/velan.png",
     socialLinks: {},
   },
   {
-    id: "vp2",
+    id: "deputyexec2",
     name: "Kishan Suhirthan",
-    role: "Vice President",
+    role: "Deputy Executive Director",
     bio: "Kishan Suhirthan is a Grade 11 student in the IB Program at Glenforest Secondary School with a strong passion for engineering and technology. As a Flight Sergeant in the Royal Canadian Air Cadet Program, he has developed strong leadership and organizational skills. His involvement with Innovire and FRC Team 1325 “Inverse Paradox” highlights his teamwork, creativity, and technical expertise. Proficient in both software development and electrical systems, Kishan is a dedicated and well-rounded individual committed to excellence in every project he undertakes.",
     image: "/kishan-headshot.jpg",
     socialLinks: {

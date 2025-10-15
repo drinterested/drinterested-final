@@ -6,7 +6,7 @@ import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Instagram, Linkedin, Globe, ChevronDown, ChevronUp } from "lucide-react"
-import { president, departments, vicePresidents, advisors } from "@/data/members"
+import { departments, advisors, executiveDirector, deputyexecdir } from "@/data/members"
 import ScrollToTop from "@/components/scroll-to-top"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
@@ -71,20 +71,20 @@ export default function MembersClient() {
                     <div className="grid md:grid-cols-3">
                       <div className="md:col-span-1 bg-[#f5f1eb] flex items-center justify-center">
                         <div className="relative h-full w-full aspect-square">
-                          <Image src="/adil.png" alt={president.name} fill className="object-cover" />
+                          <Image src="/adil.png" alt={executiveDirector.name} fill className="object-cover" />
                         </div>
                       </div>
                       <CardContent className="md:col-span-2 p-4">
-                        <h4 className="text-lg font-semibold text-[#405862]">{president.name}</h4>
-                        <p className="text-sm text-[#405862]/75 mb-2">{president.role}</p>
+                        <h4 className="text-lg font-semibold text-[#405862]">{executiveDirector.name}</h4>
+                        <p className="text-sm text-[#405862]/75 mb-2">{executiveDirector.role}</p>
                         <p className="text-sm text-[#405862] mb-3">
-                          {expandedBios[president.id] ? president.bio : truncateBio(president.bio)}
+                          {expandedBios[executiveDirector.id] ? executiveDirector.bio : truncateBio(executiveDirector.bio)}
                         </p>
                         <button
-                          onClick={() => toggleBio(president.id)}
+                          onClick={() => toggleBio(executiveDirector.id)}
                           className="text-[#405862] text-sm font-medium hover:text-[#4ecdc4] transition-colors mb-3 flex items-center"
                         >
-                          {expandedBios[president.id] ? (
+                          {expandedBios[executiveDirector.id] ? (
                             <>
                               Show Less <ChevronUp className="h-4 w-4 ml-1" />
                             </>
@@ -95,9 +95,9 @@ export default function MembersClient() {
                           )}
                         </button>
                         <div className="flex space-x-3">
-                          {president.socialLinks?.linkedin && (
+                          {executiveDirector.socialLinks?.linkedin && (
                             <Link
-                              href={president.socialLinks.linkedin}
+                              href={executiveDirector.socialLinks.linkedin}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
@@ -105,9 +105,9 @@ export default function MembersClient() {
                               <Linkedin className="h-5 w-5" />
                             </Link>
                           )}
-                          {president.socialLinks?.instagram && (
+                          {executiveDirector.socialLinks?.instagram && (
                             <Link
-                              href={president.socialLinks.instagram}
+                              href={executiveDirector.socialLinks.instagram}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
@@ -115,9 +115,9 @@ export default function MembersClient() {
                               <Instagram className="h-5 w-5" />
                             </Link>
                           )}
-                          {president.socialLinks?.website && (
+                          {executiveDirector.socialLinks?.website && (
                             <Link
-                              href={president.socialLinks.website}
+                              href={executiveDirector.socialLinks.website}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
@@ -136,7 +136,7 @@ export default function MembersClient() {
               <div>
                 <h3 className="text-lg font-semibold mb-4 text-center text-[#405862]">Deputy Executive Directors</h3>
                 <div className="grid md:grid-cols-2 gap-4">
-                  {vicePresidents.map((vp) => (
+                  {deputyexecdir.map((vp) => (
                     <Card
                       key={vp.id}
                       className="overflow-hidden border-[#405862]/20 shadow-sm hover:shadow-md transition-shadow"

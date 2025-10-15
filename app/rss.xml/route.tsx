@@ -1,5 +1,7 @@
 import { blogPosts } from "@/data/blog"
 import { webinars } from "@/data/webinars"
+import { executiveDirector, deputyexecdir, advisors, departments, MemberType } from "@/data/members"
+import { upcomingEvents, pastEvents, EventType } from "@/data/events"
 
 export async function GET() {
   const baseUrl = "https://www.drinterested.org"
@@ -191,22 +193,6 @@ export async function GET() {
     "/hoodie.jpg": "Dr. Interested hoodie - Comfortable branded clothing representing the medical education community",
     "/sticker.jpg": "Dr. Interested sticker - Collectible adhesive featuring the organization's logo and mission",
     "/mug.jpg": "Dr. Interested mug - Branded drinkware for supporters of youth healthcare education",
-
-    // Certificates
-    "/certificate-rpc.png":
-      "Research participation certificate - Official recognition for students completing Dr. Interested research programs",
-
-    // Webinar thumbnails
-    "/images/webinar-5-thumbnail.jpg":
-      "Demystifying Research Papers webinar - Educational session with Chinthala Trisha Goud on literature review and academic publication process",
-    "/images/webinar-4-thumbnail.jpg":
-      "Pathways to Med School webinar - Kate Tucker discussing Master's, PhD, and gap year options for aspiring physicians",
-    "/images/webinar-3-thumbnail.jpg":
-      "Premed Competitions webinar - Guidance on finding, preparing for, and excelling in medical competitions and science fairs",
-    "/images/webinar-2-thumbnail.jpg":
-      "Youth Impact Health Policy webinar - Executive Director Adil Mukhi on how young people can influence healthcare policy",
-    "/images/webinar-1-thumbnail.jpg":
-      "Exploring Medicine Early webinar - Advice on early medical exploration and choosing the right college major for healthcare careers",
   }
 
   const items: string[] = []
@@ -276,6 +262,83 @@ export async function GET() {
       ]]></content:encoded>
     </item>`)
   })
+
+  // ===== Add Members =====
+  const allMembers: MemberType[] = [
+    executiveDirector,
+    ...deputyexecdir,
+    ...advisors,
+    ...departments.flatMap((dept) => [
+      ...(Array.isArray(dept.director) ? dept.director : [dept.director]),
+      ...dept.members,
+    ]),
+  ]
+
+  allMembers.forEach((member) => {
+    const memberUrl = `${baseUrl}/team/${member.id}`
+    const imageUrl = `${baseUrl}${member.image}`
+    const pubDate = new Date().toUTCString()
+
+    items.push(`
+    <item>
+      <title><![CDATA[${member.name} - ${member.role}]]></title>
+      <link>${memberUrl}</link>
+      <guid isPermaLink="true">${memberUrl}</guid>
+      <description><![CDATA[${member.bio}]]></description>
+      <pubDate>${pubDate}</pubDate>
+      <category>Team Member</category>
+      <media:content url="${imageUrl}" medium="image" type="image/jpeg">
+        <media:title><![CDATA[${member.name} - Headshot]]></media:title>
+        <media:description><![CDATA[${imageDescriptions[member.image] || `${member.name}, ${member.role}` }]]></media:description>
+      </media:content>
+      <content:encoded><![CDATA[
+        <img src="${imageUrl}" alt="${member.name}" />
+        <p><strong>${member.role}</strong></p>
+        <p>${member.bio}</p>
+        ${
+          member.socialLinks
+            ? Object.entries(member.socialLinks)
+                .map(([key, url]) =>
+                  url
+                    ? `<p><a href="${url}" target="_blank">${key}</a></p>`
+                    : ""
+                )
+                .join("")
+            : ""
+        }
+      ]]></content:encoded>
+    </item>`)
+  })
+
+    // ===== Add Events =====
+    const events: EventType[] = [...upcomingEvents, ...pastEvents]
+
+    events.forEach((event: EventType) => {
+      const eventUrl = `${baseUrl}${event.link}`
+      const imageUrl = `${baseUrl}${event.image}`
+      const pubDate = new Date(event.date).toUTCString()
+
+      items.push(`
+      <item>
+        <title><![CDATA[${event.title}]]></title>
+        <link>${eventUrl}</link>
+        <guid isPermaLink="true">${eventUrl}</guid>
+        <description><![CDATA[${event.description}]]></description>
+        <pubDate>${pubDate}</pubDate>
+        <category>Event</category>
+        <media:content url="${imageUrl}" medium="image" type="image/jpeg">
+          <media:title><![CDATA[${event.title} - Event Image]]></media:title>
+          <media:description><![CDATA[${imageDescriptions[event.image] || event.description}]]></media:description>
+        </media:content>
+        <content:encoded><![CDATA[
+          <img src="${imageUrl}" alt="${event.title}" />
+          <p>${event.description}</p>
+          <p><strong>Date:</strong> ${event.date}</p>
+          <p><strong>Location:</strong> ${event.location}</p>
+          <p><a href="${eventUrl}" target="_blank">Learn more</a></p>
+        ]]></content:encoded>
+      </item>`)
+    })
 
   Object.entries(imageDescriptions).forEach(([imagePath, description]) => {
     const imageUrl = `${baseUrl}${imagePath}`
