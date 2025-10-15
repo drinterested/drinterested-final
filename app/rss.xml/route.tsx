@@ -325,7 +325,16 @@ export async function GET() {
   const events: EventType[] = [...upcomingEvents, ...pastEvents]
 
   events.forEach((event: EventType) => {
-    const eventUrl = `${baseUrl}${event.link}`
+    // Check if the link is already an absolute URL
+    const isExternalLink = event.link.startsWith('http://') || event.link.startsWith('https://')
+    const eventUrl = isExternalLink ? event.link : `${baseUrl}${event.link}`
+    
+    // Skip external links to comply with sitemap/RSS feed standards
+    // External URLs (from different domains) should not be in sitemaps
+    if (isExternalLink) {
+      return
+    }
+    
     const imageUrl = `${baseUrl}${event.image}`
     // Ensure event.date is a valid date string
     let pubDate: string
