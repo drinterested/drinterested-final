@@ -263,7 +263,7 @@ export async function GET() {
     </item>`)
   })
 
-  // ===== Add Members =====
+// ===== Add Members =====
   const allMembers: MemberType[] = [
     executiveDirector,
     ...deputyexecdir,
@@ -277,7 +277,8 @@ export async function GET() {
   allMembers.forEach((member) => {
     const memberUrl = `${baseUrl}/team/${member.id}`
     const imageUrl = `${baseUrl}${member.image}`
-    const pubDate = new Date().toUTCString()
+    // Use a fixed valid date for team members instead of current date
+    const pubDate = new Date("2025-01-01T00:00:00Z").toUTCString()
 
     items.push(`
     <item>
@@ -289,7 +290,7 @@ export async function GET() {
       <category>Team Member</category>
       <media:content url="${imageUrl}" medium="image" type="image/jpeg">
         <media:title><![CDATA[${member.name} - Headshot]]></media:title>
-        <media:description><![CDATA[${imageDescriptions[member.image] || `${member.name}, ${member.role}` }]]></media:description>
+        <media:description><![CDATA[${imageDescriptions[member.image] || `${member.name}, ${member.role}`}]]></media:description>
       </media:content>
       <content:encoded><![CDATA[
         <img src="${imageUrl}" alt="${member.name}" />
@@ -310,35 +311,47 @@ export async function GET() {
     </item>`)
   })
 
-    // ===== Add Events =====
-    const events: EventType[] = [...upcomingEvents, ...pastEvents]
+  // ===== Add Events =====
+  const events: EventType[] = [...upcomingEvents, ...pastEvents]
 
-    events.forEach((event: EventType) => {
-      const eventUrl = `${baseUrl}${event.link}`
-      const imageUrl = `${baseUrl}${event.image}`
-      const pubDate = new Date(event.date).toUTCString()
+  events.forEach((event: EventType) => {
+    const eventUrl = `${baseUrl}${event.link}`
+    const imageUrl = `${baseUrl}${event.image}`
+    // Ensure event.date is a valid date string
+    let pubDate: string
+    try {
+      const eventDate = new Date(event.date)
+      // Check if date is valid
+      if (isNaN(eventDate.getTime())) {
+        pubDate = new Date("2025-01-01T00:00:00Z").toUTCString()
+      } else {
+        pubDate = eventDate.toUTCString()
+      }
+    } catch {
+      pubDate = new Date("2025-01-01T00:00:00Z").toUTCString()
+    }
 
-      items.push(`
-      <item>
-        <title><![CDATA[${event.title}]]></title>
-        <link>${eventUrl}</link>
-        <guid isPermaLink="true">${eventUrl}</guid>
-        <description><![CDATA[${event.description}]]></description>
-        <pubDate>${pubDate}</pubDate>
-        <category>Event</category>
-        <media:content url="${imageUrl}" medium="image" type="image/jpeg">
-          <media:title><![CDATA[${event.title} - Event Image]]></media:title>
-          <media:description><![CDATA[${imageDescriptions[event.image] || event.description}]]></media:description>
-        </media:content>
-        <content:encoded><![CDATA[
-          <img src="${imageUrl}" alt="${event.title}" />
-          <p>${event.description}</p>
-          <p><strong>Date:</strong> ${event.date}</p>
-          <p><strong>Location:</strong> ${event.location}</p>
-          <p><a href="${eventUrl}" target="_blank">Learn more</a></p>
-        ]]></content:encoded>
-      </item>`)
-    })
+    items.push(`
+    <item>
+      <title><![CDATA[${event.title}]]></title>
+      <link>${eventUrl}</link>
+      <guid isPermaLink="true">${eventUrl}</guid>
+      <description><![CDATA[${event.description}]]></description>
+      <pubDate>${pubDate}</pubDate>
+      <category>Event</category>
+      <media:content url="${imageUrl}" medium="image" type="image/jpeg">
+        <media:title><![CDATA[${event.title} - Event Image]]></media:title>
+        <media:description><![CDATA[${imageDescriptions[event.image] || event.description}]]></media:description>
+      </media:content>
+      <content:encoded><![CDATA[
+        <img src="${imageUrl}" alt="${event.title}" />
+        <p>${event.description}</p>
+        <p><strong>Date:</strong> ${event.date}</p>
+        <p><strong>Location:</strong> ${event.location}</p>
+        <p><a href="${eventUrl}" target="_blank">Learn more</a></p>
+      ]]></content:encoded>
+    </item>`)
+  })
 
   Object.entries(imageDescriptions).forEach(([imagePath, description]) => {
     const imageUrl = `${baseUrl}${imagePath}`
