@@ -29,7 +29,7 @@ export const webinars: Webinar[] = [
     date: "October 10, 2025",
     views: 19,
     duration: "25:25",
-    videoPath: "/drintresearchwebinar.mp4", // UPDATE THIS PATH
+    videoPath: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/eda700b4c902a2c307da7946568be7b3669f8bf8_drintpremedcompwebinar.mp4", // UPDATE THIS PATH
     thumbnailPath: "/drintthumbnaildemistifiyingreasearch.png", // UPDATE THIS PATH
     youtubeUrl: "https://youtu.be/8G57EJFUZzE?si=JInq2f-H9BpM1_vb",
     spotifyUrl: "https://open.spotify.com/episode/4Z4UkUTF7AldXtoyujxzdK?si=86b5ed24a7194b10",
@@ -48,7 +48,7 @@ export const webinars: Webinar[] = [
     date: "October 6, 2025",
     views: 31,
     duration: "32:31",
-    videoPath: "/drintpathwaystomedwebinar.mp4", // UPDATE THIS PATH
+    videoPath: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/329e59bafc0b9ce5b7e0b7dc3a9e29716da8a9ea_drintpathwaystomedwebinar.mp4", // UPDATE THIS PATH
     thumbnailPath: "/drintthumbnailpathwaystomed.png", // UPDATE THIS PATH
     youtubeUrl: "https://youtu.be/dZj0Oi0aKPw?si=7nOnJz1coLZG5356",
     spotifyUrl: "https://open.spotify.com/episode/5ru345a1LG0AUHKYonqqvM?si=cc04b6676d1e4efe",
@@ -67,7 +67,7 @@ export const webinars: Webinar[] = [
     date: "September 14, 2025",
     views: 28,
     duration: "29:48",
-    videoPath: "/drintpremedcompwebinar.mp4", // UPDATE THIS PATH
+    videoPath: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/407c212257a8ecc9b8a07e6ffff30fdcdbe17a79_drintresearchwebinar.mp4", // UPDATE THIS PATH
     thumbnailPath: "/drintthumbnailpremedcomps.png", // UPDATE THIS PATH
     youtubeUrl: "https://youtu.be/3YPxHLOdsOU?si=giCeC-MCk0R7JlOK",
     spotifyUrl: "https://open.spotify.com/episode/2ZajhQT5piThDtwZgdk1dX?si=9550ca993e8d4c8c",
@@ -85,7 +85,7 @@ export const webinars: Webinar[] = [
     date: "September 7, 2025",
     views: 109,
     duration: "28:55",
-    videoPath: "https://ik.imagekit.io/aqfqfogji/drintpolicywebinar.mp4?updatedAt=1762117648249", // UPDATE THIS PATH
+    videoPath: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/eb91a975d980d65fa664c18d3c68acf71c120cb0_drintpolicywebinar.mp4", // UPDATE THIS PATH
     thumbnailPath: "/drintthumbnailpolicy.png", // UPDATE THIS PATH
     youtubeUrl: "https://youtu.be/8Mp9ulR7L4Y?si=eyAZF1DVFzO9uscQ",
     spotifyUrl: "https://open.spotify.com/episode/4CwnZwJufNXRcB7iGzrObO?si=2e5148b845e94246",
@@ -104,7 +104,7 @@ export const webinars: Webinar[] = [
     date: "August 31, 2025",
     views: 44,
     duration: "29:56",
-    videoPath: "/drintexploremed-chossemajorwebinar.mp4", // UPDATE THIS PATH
+    videoPath: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/e1f451ca973f1a72f5407b6696d89f9ec132c251_drintexploremed-chossemajorwebinar.mp4", // UPDATE THIS PATH
     thumbnailPath: "/drintthumbnailmedearly-majors.png", // UPDATE THIS PATH
     youtubeUrl: "https://youtu.be/al1ybYrlMi4?si=ZJHEYbNNyA4td7ss",
     spotifyUrl: "https://open.spotify.com/episode/5cmZdrgxarbyCci9DeBdzD?si=c8d6f3256a5e41d3",
