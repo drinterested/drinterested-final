@@ -161,10 +161,282 @@ export const blogTopics: BlogTopic[] = [
   description: "Stay informed with the latest developments, discoveries, and updates from the world of healthcare and medical science.",
   image: "/logo.png"
   },
+  {
+  name: "Mental Health",
+  slug: "mental-health",
+  description:
+    "Explore articles focused on mental wellness, psychology, and the impact of modern life on our minds — from stress and anxiety to mindfulness and recovery.",
+  image: "/logo.png",
+},
+
 ]
 
 // Blog Posts (Ordered from Most Recent to Oldest)
 export const blogPosts: BlogPost[] = [
+{
+  slug: "dr-galina-gheihman-profile",
+  title: "Dr. Galina Gheihman: Advancing Medical Education in Neurology",
+  excerpt:
+    "Dr. Galina Gheihman, a neurologist at Brigham and Women’s Hospital and advisor at Harvard Medical School, is reshaping how neuroscience and neurology are taught through innovative programs and publications.",
+  content: `
+## Dr. Galina Gheihman: Advancing Medical Education in Neurology
+
+![Dr. Galina Gheihman](/dr_gheihman_cover.jpg)
+
+*Image source: [Brigham and Women’s Hospital Physician Directory](https://physiciandirectory.brighamandwomens.org/details/16852/?pk_vid=e042e8051a5503991760325443ada98c)*
+
+
+## Who Is Dr. Gheihman?
+
+**Dr. Galina Gheihman** is a practicing neurologist and resident supervisor at **Brigham and Women’s Hospital**. She leads the *NeuEJM Medical Journal*, and is a developer of the *Outpatient Neurology Series*, which introduced mental health and well-being surveys and services into medical curricula. 
+
+She serves as a **PCE advisor for Harvard Medical School**, **co-director of a Non-Neurologist CME Course**, and **member of the HMS Taskforce for Teacher Faculty Experience**. Her writing includes academic articles and conference proceedings that explore innovative ways of teaching neuroscience in universities and medical programs.
+
+
+## Education and Early Career
+
+Originally from **Toronto, Ontario**, Dr. Gheihman completed her undergraduate studies at the **University of Toronto** before attending **Harvard Medical School**, where she earned her M.D. She completed her neurology residency at **Brigham and Women’s Hospital**, serving as **chief resident from 2023–2024**.  
+
+She is now a **board-certified neurologist** in Massachusetts and continues to advise and mentor medical students at Harvard Medical School.
+
+
+## Work in Medical Education and Curriculum
+
+Dr. Gheihman has founded and directed multiple initiatives that transform how neurology is taught and practiced.
+
+### Neuroscience Simulation Program
+She founded a **neuroscience simulation program** at Brigham and Women’s Hospital for aspiring neuroscientists and medical students. This program offers early, hands-on exposure to neurology and patient care — promoting active learning before residency.
+
+### BRAINS Program
+Dr. Gheihman co-founded **BRAINS**, a program that encourages **bedside near-peer teaching** among internal medicine residents. Junior students benefit from learning directly from residents who have recently gone through similar academic challenges, helping bridge the gap between theory and practice.
+
+### Educational Leadership
+She is also the **leader and co-founder of NeuFJM**, a monthly medical education journal club, and the creator of **Well-Rounded Wednesdays** within the *Outpatient Neurology Series*. As the director of the **CME (Continuing Medical Education)** program, she focuses on supporting both medical students and faculty through innovative and empathetic curriculum design.
+
+
+## Publications and Articles
+
+Dr. Gheihman is a **prolific author**, publishing numerous works that make medical education more accessible and effective for students and educators alike.  
+
+Some of her most recognized publications include:
+
+- *Teaching Neurology Amid an Ever-Changing Field* (Gheihman, 2024)  
+- *Critical Values and Characteristics in a Successful Neurology Educator* (Gheihman, 2024)  
+
+Her work has been featured in interviews on **YouTube**, and cited by other physicians, neuroscientists, and general practitioners. Beyond education, she has published studies on **post-neurointensive care** and **recovery following major surgeries** — merging clinical practice with academic innovation.
+
+
+## In Summary
+
+Dr. Galina Gheihman continues to **redefine how neuroscience and neurology are taught**, fostering environments where both medical students and educators thrive. Her programs, mentorship, and research are shaping the future of neurology education — blending compassion, innovation, and rigorous science.
+
+
+## Links to Her Work
+
+- [Brigham and Women’s Hospital Physician Directory](https://physiciandirectory.brighamandwomens.org/details/16852/?pk_vid=e042e8051a5503991760325443ada98c)  
+- [NeurologyLive – Dr. Galina Gheihman](https://www.neurologylive.com/authors/galina-gheihman-md)
+  `,
+  coverImage: "/dr_gheihman_cover.jpg",
+  date: "October 12, 2025",
+  author: authors["avika-tyagi"],
+  topic: "Medical Education",
+  readingTime: "6 min read",
+  featured: false
+},
+{
+  slug: "genetic-factors-in-stroke-recovery",
+  title: "How Genetics Influence Stroke Recovery",
+  excerpt:
+    "Stroke recovery isn’t only about age or treatment — genetics play a crucial role too. Learn how genes like BDNF, APOE e4, and PATJ impact neuroplasticity, inflammation, and healing outcomes after a stroke.",
+  content: `
+## How Genetics Influence Stroke Recovery
+
+![Stroke research image](/stroke_research_cover.jpg)
+
+*Image source: [Keck School of Medicine, USC](https://keck.usc.edu/news/usc-researcher-uses-mammal-dna-to-zoom-into-the-human-genome-with-unprecedented-resolution/)*
+
+
+## What Is a Stroke?
+
+A stroke is a condition that affects the arteries within the brain and those leading to it. It occurs when one of the blood vessels ruptures or becomes blocked by a blood clot, preventing oxygen from reaching brain cells — which then begin to die.
+
+There are two main types of stroke: **ischemic** and **hemorrhagic**.
+
+- **Ischemic stroke** is the most common type, accounting for about **90% of all cases**. It happens when a blood vessel is blocked by a clot, cutting off oxygen flow to the brain.  
+- **Hemorrhagic stroke**, on the other hand, occurs when a blood vessel ruptures in the brain, causing bleeding that exerts pressure on surrounding cells and damages them.
+
+
+## Common Treatments for Stroke
+
+The usual treatment for ischemic strokes is **tPA (tissue plasminogen activator)** — a drug that helps dissolve clots and restore blood flow. If tPA is not available, medications such as **clopidogrel** and **blood pressure drugs** are used to reduce vessel strain and prevent new clots.
+
+Rehabilitation also plays a vital role in recovery. This can include **physical therapy, speech therapy, and cognitive training**. Most recovery progress occurs soon after the stroke, so early intervention is key once the patient is medically stable.
+
+
+## How Genetics Affect Stroke Recovery
+
+While age and lifestyle are known predictors of stroke recovery, **genetic factors** also play an important role in how well patients regain function. Genes can influence inflammation, neural repair, and response to medication — making recovery outcomes highly individual.
+
+
+### 1. The BDNF val66met Variant
+
+The **BDNF (Brain-Derived Neurotrophic Factor)** gene supports neuroplasticity and memory formation. However, the **val66met variant** has been linked to poorer recovery outcomes, especially in cognitive and motor functions after a stroke.
+
+
+### 2. The APOE e4 Gene
+
+The **APOE e4** gene, more commonly associated with Alzheimer’s disease, has also been tied to **worse stroke recovery outcomes**. Carriers often show higher inflammation in the brain, which hampers healing and neuroregeneration.
+
+
+### 3. The PATJ Gene
+
+A 2019 study found that the **G allele** in the **PATJ gene** correlates with poorer recovery outcomes. Since PATJ affects **neurovascular repair** in damaged brain areas, the G allele’s reduced activity can slow healing. Genetic screening for this variant could help tailor personalized rehabilitation plans in the future.
+
+
+## Looking Ahead
+
+Understanding how genetics affect stroke recovery opens the door to **personalized medicine** — where treatments and therapies are adjusted based on a patient’s genetic profile. Though research is still evolving, genetic insights may soon allow doctors to predict recovery outcomes more accurately and improve rehabilitation strategies.
+
+
+## References
+
+- American Stroke Association. (n.d.-a). *About stroke.* American Stroke Association. Retrieved from [https://www.stroke.org/en/about-stroke](https://www.stroke.org/en/about-stroke)  
+- National Heart, Lung, and Blood Institute. (n.d.). *Stroke—What is a stroke?* NHLBI, NIH. [https://www.nhlbi.nih.gov/health/stroke](https://www.nhlbi.nih.gov/health/stroke)  
+- American Stroke Association. (n.d.-b). *Effects of stroke.* American Stroke Association. [https://www.stroke.org/en/about-stroke/effects-of-stroke](https://www.stroke.org/en/about-stroke/effects-of-stroke)  
+- The STRONG Study Investigators & Shah, S. C. (2025). *Genetic variation and stroke recovery: The STRONG Study.* *Stroke.* Advance online publication. [https://www.ahajournals.org/doi/10.1161/STROKEAHA.124.047643](https://www.ahajournals.org/doi/10.1161/STROKEAHA.124.047643)  
+- Balkaya, M., & Cho, S. (2019). *Genetics of stroke recovery: BDNF val66met polymorphism in stroke recovery and its interaction with aging.* *Neurobiology of Disease, 126,* 36–46. [https://doi.org/10.1016/j.nbd.2018.08.009](https://doi.org/10.1016/j.nbd.2018.08.009)  
+- Bathina, S., & Das, U. N. (2015). *Brain-derived neurotrophic factor and its clinical implications.* *Archives of Medical Science, 11(6),* 1164–1178. [https://pmc.ncbi.nlm.nih.gov/articles/PMC4697050](https://pmc.ncbi.nlm.nih.gov/articles/PMC4697050)  
+- Mola-Caminal, M., Ni, L., Scott, L., Campbell, H. M., Pan, X., Alsina, K. M., Reynolds, J., Philippen, L. E., Hulsurkar, M., & Williams, S. M. (2019). *PATJ low-frequency variants are associated with worse functional outcome after ischemic stroke.* *Circulation Research, 124(1),* 114–124. [https://doi.org/10.1161/CIRCRESAHA.118.313533](https://doi.org/10.1161/CIRCRESAHA.118.313533) 
+  `,
+  coverImage: "/stroke_research_cover.jpg",
+  date: "October 27, 2025",
+  author: authors["dabosmita-das"],
+  topic: "Genetics & Neurology",
+  readingTime: "6 min read",
+  featured: false
+},
+ {
+  slug: "social-media-damaging-teen-mental-health",
+  title: "How Social Media Is Damaging Teens’ Mental Health",
+  excerpt:
+    "With nearly all teens using social media daily, platforms like TikTok and Instagram are reshaping youth mental health — often for the worse. Explore the rising concerns about anxiety, depression, and body image linked to excessive screen time.",
+  content: `
+## How Social Media Is Damaging Teens’ Mental Health
+
+Social media is all around us and literally everywhere we go. But social media is particularly more popular among young adults and teenagers, especially teenagers in this day and age. For the record, around 95% of youth aged 13–17 say they use social media platforms, and almost one-third report using it almost continuously. An average teen in the US reports spending nearly **5 hours daily** on apps such as TikTok, YouTube, and Instagram — and only a small 20% of teens spend less than 2 hours!
+
+
+
+## Why Teens?
+
+Why do they fall victim to spending long hours on it?
+
+One of the main reasons why teens become attached to social media is because they get to connect almost instantly with others, particularly their peers. Around **81% of teens say that social media helps them feel connected** to their friends' lives, reducing FOMO (fear of missing out). Peer pressure also plays a major role, making teens almost desperate to connect through social media. Many also find communities that share similar opinions or lifestyles.
+
+Another reason is that a lot of teens get most of their news from social media as well, believing it helps them broaden their viewpoints by being exposed to different types of opinions and engaging in issues relevant to them.
+
+
+
+## Behind the Long Hours — The Real Impact
+
+Despite teens loving social media, many struggle with its effects. **1 in 10 adolescents** show signs of problematic social media behavior, often struggling to control their use and experiencing detrimental mental health issues. **41% of teens** with the highest social media usage rate their mental health as *very poor*, and **22% report suicidal or self-harming thoughts.**
+
+Moreover, children and adolescents who spend more than **3 hours a day** on social media face *twice the risk* of depression, anxiety, or other mental health disorders. There has even been a **188% rise in eating disorders** among youth aged 10–21 — largely linked to social media body comparisons, as **46% of teens** say that social media tends to make them feel worse about their bodies.
+
+Worse academic performance, poor sleep schedules, and social isolation are just some of the consequences of problematic social media use. All of these factors can further demotivate teens and cause them to spiral.
+
+
+## A Call for Awareness
+
+Hence, we must remain cautious when using social media and support anyone we see struggling with similar issues. Setting screen-time boundaries, taking digital detoxes, and engaging in offline hobbies can all help in creating a healthier balance.
+
+
+## References
+
+- Anderson, M., & Jiang, J. (2018, November 28). *Teens and their experiences on social media.* Pew Research Center. Retrieved September 21, 2025, from https://www.pewresearch.org/internet/2018/11/28/teens-and-their-experiences-on-social-media/  
+- DeAngelis, T. (2024, April 1). *Teens are spending nearly 5 hours daily on social media. Here are the mental health outcomes.* American Psychological Association. Retrieved September 21, 2025, from https://www.apa.org/monitor/2024/04/teen-social-use-mental-health  
+- *How Social Media is Impacting Teens.* (2023, June 23). The REACH Institute. Retrieved September 21, 2025, from https://thereachinstitute.org/mind-over-minutes-how-youths-screen-habits-are-impacting-their-mental-health/  
+- Rothwell, J. (2023, October 27). *Parenting Mitigates Social Media-Linked Mental Health Issues.* Gallup. Retrieved September 21, 2025, from https://news.gallup.com/poll/513248/parenting-mitigates-social-media-linked-mental-health-issues.aspx  
+- *Teens, screens, and mental health.* (2024, September 25). World Health Organization (WHO). Retrieved September 21, 2025, from https://www.who.int/europe/news/item/25-09-2024-teens--screens-and-mental-health  
+- US Department of Health and Human Services. (n.d.). *Social Media and Youth Mental Health.* NCBI. Retrieved September 21, 2025, from https://www.ncbi.nlm.nih.gov/books/NBK594759/  
+  `,
+  coverImage: "/social_media_teens_cover.jpg", 
+  date: "October 4, 2025",
+  author: authors["dabosmita-das"],
+  topic: "Mental Health",
+  readingTime: "5 min read",
+  featured: false
+},
+  
+  {
+  slug: "recognizing-dr-georgios-karagiannis",
+  title: "More Than A Doctor: Recognizing Dr. Karagiannis’s Work",
+  excerpt:
+    "Dr. Georgios Karagiannis, a distinguished cardiologist and researcher, continues to shape the field of heart failure and preventive cardiology through his medical expertise and academic dedication.",
+  content: `
+## More Than A Doctor: Recognizing Dr. Karagiannis’s Work
+
+Doctors are truly amazing, aren’t they? Some of them deserve to be recognized for their continuous efforts to improve human lives, either directly through treatment or indirectly through groundbreaking research. One such doctor is **Dr. Georgios Karagiannis**, a cardiologist renowned for his specialization in the field of heart failure.
+
+
+
+## A Lifelong Commitment to Cardiology
+
+Dr. Karagiannis currently practices at **Harefield Hospital** in the UK, where he treats patients from both private and NHS sectors, as well as at **Hillingdon Hospital** in the cardiology department. His dedication to education and medicine is evident through his roles as a **lecturer at Imperial College London** and **Brunel University London**, and as a **tutor at the Royal College of Physicians**.  
+His clinical interests include **heart failure**, **preventive cardiology**, and **acute cardiac care**.
+
+
+
+## Educational Background and Credentials
+
+Dr. Karagiannis completed his medical degree at the **Aristotle University of Thessaloniki** in Greece and went on to receive advanced training in cardiology there. His academic qualifications include both **MD** and **PhD** degrees, demonstrating his strong commitment to clinical practice and medical research.
+
+
+
+## Research and Contributions
+
+Beyond his hospital work, Dr. Karagiannis is recognized for his impactful **research publications** in cardiology. Some of his notable contributions include:
+
+- **A score for risk classification for heart failure patients**, designed to help physicians assess patient conditions based on key complications and factors.  
+- **“The sympathetic nervous system in heart failure: physiology, pathophysiology, and clinical implications,”** which explores the underlying mechanisms of heart failure and informs therapeutic strategies targeting the sympathetic nervous system (SNS).
+
+His research continues to guide clinicians and researchers toward improved treatment approaches and better patient outcomes.
+
+
+
+## Recognitions and Professional Distinctions
+
+For his excellence in cardiology, Dr. Karagiannis has been awarded several prestigious titles:
+
+- **FESC (Fellow of the European Society of Cardiology)**  
+- **FHFA (Fellow of the Heart Failure Association)**  
+- **FRCP (Fellow of the Royal College of Physicians)**  
+
+These honors reflect not only his expertise but also his contributions to advancing the global understanding of cardiovascular health.
+
+
+
+## Final Thoughts
+
+Dr. Georgios Karagiannis’s career reflects both **passion and perseverance**. Whether treating patients with compassion or contributing to medical literature, his work stands as a beacon of excellence in cardiology. His commitment to research, education, and patient care makes him much more than a doctor—he is a true pioneer of heart health.
+
+
+
+## References
+
+- Butler, J. (2009, November 3). *The sympathetic nervous system in heart failure: physiology, pathophysiology, and clinical implications.* PubMed. Retrieved October 8, 2025, from [https://pubmed.ncbi.nlm.nih.gov/19874988/](https://pubmed.ncbi.nlm.nih.gov/19874988/)  
+- Circle Health Group. (n.d.). *Dr Georgios Karagiannis.* Retrieved October 8, 2025, from [https://www.circlehealthgroup.co.uk/consultants/georgios-karagiannis](https://www.circlehealthgroup.co.uk/consultants/georgios-karagiannis)  
+- *Dr Georgios Karagiannis | Consultant Cardiologist.* (n.d.). Spire Healthcare. Retrieved October 8, 2025, from [https://www.spirehealthcare.com/consultant-profiles/dr-georgios-karagiannis-c7459666/](https://www.spirehealthcare.com/consultant-profiles/dr-georgios-karagiannis-c7459666/)  
+- HCA Healthcare UK. (n.d.). *Dr Georgios Karagiannis.* Retrieved October 8, 2025, from [https://www.hcahealthcare.co.uk/finder/stepconsultantprofile/dr-georgios-karagiannis](https://www.hcahealthcare.co.uk/finder/stepconsultantprofile/dr-georgios-karagiannis)  
+- Royal Brompton and Harefield Education. (n.d.). *Dr Georgios Karagiannis.* Retrieved October 8, 2025, from [https://www.rbhh-education.co.uk/instructor/dr-georgios-karagiannis/](https://www.rbhh-education.co.uk/instructor/dr-georgios-karagiannis/)
+  `,
+  coverImage: "/dr_karagiannis_cover.jpg", 
+  date: "September 19, 2025",
+  author: authors["dabosmita-das"],
+  topic: "Medical Innovation",
+  readingTime: "5 min read",
+  featured: true
+},
   {
   slug: "sleep-deprivation-affects-stress-and-anxiety",
   title: "How Sleep Deprivation Affects Teen Stress and Anxiety",
@@ -196,7 +468,7 @@ Teenagers with high stress levels were more likely to report trouble sleeping we
 
 In short, adolescents who slept less than 8 hours on a school night were found to be more stressed than those who slept at least 8 hours.  
 
----
+
 
 ## Problem 2: Deepening Anxiety
 Teenagers also experience **greater anxiety** if they don't get enough sleep.  
@@ -212,13 +484,13 @@ It is common for students to suffer from greater anxiety in the examination room
 
 Results for depressive symptoms were small and inconsistent, as were outcomes for negative emotions such as sadness, worry, and stress.  
 
----
+
 
 ## Conclusion
 Lack of sleep can adversely affect both **stress** and **anxiety**.  
 Therefore, it is important for teens to **develop healthy sleep habits**.  
 
----
+
 
 ## References
 - Columbia University Department of Psychiatry. *How Sleep Deprivation Impacts Mental Health.* Columbia Psychiatry.  
@@ -491,7 +763,7 @@ Travel nursing is more than a profession—it’s a calling. These nurses are th
 
 Nurses are a critical part of a healthcare team and are essential for ensuring that a patient’s treatment plan is conducted in a timely and effective manner. In a given day, nurses may administer medications, change bedsheets, or offer emotional support. In the U.S., there are approximately 4.7 million registered nurses, with 87% remaining active in the profession. Among many specialties, oncology nurses work specifically with patients diagnosed with or at risk of developing cancer.
 
----
+
 
 ## How to Become an Oncology Nurse
 
@@ -499,7 +771,7 @@ To become an oncology nurse, you must first be a registered nurse (RN). This req
 
 While specialization in oncology is available after becoming an RN, it's recommended to gain general experience first. Oncology nurses handle responsibilities like administering chemotherapy, supporting surgical recovery, and assessing the emotional and mental health of cancer patients.
 
----
+
 
 ## Oncology Nursing Job Outlook
 
@@ -507,7 +779,7 @@ Oncology nurses earn competitive salaries in the U.S., ranging from $84,768 to $
 
 They may also choose to subspecialize, working with pediatric, adult, or geriatric cancer patients. Opportunities exist in focused areas such as immunotherapy, bone marrow transplantation, and breast cancer care.
 
----
+
 
 ## Why They Matter
 
@@ -555,7 +827,7 @@ These concerns underscore the importance of ethical oversight, transparency, and
 
 This treatment is a **landmark achievement**: the first successful personalized CRISPR gene therapy in a living patient. It opens doors to future innovations in treating genetic conditions from birth. Despite challenges, it provides real hope to families like KJ’s—proof that scientific advancement can rewrite what once seemed a death sentence into a story of survival and strength.
 
----
+
 
 ### Works Cited
 
@@ -1158,7 +1430,7 @@ As bacteria evolve resistance, phages evolve alongside them, creating a natural 
 
 Bacteriophages offer a sustainable, precise, and powerful response to antimicrobial resistance. As superbugs rise, phage therapy may be the key to revolutionizing healthcare and ensuring humanity stays ahead in the battle against microbial threats.
 
----
+
 
 ### Works Cited
 
@@ -1796,13 +2068,13 @@ Endocrinologists play a crucial role in diagnosing and treating hormone-related 
 
 Chemotherapy is a type of **cancer treatment** that uses drugs to kill cancer cells. These drugs target cells that grow and divide quickly. Since cancer cells grow faster than most normal cells, chemotherapy focuses on stopping them. However, some healthy cells—like those in the hair, digestive system, and bone marrow—also divide quickly, so they can be affected too. This leads to side effects like **hair loss**, **nausea**, **tiredness**, and a **higher risk of infections**.
 
----
+
 
 ## How Chemotherapy Works
 
 Chemotherapy drugs interfere with how cancer cells grow and divide. Since cancer cells multiply without control, these drugs are designed to **slow or stop this growth**. Unfortunately, because the drugs also affect healthy fast-dividing cells, side effects often occur in other parts of the body.
 
----
+
 
 ## Types of Chemotherapy
 
@@ -1814,7 +2086,7 @@ There are several classes of chemotherapy drugs, each working in unique ways:
 - **Mitotic inhibitors**: Stop cell division by targeting microtubules (e.g., paclitaxel, vincristine)
 - **Topoisomerase inhibitors**: Block enzymes that help DNA replicate (e.g., etoposide, irinotecan)
 
----
+
 
 ## Uses of Chemotherapy
 
@@ -1825,7 +2097,7 @@ Chemotherapy is used in various ways:
 - **Neoadjuvant chemotherapy**: Given before surgery/radiation to shrink tumors.
 - **Palliative chemotherapy**: Used to relieve symptoms and improve comfort in advanced cancer cases.
 
----
+
 
 ## Side Effects of Chemotherapy
 
@@ -1837,7 +2109,7 @@ Because chemotherapy impacts healthy fast-growing cells, common side effects inc
 - **Weakened immunity** from reduced white blood cells.
 - **Mouth sores** and **neuropathy** (tingling or numbness in hands/feet).
 
----
+
 
 ## How Chemotherapy Is Given
 
@@ -1849,7 +2121,7 @@ Chemotherapy can be administered in different forms:
 - **Topical** creams for skin cancers.
 - **Intrathecal** (into the spinal fluid) or **intraperitoneal** (into the abdomen) routes for certain cases.
 
----
+
 
 Chemotherapy remains a powerful tool in the fight against cancer, and ongoing research continues to improve its precision and reduce its side effects.
   `,
@@ -1967,7 +2239,7 @@ A hepatologist is a medical specialist who focuses on diagnosing and treating di
 - **Primary biliary cholangitis**
 - **Bile duct cancer**
 
----
+
 
 ## Education and Training of a Hepatologist
 
@@ -1979,7 +2251,7 @@ Becoming a hepatologist requires extensive medical training:
 4. **1 year** advanced transplant hepatology fellowship *or* a **combined 3-year program**
 5. Certification by the **American Board of Internal Medicine**
 
----
+
 
 ## Case Study: Integrative Ayurveda Treatment for Liver Cirrhosis
 
@@ -2000,7 +2272,7 @@ All three reported:
 
 While cirrhosis may not be fully reversible, this case suggests fibrosis may improve when **Ayurvedic treatment is combined with modern monitoring**.
 
----
+
 
 ## Conclusion
 
