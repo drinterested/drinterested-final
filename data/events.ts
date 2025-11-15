@@ -52,21 +52,18 @@ export const pastEvents: EventType[] = [
     status: "closed",
     link: "https://docs.google.com/forms/d/e/1FAIpQLSfzFeuorRRJIkE3FdGiPjGR2IJARzWLguG_O9Xiiblm1m6fmA/viewform",
   },
-    {
-=======
-   {
-  title: "Dr. Interested Webinar Series Recap",
-  date: "August - November 2025",
-  location: "Virtual",
-  description:
-    "A recap of the Dr. Interested Webinar Series, featuring discussions on research, pre-med pathways, and health policy. Watch full recordings and explore key takeaways from each session.",
-  image: "/drintthumbnailpathwaystomed.png", // add an image in /public
-  status: "completed",
-  link: "/events/webinar-series-recap", // ✅ path to the new page
-  featured: true,
-}, 
   {
->>>>>>> 75144b25aa5d425e709546e8c943381234f50cb1
+    title: "Dr. Interested Webinar Series Recap",
+    date: "August - November 2025",
+    location: "Virtual",
+    description:
+      "A recap of the Dr. Interested Webinar Series, featuring discussions on research, pre-med pathways, and health policy. Watch full recordings and explore key takeaways from each session.",
+    image: "/drintthumbnailpathwaystomed.png",
+    status: "completed",
+    link: "/events/webinar-series-recap",
+    featured: true,
+  }, 
+  {
     title: "Research Proposal Competition",
     date: "July 1 to September 1",
     time: "Independent",
