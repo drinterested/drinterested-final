@@ -69,6 +69,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
+  const chessPage: MetadataRoute.Sitemap = [
+    {
+      url: "https://chess.drinterested.org",
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+  ]
+
   const otherPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/links`,
@@ -133,6 +142,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...mainPages,
     ...impactReportPages,
     ...newsletterPage,
+    ...chessPage,
     ...otherPages,
     ...watchPages,
     ...blogTopicPages,

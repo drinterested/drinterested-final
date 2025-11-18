@@ -107,6 +107,16 @@ export function generateOrganizationSchema() {
       "https://mastodon.social/@drinterested",
       "https://news.drinterested.org/",
       "https://impact2025.drinterested.org/",
+      "https://chess.drinterested.org/",
+    ],
+    hasPart: [
+      {
+        "@type": "WebSite",
+        name: "Simmon Chang Chess (Against Cancer) Club",
+        url: "https://chess.drinterested.org",
+        description:
+          "The Dr. Interested Simmon Chang Chess (Against Cancer) Club — tournaments and initiatives supporting pediatric cancer research.",
+      },
     ],
     contactPoint: [
       {

@@ -21,7 +21,7 @@ export const upcomingEvents: EventType[] = [
     description:
       "Tackle real-world innovation challenges, receive mentorship from industry leaders, and present your ideas to expert judges. Includes case package, light refreshments, networking, and early access perks. Fee: $10. Spots are limited! Learn more: https://www.instagram.com/explore3comp/",
     image: "/ex3-logo.png",
-    status: "open",
+    status: "full",
     link: "https://docs.google.com/forms/d/e/1FAIpQLSdl8z70fQGVrXVTAuPGXgOsyB0FyqgN94O0AfXn6qWgBRflMg/viewform",
     featured: true,
   },
@@ -36,11 +36,32 @@ export const upcomingEvents: EventType[] = [
     status: "open",
     link: "https://discord.gg/pzbGRgsGXY",
   },
+  {
+    title: "Dr. Interested Simmon Chang Chess (Against Cancer) Club",
+    date: "December 28, 2025",
+    time: "Rapid (10+5) · Swiss (5 Rounds)",
+    location: "Virtual",
+    description:
+      "Registration Open for Weiss Open (CFC Rated). Hosted by The Dr. Interested Simmon Chang Chess (Against Cancer) Club. Entry Fee: $15. Complete the registration form and send an Interac e-transfer with your Lichess username, name, and CFC-ID to redlory23@gmail.com. All proceeds benefit PCRF — 100% of tournament proceeds are donated to the Pediatric Cancer Research Foundation.",
+    image: "/chessdrint.png",
+    status: "open",
+    link: "https://chess.drinterested.org",
+  },
 ]
 
 // Past events data
 export const pastEvents: EventType[] = [
-    {
+  {
+    title: "First Chess Against Cancer Tournament Complete!",
+    date: "November 2025",
+    location: "Virtual",
+    description:
+      "We’re excited to share that our first Chess Against Cancer tournament is officially done, and together we raised $105 CAD for the Pediatric Cancer Research Foundation! In honor of Simmon Chang, a remarkable young man who unfortunately passed away from osteosarcoma shortly after registering for the tournament, we have renamed our initiative the Simmon Chang Chess (Against Cancer) Club, with permission from his family. His courage and love for chess continue to inspire us and drive our mission to fight childhood cancer. Thank you to everyone who participated, donated, and helped make this first tournament a success!",
+    image: "/chessdrint.png",
+    status: "completed",
+    link: "https://chess.drinterested.org",
+  },
+  {
     title: "Culture & Psychology Conference",
     date: "October 11, 2025",
     time: "1:30 PM - 5:30 PM EST",
@@ -49,7 +70,7 @@ export const pastEvents: EventType[] = [
       "Join us for the Culture & Psychology Conference, hosted in partnership with the Bridge of Culture, on October 18, 2025, at York University’s YSpace (Markham Campus). This exciting event brings together experts, students, and professionals for a day of talks, workshops, and discussions exploring the intersection of culture, psychology, and mental health.",
     image: "/psych-conference.png",
     status: "closed",
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSfzFeuorRRJIkE3FdGiPjGR2IJARzWLguG_O9Xiiblm1m6fmA/viewform",
+    link: "/events/psychology-conference",
   },
   {
     title: "Dr. Interested Webinar Series Recap",
