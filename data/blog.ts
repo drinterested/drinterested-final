@@ -111,6 +111,11 @@ export const authors: Record<string, Author> = {
   image: "/logo.png",
   bio: "Avika is a rising sophomore in Maryland passionate about neuroscience, pediatrics, and pursuing a future in medicine and research."
 },
+  "nashto-mohammed": {
+  name: "Nashto Mohammed",
+  image: "/logo.png",
+  bio: "Nashto is an aspiring medical student and researcher with a keen interest in microbiology and virology, dedicated to exploring the intricate relationships between microbes and human health."
+},
 }
 
 // Blog Topics
@@ -173,6 +178,201 @@ export const blogTopics: BlogTopic[] = [
 
 // Blog Posts (Ordered from Most Recent to Oldest)
 export const blogPosts: BlogPost[] = [
+{
+  slug: "phages-in-your-gut",
+  title: "Phages in Your Gut: The Invisible Viruses That Shape Your Health",
+  excerpt:
+    "Bacteriophages, or phages, are viruses that infect bacteria and play a crucial role in regulating the gut microbiome, supporting digestion, immunity, and even offering potential therapeutic applications.",
+  content: `
+## Phages in Your Gut: The Invisible Viruses That Shape Your Health
+
+Hidden deep in the human intestine is a secret universe ruled by **bacteriophages**, or “phages.” These are viruses that infect bacteria, with an estimated ten phages for each bacterial cell in the gut. Though invisible and often overlooked, phages are crucial for maintaining a healthy gut ecosystem. They control which bacteria survive, how bacteria interact, and how our bodies respond to infection and inflammation.
+
+---
+
+## Role of Phages in the Gut Microbiome
+
+Phages are essential regulators of the **microbiome**, the vast community of bacteria in our intestines. By infecting and lysing pathogenic bacteria, phages help maintain balance in the gut, supporting both **digestion** and **immune function** (Clokie et al., 2011). When this balance is disrupted—a state called **dysbiosis**—it can lead to gut disorders and chronic ailments like **inflammatory bowel disease (IBD)**. Research shows phages naturally target problematic bacterial strains, helping restore microbial balance (Shkoporov & Hill, 2019).
+
+---
+
+## Phages in Modern Medicine
+
+Phages are emerging as a promising tool in **phage therapy**, which uses specific phages to target antibiotic-resistant bacteria (Kortright et al., 2019). Unlike broad-spectrum antibiotics, phages can attack harmful bacteria while leaving beneficial bacteria intact. This precision offers a potential revolution in treating infectious diseases, especially those no longer responsive to traditional drugs, and could transform how we manage gut-related illnesses and microbial diseases.
+
+---
+
+## The Future of Phage Research
+
+Though phage science is still in its infancy, their potential is enormous. These tiny viruses act as **invisible protectors**, policing microbial balance to maintain health. Understanding how phages influence immunity, digestion, and disease prevention could unlock new ways to enhance human health.
+
+---
+
+## References
+
+- Clokie, M. R. J., Millard, A. D., Letarov, A. V., & Heaphy, S. (2011). *Phages in nature.* Bacteriophage, 1(1), 31–45.  
+- Shkoporov, A. N., & Hill, C. (2019). *Bacteriophages of the human gut: The "known unknown" of the microbiome.* Cell Host & Microbe, 25(2), 195–209.  
+- Kortright, K. E., Chan, B. K., Koff, J. L., & Turner, P. E. (2019). *Phage therapy: A renewed approach to combat antibiotic-resistant bacteria.* Cell Host & Microbe, 25(2), 219–232.
+  `,
+  coverImage: "gut-phages.png",
+  date: "November 25, 2025",
+  author: authors["nashto-mohammed"],
+  topic: "Health",
+  readingTime: "6 min read",
+  featured: false
+},
+
+{
+  slug: "measles-resurgence-canada",
+  title: "Measles Resurging in Canada – Why Vaccination Matters",
+  excerpt:
+    "Measles has resurged in Canada after decades of elimination. Learn how gaps in vaccination coverage contributed to outbreaks, and why the MMR vaccine remains critical.",
+  content: `
+## Measles Resurging in Canada – Why Vaccination Matters
+
+Measles returning in Canada may feel unreal, but the events of 2024–2025 showed that viruses don’t disappear simply because we assume they’re gone. The outbreak spread across multiple provinces, leading Canada to lose its measles-free status in late 2025. Thousands of cases were documented, including severe infections and infant deaths. These tragedies were preventable, highlighting the importance of vaccination and immunity maintenance.
+
+---
+
+## How Measles Resurged
+
+Vaccine coverage is key. Rates had been slipping in certain regions, worsened by the COVID-19 pandemic. School closures, healthcare disruptions, and misinformation contributed to missed vaccinations. Measles requires extremely high coverage—around 95% with two MMR doses—to prevent outbreaks. Its contagiousness is unmatched: one infected person can spread it to 12–18 others, and the virus can linger in the air for hours.
+
+---
+
+## Misconceptions About Measles
+
+Some viewed measles as “just a rash” or “something everyone got.” In reality, before vaccines, measles was a leading global killer. Complications include pneumonia, dehydration, encephalitis, blindness, hearing loss, long-term neurological damage, and SSPE—a fatal condition appearing years after infection. During Canada’s 2024–2025 outbreaks, infants too young for vaccination suffered preventable harm.
+
+---
+
+## The Role of the MMR Vaccine
+
+The MMR vaccine is one of the safest and most studied vaccines globally. Two doses provide about 97% protection. Vaccination not only protects individuals but also shields vulnerable populations such as infants, pregnant people, and immunocompromised individuals—creating herd immunity.
+
+---
+
+## Public Health Response
+
+Canadian public health agencies responded with:
+
+- Extended-hour vaccination clinics and mobile immunization vans  
+- Emergency catch-up programs  
+- Temporary lowering of the minimum MMR vaccination age in outbreak areas  
+- School-based immunization checks and notifications  
+- New procedures in hospitals and clinics to prevent ER exposures  
+
+---
+
+## Challenges and Long-Term Solutions
+
+Rebuilding immunity requires:
+
+- Stable funding for routine immunization programs  
+- Modernized, real-time immunization registries with reminders  
+- Community-focused, culturally aware outreach  
+- Increased access to primary care, especially in rural and Indigenous communities  
+- Clear, consistent, and trustworthy public health communication  
+
+Global trends also impact Canada, as measles outbreaks elsewhere can quickly spread via travel. Strengthened international coordination, outreach, and reliable vaccination systems are critical to prevent future outbreaks.
+
+---
+
+## Key Takeaways
+
+- Measles resurgence in Canada was driven by small gaps in vaccination, worsened by the pandemic  
+- The MMR vaccine is safe, effective, and essential for individual and community protection  
+- Public health systems need stable funding, accessible services, and trusted communication  
+- Preventing measles is achievable; rebuilding immunity is a matter of consistent vaccination and community engagement  
+
+---
+
+## References
+
+- [Associated Press, 2025](https://apnews.com/news-highlights/spotlights/2025/canada-loses-measles-elimination-status-after-ongoing-outbreaks/)  
+- [Bloomberg, 2025](https://www.bloomberg.com/news/articles/2025-11-10/canada-loses-measles-free-status-with-outbreak-passing-one-year-mark)  
+- [Canadian Medical Association Journal, 2024](https://www.cmaj.ca/content/197/3/E101)  
+- [Durham Region Public Health, 2025](https://www.durham.ca/en/health-and-wellness/resources/Documents/ResourcesforHealthCareProviders/FaxAbout/2025/Measles-Preparedness-June-12-2025.pdf)  
+- [Gavi, The Vaccine Alliance, 2025](https://www.gavi.org/vaccineswork/why-measles-surging-worldwide)  
+- [Government of Manitoba, 2025](https://www.gov.mb.ca/health/publichealth/cdc/docs/hcp/2025/travel-related-measles-confirmed-cases.pdf)  
+- [Pan American Health Organization, 2025](https://www.paho.org/sites/default/files/2025-05/2025-may-2-phe-epi-update-measles-final.pdf)  
+- [Public Health Agency of Canada, 2025](https://www.canada.ca/en/public-health/services/publications/diseases-conditions/measles-rubella-surveillance.html)  
+- [Public Health Ontario, 2025](https://www.publichealthontario.ca/-/media/Documents/E/2025/enhanced-epi-summary-measles-2024-25.pdf)  
+- [Reuters, 2025](https://www.reuters.com/world/americas/canada-has-lost-its-measles-elimination-status-says-ottawa-2025-11-10/)  
+- [The Guardian, 2025](https://www.theguardian.com/world/2025/nov/11/canada-loses-measles-free-elimination-status)  
+- [World Health Organization – Disease Outbreak News, 2025](https://www.who.int/emergencies/disease-outbreak-news/item/2025-DON565)  
+- [World Health Organization – Measles Fact Sheet, 2025](https://www.who.int/news-room/fact-sheets/detail/measles)
+  `,
+  coverImage: "/measels_cover.png",
+  date: "November 25, 2025",
+  author: authors["manha-atiq"],
+  topic: "Health",
+  readingTime: "10 min read",
+  featured: false
+},
+
+{
+  slug: "asthma-understanding-causes-triggers-and-management",
+  title: "What is Asthma? Understanding Causes, Triggers, and Management",
+  excerpt:
+    "Asthma is a common chronic condition affecting the lungs and airways. Learn about its causes, triggers, and practical ways to manage symptoms effectively.",
+  content: `
+## What is Asthma?
+
+Asthma is a condition that affects the lungs and airways in our body. It causes problems with breathing and includes symptoms such as coughing and wheezing. It is one of the most common chronic conditions worldwide. In 2019 alone, around 262 million people were affected by asthma, and 455,000 people died from it.
+
+While there is no cure for asthma, it can be managed with medications prescribed by doctors and by understanding triggers that can start an asthma attack. In this article, we explain how asthma occurs and discuss common triggers that can be managed to reduce attacks.
+
+---
+
+## The Mechanism Behind Asthma
+
+In asthma, irritants or triggers can cause inflammation of the airways (bronchial tubes), making them narrow. This results in shortness of breath, wheezing, and chest tightness due to reduced airflow to the lungs.
+
+Some contributing factors for asthma include:
+
+- Family history of asthma  
+- History of allergic conditions  
+- Exposure to irritants like air pollution, which increases risk
+
+---
+
+## Common Triggers and Management
+
+Asthma triggers vary by person, but many fall into similar categories:
+
+### 1. Allergies
+Exposure to allergens like dust mites can trigger asthma.  
+**Management tips:**
+- Avoid contact with allergens  
+- Declutter living spaces  
+- Remove carpets that trap dust  
+
+### 2. Airborne Irritants
+Smoke and dust can irritate the airways.  
+**Management tips:**
+- Use masks outdoors  
+- Check air quality before outdoor activities  
+- Install air filters indoors  
+
+### 3. Emotional Stress
+Strong emotions (anger, fear, excitement) or anxiety can trigger symptoms.  
+**Management tips:**
+- Practice mindful breathing (slow, controlled breaths)  
+- Focus on a single object for a short time to relax  
+
+### 4. Certain Medications
+Medications such as aspirin and beta blockers may trigger asthma attacks.  
+**Management tip:**
+- Discuss any new medications with your healthcare provider
+  `,
+  coverImage: "/asthma-feature.png",
+  date: "November 25, 2025",
+  author: authors["dabosmita-das"],
+  topic: "Health",
+  readingTime: "5 min read",
+  featured: false
+},
 {
   slug: "dr-galina-gheihman-profile",
   title: "Dr. Galina Gheihman: Advancing Medical Education in Neurology",
