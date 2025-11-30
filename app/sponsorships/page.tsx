@@ -1,18 +1,52 @@
 import type { Metadata } from "next"
-import { Mail, Sparkles, Users, Megaphone, Award } from "lucide-react"
+import { Mail, Sparkles, Users, Megaphone, Award, Heart, Info } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Sponsorships",
+  title: "Sponsorships & Donations",
   description:
-    "Partner with Dr. Interested to support youth healthcare education and leadership. Gain visibility across our global community of 55,000+ engaged students.",
+    "Partner with Dr. Interested to support youth healthcare education. Join our sponsors or donate to help inspire the next generation of healthcare professionals.",
+  keywords: [
+    "sponsorships",
+    "partner with Dr. Interested",
+    "donations",
+    "support healthcare education",
+    "youth healthcare programs",
+    "corporate partnerships",
+    "charitable giving",
+  ],
   openGraph: {
-    title: "Sponsorships | Dr. Interested",
+    title: "Sponsorships & Donations | Dr. Interested",
     description:
-      "Partner with Dr. Interested to support youth healthcare education and leadership. Gain visibility across our global community of 55,000+ engaged students.",
+      "Partner with Dr. Interested to support youth healthcare education. Join our sponsors or donate to help inspire the next generation of healthcare professionals.",
     url: "https://www.drinterested.org/sponsorships",
     siteName: "Dr. Interested",
     type: "website",
+    images: [
+      {
+        url: "/websitebanner.jpg",
+        width: 1920,
+        height: 1080,
+        alt: "Dr. Interested Sponsorships",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sponsorships & Donations | Dr. Interested",
+    description:
+      "Partner with Dr. Interested to support youth healthcare education. Join our sponsors or donate to help inspire the next generation of healthcare professionals.",
+    images: {
+      url: "/websitebanner.jpg",
+      alt: "Dr. Interested Sponsorships",
+    },
+  },
+  alternates: {
+    canonical: "https://www.drinterested.org/sponsorships",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 
@@ -26,10 +60,13 @@ export default function SponsorshipsPage() {
             <Sparkles className="h-4 w-4" />
             Partner With Us
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#405862] mb-6 text-balance">Sponsorships</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#405862] mb-6 text-balance">
+            Sponsorships & Donations
+          </h1>
           <p className="text-lg md:text-xl text-[#405862]/80 max-w-2xl mx-auto text-pretty">
             Support youth healthcare education and leadership while gaining visibility across our global community of
-            60,000+ engaged students.
+            60,000+ engaged students. Join our sponsors or donate to help inspire the next generation of healthcare
+            professionals.
           </p>
         </div>
       </section>
@@ -113,6 +150,154 @@ export default function SponsorshipsPage() {
               <Mail className="h-5 w-5" />
               finance@drinterested.org
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Support Us Through Donations Section */}
+      <section className="py-12 md:py-16 bg-[#f5f1eb]/50">
+        <div className="container max-w-5xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-[#4ecdc4]/10 text-[#405862] px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Heart className="h-4 w-4" />
+              Support Our Mission
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#405862] mb-4">Support Us Through Donations</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+              Every contribution helps us continue our educational mission to inspire the next generation of healthcare
+              professionals.
+            </p>
+          </div>
+
+          {/* Donation Information */}
+          <div className="bg-white rounded-2xl border-2 border-[#4ecdc4]/20 p-8 md:p-12 mb-8 shadow-sm">
+            <h3 className="text-2xl font-bold text-[#405862] mb-6">Why Your Donation Matters</h3>
+            <p className="text-[#405862]/80 mb-6 leading-relaxed">
+              Dr. Interested is a student-run, unregistered organization dedicated to providing accessible healthcare
+              education to youth worldwide. Your donations directly support:
+            </p>
+            <ul className="grid md:grid-cols-2 gap-4 mb-8">
+              <li className="flex items-start gap-3">
+                <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#4ecdc4]/20 flex items-center justify-center mt-0.5">
+                  <div className="h-2 w-2 rounded-full bg-[#4ecdc4]"></div>
+                </div>
+                <span className="text-[#405862]/80">Youth healthcare education and mentorship programs</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#4ecdc4]/20 flex items-center justify-center mt-0.5">
+                  <div className="h-2 w-2 rounded-full bg-[#4ecdc4]"></div>
+                </div>
+                <span className="text-[#405862]/80">Events, workshops, and outreach initiatives</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#4ecdc4]/20 flex items-center justify-center mt-0.5">
+                  <div className="h-2 w-2 rounded-full bg-[#4ecdc4]"></div>
+                </div>
+                <span className="text-[#405862]/80">Recurring and one-time educational programs</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#4ecdc4]/20 flex items-center justify-center mt-0.5">
+                  <div className="h-2 w-2 rounded-full bg-[#4ecdc4]"></div>
+                </div>
+                <span className="text-[#405862]/80">Core platform and operational costs</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Donation Method */}
+          <div className="bg-white rounded-2xl border-2 border-[#4ecdc4]/20 p-8 md:p-12 mb-8 shadow-sm">
+            <h3 className="text-2xl font-bold text-[#405862] mb-6 flex items-center gap-2">
+              <Mail className="h-6 w-6 text-[#4ecdc4]" />
+              How to Donate
+            </h3>
+            <p className="text-[#405862]/80 mb-6 leading-relaxed">
+              We accept donations via E-Transfer to support our mission:
+            </p>
+            <div className="bg-[#f5f1eb] rounded-lg p-6 mb-6 border border-[#4ecdc4]/20">
+              <p className="text-sm text-[#405862]/70 mb-2">E-Transfer Email Address</p>
+              <p className="text-2xl font-bold text-[#405862] mb-4">finance@drinterested.org</p>
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="font-semibold text-[#405862]">Donation Instructions:</h4>
+              <ul className="space-y-3 text-[#405862]/80">
+                <li className="flex gap-3">
+                  <span className="flex-shrink-0 font-bold text-[#4ecdc4]">1.</span>
+                  <span>
+                    Send an E-Transfer to <span className="font-medium text-[#405862]">finance@drinterested.org</span>
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="flex-shrink-0 font-bold text-[#4ecdc4]">2.</span>
+                  <span>Include your name and the word "Donation" in the message field</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="flex-shrink-0 font-bold text-[#4ecdc4]">3.</span>
+                  <span>
+                    Optional: If you'd like your donation directed toward a specific program or event, include the
+                    program name in the e-transfer description
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-[#4ecdc4]/5 rounded-lg p-4 mt-6 border border-[#4ecdc4]/20">
+              <p className="text-sm text-[#405862]/80">
+                <span className="font-medium text-[#405862]">Program Direction:</span> We honor program-specific
+                donation requests where possible and subject to organizational needs. If you'd like your donation
+                directed toward a specific program or event, please include the program name in the e-transfer
+                description.
+              </p>
+            </div>
+          </div>
+
+          {/* Transparency Notice */}
+          <div className="bg-white rounded-2xl border-2 border-[#405862]/30 p-8 md:p-12 mb-8 shadow-sm">
+            <div className="flex gap-4">
+              <Info className="h-6 w-6 text-[#405862] flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-lg font-bold text-[#405862] mb-4">Transparency & Compliance</h3>
+                <div className="space-y-3 text-[#405862]/80 text-sm">
+                  <p>
+                    <span className="font-medium text-[#405862]">Dr. Interested is not a registered charity.</span>{" "}
+                    Donations are not eligible for charitable tax receipts as we are not registered with Canada's CRA or
+                    any similar tax authority.
+                  </p>
+                  <p>
+                    All funds received are used exclusively to support Dr. Interested's educational mission and programs
+                    dedicated to youth healthcare education.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Legal Links */}
+          <div className="text-center text-sm text-muted-foreground">
+            <p>
+              By donating, you agree to our{" "}
+              <Link
+                href="/privacy-policy"
+                className="text-[#405862] font-medium hover:text-[#4ecdc4] underline transition-colors"
+              >
+                Privacy Policy
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="/terms"
+                className="text-[#405862] font-medium hover:text-[#4ecdc4] underline transition-colors"
+              >
+                Terms & Conditions
+              </Link>
+              .
+            </p>
+          </div>
+
+          {/* Closing Message */}
+          <div className="mt-12 p-8 text-center bg-gradient-to-r from-[#4ecdc4]/5 to-[#405862]/5 rounded-xl">
+            <p className="text-lg text-[#405862] font-medium text-pretty">
+              Thank you for supporting youth pursuing careers in healthcare.
+            </p>
           </div>
         </div>
       </section>
