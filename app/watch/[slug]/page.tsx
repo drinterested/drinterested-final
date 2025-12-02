@@ -24,7 +24,7 @@ export async function generateMetadata({
     }
   }
 
-  const baseUrl = "https://www.drinterested.org"
+  const baseUrl = "https://drinterested.org"
   const watchUrl = `${baseUrl}/watch/${webinar.slug}`
 
   return {
