@@ -13,9 +13,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: { slug: string }
 }): Promise<Metadata> {
-  const { slug } = await params
+  const { slug } = params
   const webinar = getWebinarBySlug(slug)
 
   if (!webinar) {
@@ -99,9 +99,9 @@ export async function generateMetadata({
 export default async function WatchPage({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: { slug: string }
 }) {
-  const { slug } = await params
+  const { slug } = params
   const webinar = getWebinarBySlug(slug)
 
   if (!webinar) {
