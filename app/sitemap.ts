@@ -124,16 +124,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }))
 
+  // Use current date for lastModified to avoid invalid date strings
   const blogPostPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: currentDate,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }))
 
+  // Some webinar dates include times/timezones and are not ISO. Avoid parsing.
   const watchPages: MetadataRoute.Sitemap = webinars.map((webinar) => ({
     url: `${baseUrl}/watch/${webinar.slug}`,
-    lastModified: new Date(webinar.date),
+    lastModified: currentDate,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }))
