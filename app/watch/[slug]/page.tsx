@@ -3,10 +3,14 @@ import { notFound } from "next/navigation"
 import { getWebinarBySlug, getAllWebinarSlugs } from "@/data/webinars"
 import WatchPageClient from "./WatchPageClient"
 
+
+export const dynamic = "force-static"
+export const dynamicParams = true
+
 export async function generateStaticParams() {
   const slugs = getAllWebinarSlugs()
   return slugs.map((slug) => ({
-    slug: slug,
+    slug,
   }))
 }
 
@@ -35,14 +39,13 @@ export async function generateMetadata({
       "Dr. Interested",
       "webinar",
       "medical education",
-      "healthcare education",
       "premed",
-      "medical students",
       "healthcare careers",
     ],
     authors: [{ name: "Dr. Interested" }],
     creator: "Dr. Interested",
     publisher: "Dr. Interested",
+
     openGraph: {
       type: "video.other",
       locale: "en_US",
@@ -68,24 +71,18 @@ export async function generateMetadata({
         },
       ],
     },
+
     twitter: {
-      card: "player",
+      card: "summary_large_image",
       title: webinar.title,
       description: webinar.description,
-      images: {
-        url: `${baseUrl}${webinar.thumbnailPath}`,
-        alt: webinar.title,
-      },
-      players: {
-        playerUrl: watchUrl,
-        streamUrl: `${baseUrl}${webinar.videoPath}`,
-        width: 1280,
-        height: 720,
-      },
+      images: [`${baseUrl}${webinar.thumbnailPath}`],
     },
+
     alternates: {
       canonical: watchUrl,
     },
+
     robots: {
       index: true,
       follow: true,
