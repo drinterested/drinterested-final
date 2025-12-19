@@ -187,10 +187,17 @@ export const departments: DepartmentType[] = [
     ],
     members: [
       {
+        id: "marketing-mem10",
+        name: "Chetna Prabhu",
+        role: "Marketing Member",
+        image: "/ChetnaPrabhu_marketing.jpg",
+        bio: "Chetna Prabhu is a dedicated grade 11 AP student taking AP French and AP Physics at St. Joseph’s Secondary School. She loves content designing and digital creation, researching, learning new languages, and studying both science and mathematics. At school, she is part of the student council as Minister of Public Relations, DECA, HOSA, and the school’s newspaper club. To Chetna, the youth has such a powerful role in being able to make change and am so excited to support the next generation of medical students who aspire to find opportunities and programs in medicine. She is a passionate student interested in pursuing biomedical engineering in the future and hopes to gain experience in healthcare, research, and marketing through this amazing opportunity with Dr. Interested as a marketing executive.",
+      },
+      {
         id: "marketing-mem1",
         name: "Jawwad Ahmad",
         role: "Marketing Member",
-        image: "/logo.png",
+        image: "/Jawwad_marketing.png",
         bio: "Hi, my name is Jawwad. I’m a Grade 11 IB student who has an interest in Engineering, Robotics and STEM. I have participated in many volunteering activities like Peer Helpers and at the YMCA. I have also participated in clubs like DECA and Peer Helpers. I look forward to collaborating on cutting edge ideas that push the boundaries of what's possible.",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/jawwad-ahmad-15197b32a/",
@@ -198,37 +205,14 @@ export const departments: DepartmentType[] = [
         },
       },
       {
-        id: "marketing-mem2",
-        name: "David Santoso",
-        role: "Marketing Member",
-        image: "/logo.png",
-        bio: "Developing marketing strategies to increase engagement with our target audience.",
-        socialLinks: {},
-      },
-      {
         id: "marketing-mem3",
         name: "Hasnain Ali",
         role: "Marketing Member",
         image: "/logo.png",
-        bio: "Managing our social media presence and creating content that resonates with high school students.",
-        socialLinks: {},
-      },
-      {
-        id: "marketing-mem4",
-        name: "Paulina Arenas",
-        role: "Marketing Member",
-        image: "/Paulina.png",
-        bio: "Paulina Arenas is a dedicated student at Southeast Career Technical Academy in Las Vegas, majoring in Sports Medicine. As a bilingual leader involved in DECA, HOSA, the Student Organization of Latino, and the Chick-fil-A Lead Academy, she thrives in roles that combine leadership, service, and collaboration. Paulina is a multi-sport athlete, competing in soccer and archery,, She’s passionate about improving access to healthcare in underserved communities and aspires to develop programs that make a lasting impact.",
-        socialLinks: {},
-      },
-      {
-        id: "marketing-mem5",
-        name: "Avishi Jain",
-        role: "Marketing Member",
-        image: "/logo.png",
-        bio: "Hi, I’m Avishi. 16. I build soulful things—from startups to podcasts to midnight Canva brainstorms powered by banana chips. Obsessed with creativity, emotional truth, and mango season metaphors (I might’ve compared love to Alphonso pulp once. No regrets). Purpose is my vibe. Impact is my goal. I’ve accidentally created aesthetic spreadsheets that made people cry (in a good way). I believe in journaling under trees, healing through memes, and occasionally naming my Notion pages like they’re characters in a fantasy novel.🥭✨🧃",
+        bio: "Hasnain Ali is a Motivated and adaptable high school student with proven experience in digital marketing and content creation through roles such as content creation and digital marketing at Dr. Interested. Adept at developing innovative campaigns through effective team collaboration and strong communication skills. In addition to marketing experience, contributed as a dedicated volunteer at Seva Food Bank, assisting with customer service, food distribution, and inventory support. Committed to delivering high-quality projects on time, maintaining consistent branding, and providing reliable, hands-on support in fast-paced environments. Passionate about leveraging both creativity and customer-focused service to drive engagement and make a meaningful impact.",
         socialLinks: {
-          instagram: "https://www.instagram.com/selfmade_avi/",
+          linkedin: "https://www.linkedin.com/in/hasnain-ali-891b26315/",
+          instagram: "https://www.instagram.com/h2znain/",
         },
       },
       {
@@ -240,14 +224,38 @@ export const departments: DepartmentType[] = [
         socialLinks: {
           linkedin: "www.linkedin.com/in/keyaan-chowdhury-46487936a"
         },
+        
       },
       {
         id: "marketing-mem7",
-        name: "Emily Do",
+        name: "Ganesh Kartik Nagasubramanian",
+        role: "Marketing Member",
+        image: "/GaneshKartik_marketing.png",
+        bio: "Ganesh Kartik is a Grade 11 DP IB student at Glenforest Secondary School, an outgoing and communicative person who is always ready to lend a helping hand. He has a strong interest in history, technology, and building, while also being a keen learner in anything STEM related. Being an active member of Dr. Interested, Ganesh Kartik helps run events which elevate the medicinal understanding of all those who participate, through his clear commitment and sheer hard work. ",
+        socialLinks: {
+          linkedin: "http://www.linkedin.com/in/ganeshknagasubramanian"
+        },
+        
+      },
+      {
+        id: "marketing-mem8",
+        name: "Saanvi Somani",
+        role: "Marketing Member",
+        image: "/Saanvi_marketing.png",
+        bio: "Saanvi is a dedicated high school student at the Texas Academy of Math and Science with a strong interest in psychology and creative problem-solving. She likes to pair her academic drive with leadership through her involvement in classes at the college level with volunteering at multiple institutes. Being a member of Dr. Intersted, Saanvi contributes to student-led initiatives that help highschoolers explore healthcare pathways by using her editing skills and creating engaging reels. ",
+        socialLinks: {
+          instagram: "https://www.instagram.com/saanvi_s08/"
+        },
+        
+      },
+      {
+        id: "marketing-mem9",
+        name: "Shiwali Gupta",
         role: "Marketing Member",
         image: "/logo.png",
-        bio: "Hi! My name is Emily, I am a senior in high school with plans to pursue a career in dentistry in the future. I’m someone who naturally cares about people and likes to create a comfortable space for others to feel heard and supported. I’m curious, hardworking, and open to challenges, especially when they help me grow or make a positive difference in someone’s life. Whether it’s through academics, volunteering, or mentorship, I’m always looking for ways to connect with others and contribute to something meaningful.",
-        socialLinks: {},
+        bio: "Hi! I’m Shiwali Gupta, a 9th grader in Ohio. I was born in India, and moved to the US at 7 years old. I’m really interested in helping people in any way I can. I love to make everyone smile. Outside of school, I am in dance, taekwondo and many clubs for school.",
+        
+        
       },
     ],
   },
@@ -261,93 +269,33 @@ export const departments: DepartmentType[] = [
       name: "Muhammad Ibrahim Lari",
       role: "Director of Publications",
       image: "/lari.png", 
-      bio: "Muhammad Lari is a dedicated high school student currently enrolled at Glenforest Secondary School. With a strong academic background, particularly in science and mathematics, Muhammad has honed critical thinking and problem-solving skills through both independent learning and hands-on experiences. Their organizational and leadership abilities are evident through their involvement in managing logistics for school events and tutoring peers in mathematics. Additionally, Muhammad  is passionate about astronomy and health education, contributing to student initiatives that empower the community with valuable wellness insights. Their commitment to academics, extracurriculars, and personal growth highlights their perseverance, adaptability, and drive for excellence.",
+      bio: "Hi, I’m Muhammad Lari, a future engineer driven by curiosity and a desire to create meaningful change. I love exploring how things work and finding ways to improve them, whether through hands-on problem-solving or leading youth projects. I’m constantly looking for opportunities to learn, innovate, and build ideas that matter.",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/muhammad-ibrahim-lari-67564230a/",
       },
     },
     members: [
       {
-      id: "1-deputy-dir",
-      name: "Manmeet Singh",
-      role: "Assistant Director of Publications (Research)",
-      image: "/manmeet.png", 
-      bio: "Manmeet Singh is a highly motivated highschool student currently enrolled in the IB program at Glenforest Secondary School. Through hands-on learning experiences in the IBT and IB programs, Manmeet has developed a strong foundation in science and mathematics allowing for critical thinking and complex problem solving skills. Manmeet’s creative and entrepreneurial mindset has led to the development of two business models showcasing his ability to innovate and adapt. Overall, Manmeet’s dedication to both academics and sports has driven Manmeet to excel in various leadership roles, demonstrating perseverance, discipline, and commitment.",
-      socialLinks: {},
-      },
-      {
-      id: "2-deputy-dir",
-      name: "Adhi Ammanath",
-      role: "Assistant Director of Publications (Podcast)",
-      image: "/logo.png", 
-      bio: "Adhi Ammanath helps lead the podcast team, focusing on creating engaging audio content that explores various medical topics and career paths.",
-      socialLinks: {},
-      },
-      {
-        id: "publications-mem1",
-        name: "Maliha Metla",
-        role: "Publications Member",
-        image: "/Maliha.JPG",
-        bio: "Maliha Metla is a 10th grade student from New York who is actively involved in her community. She is a publications team member of Dr. Interested. Maliha joined Dr. Interested after noticing a lack of accessible resources for students to explore different medical career options and develop essential skills. She is passionate about education, science, the medical field,and giving back to her community. Maliha is also working on publishing research related to medical and technological advancements, demonstrating her dedication to both academics and making a meaningful impact.",
-        socialLinks: {
-          linkedin: "https://www.linkedin.com/in/maliha-metla-a71650343/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-        },
-      },
-      {
-        id: "publications-mem2",
-        name: "Manha Atiq",
-        role: "Publications Member",
-        image: "/logo.png",
-        bio: "Developing educational resources to help students understand medical concepts and career paths.",
-        socialLinks: {},
-      },
-      {
-        id: "publications-mem4",
-        name: "Iosef Isaac Perez",
-        role: "Publications Member",
-        image: "/logo.png",
-        bio: "Ensuring consistent tone, style, and accuracy in all materials.",
-        socialLinks: {
-          instagram: "https://www.instagram.com/b.iird/",
-        },
-      },
-      {
-        id: "publications-mem5",
-        name: "Gaeun Lee",
-        role: "Publications Member",
-        image: "/logo.png", // Need Image
-        bio: "Supporting research projects and mentorship programs for aspiring medical researchers.",
-        socialLinks: {},
-      },
-      {
         id: "publications-mem6",
         name: "Dabosmita Parial",
         role: "Publications Member",
-        image: "/Dabosmita.jpg",
-        bio: "Dabosmita is a year 12 student who is curious and excited to learn new things all the time- whether it be about the latest developments in tech, medicine, or random contemplative philosophical ideas. She is passionate about leadership and public speaking- which she demonstrates at her school by being a prefect and also being part of the school's debate team that regularly takes part in interschool debates organised by Qatar Debate. Alongside debate, she takes part in MUN conferences and speech competitions within and outside her school. She is a member of publications at Cosmic-Us, a student-led organization and works as a research team member at Dr.Interested. Dabosmita will always look forward to future projects to develop her skills and discover her potential further!",
+        image: "/Dabosmita.png",
+        bio: "Hi, I’m Dabosmita! A student who loves psychology and medicine, I hope to pursue a career in either one of those or maybe both combined! Other than that, I am an avid public speaker who loves to partake in debates especially those involving ethics and childhood. In addition to all of this, I am always looking forward to opportunities to research and volunteer as I aspire to improve my skills over the next few years.",
         socialLinks: {},
       },
       {
         id: "publications-mem7",
-        name: "Prithi Balaji",
+        name: "Aiza Rasheed",
         role: "Publications Member",
-        image: "/logo.png", // Need Image
-        bio: "Prithi brings a unique blend of STEM and medicinal knowledge to the mix of strengths here at the FireGuard cause. Currently a 10th grader in Charlotte, NC, Prithi is ranked 1st in a class of 686 students, with a weighted GPA of 4.55. She is deeply involved in both academics and extracurricular activities, showcasing leadership in various roles. Prithi's academic focus spans subjects like AP Computer Science, Honors Biomedical Sciences, and AP Psychology, with a particular interest in the application of AI in healthcare. She is currently working on a research paper exploring the use of CNN-LSTM AI models for diagnosing melanoma, combining her technical skills and passion for medical innovation. She also placed Gold for NCSO Regionals, and continues to compete in events related to disease detection, anatomy, and experimental design. As an intern with ThinkNeuro, Prithi has had the opportunity to engage in various professional development initiatives, including contributing to the development of neurologic curriculum reforms and working on complex marketing logistics. Finally, she has had the opportunity to represent her impact on her community by giving back to the middle schoolers through volunteering, committing to a subcommittee of 4H where she actively volunteers, and being a proofreader for a global set of users at Project Gutenberg. Ultimately, these experiences have all led Prithi to become a motivated, inspired, and resilient individual, who will strive to improve her knowledge whilst contributing to the excellent atmosphere that is the Academy of Sciences.",
+        image: "/aiza.png", 
+        bio: " Hi, I’m Aiza! I'm a student looking to pursue Psychology and Philosophy in university as I have an immense passion for both subjects. I’m hoping to become a psychologist when I am older and eventually teach as a professor! Additionally, I absolutely love reading, mostly I read classics, philosophy, psychology and medical papers.",
       },
       {
         id: "publications-mem9",
-        name: "Avika Tyagi",
+        name: "Nashto Mohammed",
         role: "Publications Member",
-        image: "/logo.png", // Need Image
-        bio: "Producing articles, blogs, and printed materials for distribution.",
-        socialLinks: {},
-      },
-      {
-        id: "publications-mem10",
-        name: "Saniyah Sajjad",
-        role: "Publications Member",
-        image: "/logo.png", // Need Image
-        bio: "Hi, I am an incoming first-year Psychology student at Western with an AEO status. I am passionate about business and psychology, and I aim to enter the marketing field in the future. ",
+        image: "/nashto.png", 
+        bio: "Hi, my name is Nastaho Mohamed. I’m passionate about health science and aspiring to become a pediatrician. I’ve always been interested in understanding how the body works and how medical care can change someone’s life, especially for children. Helping my community is important to me, and I want to use my future career to support families, improve access to care, and make a positive difference. I’m motivated to keep learning, gaining experience, and building the skills I need to reach my goals.",
         socialLinks: {},
       },
     ],
@@ -371,38 +319,41 @@ export const departments: DepartmentType[] = [
       {
         id: "3-deputy-dir",
         name: "Vicky Shi",
-        role: "Assistant Director of HR (Ambassador Program)",
+        role: "Deputy Director",
         image: "/logo.png", 
-        bio: "Handling team feedback, conflict resolution, and peer support.",
+        bio: "Hi! I’m a Grade 10 Pre-IB student at St.Roberts CHS. I’m passionate about creating inclusive, supportive environments where people can truly grow. Outside of work, I love reading, curating playlists that match every mood, and finding new ways to express myself creatively. I care deeply about personal development, mental wellness, and building real, meaningful connections with the people around me. Whether I’m helping someone navigate a tough situation or just being a sounding board, I try to bring thoughtfulness and intention to everything I do. I’m always looking for new ways to grow, learn, and make a positive impact, both in my work and in my everyday life.",
         socialLinks: {},
       },
       {
         id: "hr-mem1",
-        name: "Aayan Shivji",
+        name: "Chloe Young",
         role: "Human Resources Member",
-        image: "/logo.png", 
-        bio: "Aayan Shivji is a hardworking high school student at St. Francis Xavier Secondary School with a passion for learning and community involvement. He enjoys exploring science and mathematics, constantly challenging himself with new concepts and problem-solving opportunities. Beyond academics, Aayan is deeply involved in extracurricular activities and loves volunteering. Whether organizing school events, mentoring younger students, or participating in community service, he is always eager to make a positive impact. His enthusiasm extends to sports, where he really enjoys table tennis and tennis, embracing both the competitive and team aspects of the game. With a strong work ethic and a drive to grow, Aayan continues to seek new experiences that shape his skills and character. He is truly looking forward to working with Dr. Interested and having a meaningful learning experience that will help him grow both academically and professionally.",
+        image: "/chloey.png", 
+        bio: "Hello, I am a grade 11 student in Ontario, Canada and I want to become a surgeon in the future. Some of my hobbies include building model kits, alpine skiing, and creative writing. I joined Dr. Interested because I love what they do and how they help youth along their pathway into medicine. ",
         socialLinks: {},
       },
       {
         id: "hr-mem2",
-        name: "Koraya Whyte-Smith",
+        name: "Grasen Menns",
         role: "Human Resources Member",
-        image: "/logo.png",
-        bio: "Supporting the onboarding process and creating resources for new members.",
-        socialLinks: {},
+        image: "/grasen.png",
+        bio: "Hello there, my name is Grasen, but everyone calls me Gray. I’m a Grade 9 RAP Student in Ontario, Canada. I am super excited to be part of the Dr. Interested team and learn from youth across the world. I have always been interested in medicine and Healthcare. And believe this will be a wonderful experience. My interests are Music, Writing, and Nature. I hope to work in Law or Trauma Medicine. I hope to meet everyone here as a part of Dr Interested and get to know everyone's experiences!",
+        socialLinks: {
+          linkedin: "http://www.linkedin.com/in/grasen-menns-8980aa358",
+          instagram: "https://www.instagram.com/grasen2025/",
+        },
       },
       {
         id: "hr-mem3",
         name: "Dwarakamaye Bolla",
         role: "Human Resources Member",
         image: "/logo.png",
-        bio: "Managing member information and departmental records.",
+        bio: "Hi! I’m a student that has an interesting schedule. Multiple classes from multiple years so I just like to call myself a high schooler! I’m motivated to change the environment around me and find new hobbies dear to me. Being organized but going with the flow is my thing. Having a passion for biotechnology and advancing science, I’ll always partake in new opportunities! I’m a hopeless romantic obsessed with books, dramas, fantasies and so much more! I might be too happy or boring, but I’ll always match your mood (most of the time). So with my interests and love for many things, I’ll always be ready to help make a change whether it being my work or through a simple act.  So, “live life to experience it!” ",
         socialLinks: {},
       },
       {
         id: "hr-mem4",
-        name: "Srikar Reddy",
+        name: "Megha Ashish",
         role: "Human Resources Member",
         image: "/logo.png",
         bio: "Maintaining clear communication between leadership and team members.",
@@ -410,19 +361,30 @@ export const departments: DepartmentType[] = [
       },
       {
         id: "hr-mem5",
-        name: "Joanne Lee",
+        name: "Chinthala Trisha Goud ",
         role: "Human Resources Member",
-        image: "/logo.png",
-        bio: "Coordinating recruitment, onboarding, and internal communications.",
+        image: "/chintala.png",
+        bio: "Hello everyone! My name is Trisha, and I’m thrilled to be part of the Dr. Interested community. I’ve always been passionate about medicine and healthcare, and I’m excited to learn from youth around the world who share the same curiosity. My interests include fitness, music, writing, and exploring new ideas. I’m especially drawn to medical fields and creative work, and I hope to build a future that blends both knowledge and purpose. I’m looking forward to meeting all of you and hearing about your journeys and experiences!",
         socialLinks: {},
       },
       {
         id: "hr-mem6",
-        name: "Mariam Azzam",
+        name: "Tanisha Singh",
         role: "Human Resources Member",
-        image: "/logo.png",
-        bio: "Promoting a positive and inclusive team culture.",
-        socialLinks: {},
+        image: "/tanisha.png",
+        bio: "Hi I'm Tanisha. I'm a 15 year old Indian, currently in 11th. I like singing, dancing, reading and listening to music. ",
+        socialLinks: {
+          instagram: "https://www.instagram.com/tapioca.567/",
+        },
+        
+      },
+      {
+        id: "hr-mem8",
+        name: "Maliha Metla",
+        role: "Human Resources Member",
+        image: "/maliha.png",
+        bio: "Hi! I’m Maliha Metla, a junior in high school passionate about medicine, community service, and creating meaningful change. Whether through my nonprofit work, medical internships, or local volunteering, I strive to help others and inspire hope in the communities I serve. ",
+        
       },
     ],
   },
@@ -444,85 +406,10 @@ export const departments: DepartmentType[] = [
     members: [
       {
         id: "4-deputy-dir",
-        name: "Rameen Usman",
+        name: "Jessica Elizabeth Philips ",
         role: "Deputy Director of Events",
         image: "/logo.png",
-        bio: "Hello, I'm Rameen Usman, a Year 11 student currently living in Lahore- Pakistan. I have a strong passion for STEM and love working behind the scenes to organize and manage events. I am a three-time scholarship recipient from institutions like Dartmouth, Harvard and Polygence which have allowed me to explore more within the pre-med field and gain exposure to real-world applications of science. In my free time I enjoy writing as a creative outlet. I’m deeply committed to closing the gender gap in STEM and helping create space for more women to lead in this field.",
-        socialLinks: {},
-      },
-      {
-        id: "5-deputy-dir",
-        name: "Amina Assanova",
-        role: "Deputy Director of Events",
-        image: "/logo.png",
-        bio: "Planning and executing workshops that provide hands-on learning experiences.",
-        socialLinks: {},
-      },
-      {
-        id: "events-mem1",
-        name: "Andrew Wang",
-        role: "Events Member",
-        image: "/logo.png",
-        bio: "Planning and executing workshops that provide hands-on learning experiences.",
-        socialLinks: {},
-      },
-      {
-        id: "events-mem2",
-        name: "Soham Somani",
-        role: "Events Member",
-        image: "/soham.png", 
-        bio: "Developing networking opportunities to help students build connections in the healthcare field.",
-        socialLinks: {},
-      },
-      {
-        id: "events-mem3",
-        name: "Keenan Johnson",
-        role: "Events Member",
-        image: "/keenan.jpg", // Need Image
-        bio: "Hi! I'm Keenan! I am a dedicated high school student with a passion for leadership, STEM exploration, and community engagement. Through my involvement in extracurricular activities such as the Athletic Council and STEM Fellowship programs, I have developed strong communication, teamwork, and problem-solving skills. I am committed to fostering positive, inclusive environments and inspiring young children to grow through creative activities. My curiosity and initiative drive me to explore various fields of knowledge, from physics to graphic design and video editing.",
-        socialLinks: {
-          linkedin: "https://www.linkedin.com/in/keenan2009/",
-        },
-      },
-      {
-        id: "events-mem4",
-        name: "Ganesh Kartik Nagasubramanian",
-        role: "Events Member",
-        image: "/logo.png", // Need Image
-        bio: "Ganesh Kartik Nagasubramanian is a Grade 10 student at Glenforest enrolled in the IB Program at Glenforest Secondary School.",
-        socialLinks: {
-        },
-      },
-      {
-        id: "events-mem5",
-        name: "Maria Mohamed",
-        role: "Events Member",
-        image: "/logo.png", // Need Image
-        bio: "Hi, I am Maria Mohamed. I am a high school student with a passion for medicine and a dream of becoming a surgeon. I joined Dr. Interested as a member of the outreach team because I want to help others learn about healthcare and connect with opportunities that can shape their future.",
-        socialLinks: {},
-      },
-      {
-        id: "events-mem6",
-        name: "Ajitesh Sankara Narayanan",
-        role: "Events Member",
-        image: "/logo.png", // Need Image
-        bio: "Planning engaging events that align with our mission and goals.",
-        socialLinks: {},
-      },
-      {
-        id: "events-mem7",
-        name: "Olivia McIntosh",
-        role: "Events Member",
-        image: "/logo.png", // Need Image
-        bio: "Developing creative themes and ideas for upcoming events.",
-        socialLinks: {},
-      },
-      {
-        id: "events-mem8",
-        name: "Cindy Cao",
-        role: "Events Member",
-        image: "/logo.png", // Need Image
-        bio: "Collecting feedback and analyzing success post-event.",
+        bio: "Hi, my name is Jessica Philips. I’m a student currently living in Dubai, and I’m passionate about science and pursuing a future in Medicine. I’m hardworking, curious, and always looking for ways to improve myself, whether it’s through academics, projects, or building new skills. I enjoy learning, staying organised, and challenging myself to grow.",
         socialLinks: {},
       },
     ],
@@ -536,49 +423,17 @@ export const departments: DepartmentType[] = [
       id: "grants-dir",
       name: "Liam Lacey",
       role: "Director of Finance",
-      image: "/logo.png",
-      bio: "Leading our Finance Department, Liam Lacey is a dedicated student and he has a strong interest in finance and economics. Liam has been involved in various extracurricular activities, including volunteering for community service projects and participating in school clubs. His leadership skills and commitment to excellence make him an invaluable asset to our team.",
+      image: "/liam.png",
+      bio: " Liam is a grade 11 IB DP student at Glenforest Secondary School who's interested in learning more about the financial workings of healthcare, and its subsectors, ultimately to pursue his own goal of heading into the business world and its many avenues. He has volunteered in several events as a prominent member of the Athletic Council within Glenforest SS, in addition to other clubs including the Rock Band and DECA. He aims to further improve my own leadership skills, while also focusing on expanding his repertoire of financial knowledge, and its workings within different industries. He is looking forward to continuing his pursuit of learning more about the finance and business space, while being a strong contributor to Dr.Interested",
       socialLinks: {},
     },
     members: [
       {
         id: "grants-mem1",
-        name: "Akeer Kuol Malual Nyok",
+        name: "Dhruv Solanki",
         role: "Finance Member",
-        image: "/akeer.png",
-        bio: "Researching grant opportunities and developing compelling proposals.",
-        socialLinks: {},
-      },
-      {
-        id: "grants-mem2",
-        name: "Agathiya Ramalingam",
-        role: "Finance Member",
-        image: "/logo.png",
-        bio: "Preparing and overseeing budgets for various initiatives.",
-        socialLinks: {},
-      },
-      {
-        id: "grants-mem3",
-        name: "Priyansh Sharma",
-        role: "Finance Member",
-        image: "/logo.png",
-        bio: "Tracking expenses and managing reimbursements.",
-        socialLinks: {},
-      },
-      {
-        id: "grants-mem4",
-        name: "Vedanshi Raheja",
-        role: "Finance Member",
-        image: "/logo.png",
-        bio: "Ensuring financial transparency through regular reporting.",
-        socialLinks: {},
-      },
-      {
-        id: "grants-mem6",
-        name: "Nidhish Vijaya Ragavan",
-        role: "Finance Member",
-        image: "/logo.png",
-        bio: "Coordinating funding requests and approval processes.",
+        image: "/dhruv.png",
+        bio: "I am a Grade 11 IB student at Glenforest Secondary School with a strong interest in business and technology. I actively volunteer in my community, including at local food banks such as Seva. I am also a finance member in Dr. Interested, where I continue to build my skills in financial analysis and leadership. I am committed to exploring the intersection of business and tech while growing as a dedicated student, volunteer, and future innovator.",
         socialLinks: {},
       },
     ],
