@@ -171,18 +171,6 @@ export default function RootLayout({
           </Suspense>
           <Analytics />
         </ThemeProvider>
-        <Script id="accessibility-widget" strategy="afterInteractive">
-          {`
-            window.addEventListener("load", (event) => {
-              setTimeout(() => {
-                let aioa_script_tag = document.createElement("script");
-                aioa_script_tag.src = "https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=#4ecdc4&token=&position=bottom_right";
-                aioa_script_tag.id = "aioa-adawidget";
-                document.getElementsByTagName("body")[0].appendChild(aioa_script_tag);
-              }, 3000);
-            });
-          `}
-        </Script>
         <Script id="pdf-schema" type="application/ld+json" strategy="afterInteractive">
           {`
             {

@@ -20,6 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/members/join`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 1.0,
+    },
+    {
       url: `${baseUrl}/members`,
       lastModified: currentDate,
       changeFrequency: "monthly",
@@ -101,19 +107,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/certificate`,
       lastModified: currentDate,
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.3,
     },
     {
       url: `${baseUrl}/privacy-policy`,
       lastModified: currentDate,
       changeFrequency: "yearly",
-      priority: 0.3,
+      priority: 0.4,
     },
     {
       url: `${baseUrl}/terms`,
       lastModified: currentDate,
       changeFrequency: "yearly",
-      priority: 0.3,
+      priority: 0.4,
     },
   ]
 

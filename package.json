@@ -38,9 +38,8 @@
     "@radix-ui/react-toggle": "latest",
     "@radix-ui/react-toggle-group": "latest",
     "@radix-ui/react-tooltip": "latest",
-    "@remix-run/react": "latest",
     "@sveltejs/kit": "latest",
-    "@vercel/analytics": "latest",
+    "@vercel/analytics": "^1.6.1",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -48,11 +47,13 @@
     "date-fns": "^3.6.0",
     "embla-carousel-react": "latest",
     "framer-motion": "latest",
+    "gray-matter": "^4.0.3",
     "html2canvas": "^1.4.1",
     "input-otp": "latest",
     "jspdf": "^3.0.2",
     "lucide-react": "^0.454.0",
-    "next": "16.0.7",
+    "next": "^16.0.10",
+    "next-mdx-remote": "^5.0.0",
     "next-themes": "latest",
     "react": "19.2.1",
     "react-day-picker": "latest",
@@ -71,17 +72,15 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@types/cookie": "^0.6.0",
     "@types/node": "^22",
-    "@types/react": "19.2.7",
-    "@types/react-dom": "19.2.3",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.7",
     "postcss": "^8.5",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.7"
+    "typescript": "^5"
   },
-  "overrides": {
-    "@types/react": "19.2.7",
-    "@types/react-dom": "19.2.3"
-  }
+  "overrides": {}
 }

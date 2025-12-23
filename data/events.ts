@@ -14,16 +14,6 @@ export type EventType = {
 // Upcoming events data
 export const upcomingEvents: EventType[] = [
   {
-    title: "Cards for Doctors",
-    date: "Dec 1st, 2025 - Dec 19th, 2025",
-    location: "Virtual",
-    description:
-      "Join us in celebrating doctors for their dedication and care! 💙 Help spread gratitude by designing appreciation cards that will be distributed to doctors across the Greater Toronto Area by our team. Cards may be handwritten or digitally designed, and messages should be positive and professional. Volunteer Hours: 0.5 hours per card. Maximum of 20 cards per person (up to 10 hours).",
-    image: "/cardsfordoctors.png",
-    status: "open",
-    link: "https://forms.gle/ufde1Ux5pkFWp5xu7",
-  },
-  {
     title: "Office Hours",
     date: "June - Ongoing",
     time: "Whenever you need help",
@@ -49,7 +39,17 @@ export const upcomingEvents: EventType[] = [
 
 // Past events data
 export const pastEvents: EventType[] = [
-    {
+  {
+    title: "Cards for Doctors",
+    date: "Dec 1st, 2025 - Dec 19th, 2025",
+    location: "Virtual",
+    description:
+      "Join us in celebrating doctors for their dedication and care! 💙 Help spread gratitude by designing appreciation cards that will be distributed to doctors across the Greater Toronto Area by our team. Cards may be handwritten or digitally designed, and messages should be positive and professional. Volunteer Hours: 0.5 hours per card. Maximum of 20 cards per person (up to 10 hours).",
+    image: "/cardsfordoctors.png",
+    status: "completed",
+    link: "https://www.instagram.com/p/DSgEZpyjh1k/",
+  },
+  {
     title: "EXPLORE³ Case Competition",
     date: "November 22, 2025",
     time: "9 AM – 4 PM",
