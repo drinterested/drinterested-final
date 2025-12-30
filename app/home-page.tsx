@@ -112,6 +112,9 @@ export default function HomePage() {
                 </Link>
 
                 <div className="flex items-center gap-3 flex-wrap mt-1">
+                  <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md">
+  
+</div>
                   <Link
                     href="https://discord.gg/pzbGRgsGXY"
                     target="_blank"
@@ -176,6 +179,25 @@ export default function HomePage() {
                   </Link>
                 </div>
               </div>
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md w-full">
+  <div className="relative h-30 w-full rounded-lg overflow-hidden shadow-sm ">
+    <Image
+      src="/imaginecan.png"
+      alt="Imagine Canada Member"
+      fill
+      className="object-contain "
+    />
+  </div>
+
+  <div className="relative h-28 w-full rounded-lg overflow-hidden shadow-sm">
+    <Image
+      src="/development.png"
+      alt="Youth development recognition"
+      fill
+      className="object-contain "
+    />
+  </div>
+</div>
             </motion.div>
 
             <motion.div
