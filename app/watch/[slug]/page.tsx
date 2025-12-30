@@ -4,8 +4,7 @@ import { getWebinarBySlug, getAllWebinarSlugs } from "@/data/webinars"
 import WatchPageClient from "./WatchPageClient"
 
 
-export const dynamic = "force-static"
-export const dynamicParams = true
+
 
 export async function generateStaticParams() {
   const slugs = getAllWebinarSlugs()
