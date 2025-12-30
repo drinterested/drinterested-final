@@ -11,11 +11,11 @@ import ScrollToTop from "@/components/scroll-to-top"
 const conferenceImages = [
   { id: 1, src: "/psychimg1.JPG", caption: "Meet Jessica Agbolade" },
   { id: 2, src: "/psychimage2.JPG", caption: "Keynote on the Bridge of Culture" },
-  { id: 3, src: "/psychimage3.jpg", caption: "The ySpace" },
-  { id: 4, src: "/psychimage4.jpg", caption: "Meet the attendees" },
-  { id: 5, src: "/psychimage5.jpg", caption: "Quick Break!" },
-  { id: 6, src: "/psychimage6.jpg", caption: "Dr Interested President with the Speaker" },
-  { id: 7, src: "/psychimage7.jpg", caption: "Presentation Beginning" },
+  { id: 3, src: "/psychimage3.JPG", caption: "The ySpace" },
+  { id: 4, src: "/psychimage4.JPG", caption: "Meet the attendees" },
+  { id: 5, src: "/psychimage5.JPG", caption: "Quick Break!" },
+  { id: 6, src: "/psychimage6.JPG", caption: "Dr Interested President with the Speaker" },
+  { id: 7, src: "/psychimage7.JPG", caption: "Presentation Beginning" },
   { id: 8, src: "/psychimage8.png", caption: "Keynote by Adil Mukhi Representing Dr. Interested" },
   { id: 9, src: "/psychimage9.jpeg", caption: "Opening Reflection" },
 ]
