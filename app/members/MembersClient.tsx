@@ -1,10 +1,6 @@
 "use client";
 
-<<<<<<< HEAD
 import { useState, useEffect, useRef, useCallback, useLayoutEffect } from "react";
-=======
-import { useState, useEffect } from "react";
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
@@ -16,29 +12,22 @@ import {
   Globe,
   ChevronDown,
   ChevronUp,
-<<<<<<< HEAD
   ChevronLeft,
   ChevronRight,
-=======
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
 } from "lucide-react";
 import {
   departments,
   advisors,
   executiveDirector,
   deputyexecdir,
-<<<<<<< HEAD
   executiveAssistants,
   ambassadors,
-=======
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
 } from "@/data/members";
 import ScrollToTop from "@/components/scroll-to-top";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function MembersClient() {
   const [expandedBios, setExpandedBios] = useState<Record<string, boolean>>({});
-<<<<<<< HEAD
   const [scrolledDepartments, setScrolledDepartments] = useState<
     Record<string, boolean>
   >({});
@@ -52,11 +41,6 @@ export default function MembersClient() {
       : [department.director]
   );
   const ambassadorNames = ambassadors.map((ambassador) => ambassador.name);
-=======
-  const [visibleMembers, setVisibleMembers] = useState<Record<string, boolean>>(
-    {}
-  );
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
 
   const params = useParams(); // { tab: 'leadership' | 'departments' | 'advisors' | 'join' }
   const router = useRouter();
@@ -81,7 +65,6 @@ export default function MembersClient() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-<<<<<<< HEAD
 
   useEffect(() => {
     if (activeTab !== "departments" || typeof window === "undefined") {
@@ -195,8 +178,6 @@ export default function MembersClient() {
       window.removeEventListener("wheel", handleWheel);
     };
   }, [activeTab]);
-=======
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
 
   const toggleBio = (id: string) => {
     setExpandedBios((prev) => ({
@@ -204,22 +185,11 @@ export default function MembersClient() {
       [id]: !prev[id],
     }));
   };
-<<<<<<< HEAD
-=======
-
-  const toggleMembers = (id: string) => {
-    setVisibleMembers((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
-  };
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
 
   const truncateBio = (bio: string, maxLength = 150) => {
     if (bio.length <= maxLength) return bio;
     return bio.substring(0, maxLength) + "...";
   };
-<<<<<<< HEAD
 
   const markDepartmentComplete = useCallback((id: string) => {
     setScrolledDepartments((prev) =>
@@ -679,25 +649,16 @@ export default function MembersClient() {
       </div>
     );
   };
-=======
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
 
   return (
     <div className="overflow-x-hidden">
       <ScrollToTop />
       <section className="hero-section py-8 md:py-10 bg-[#f5f1eb]">
         <div className="container">
-<<<<<<< HEAD
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-2 text-[#405862]">
             Our Team
           </h1>
           <p className="text-center text-base md:text-lg mb-4 max-w-2xl mx-auto text-[#405862]/80">
-=======
-          <h1 className="text-3xl font-bold text-center mb-2 text-[#405862]">
-            Our Team
-          </h1>
-          <p className="text-center text-[#405862] mb-6 max-w-2xl mx-auto text-sm">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
             Meet the talented team behind Dr. Interested, dedicated to inspiring
             the next generation of healthcare professionals.
           </p>
@@ -730,11 +691,7 @@ export default function MembersClient() {
             <TabsContent value="leadership" className="space-y-6">
               {/* Executive Director */}
               <div>
-<<<<<<< HEAD
                 <h3 className="text-xl md:text-2xl font-semibold mb-4 text-center text-[#405862]">
-=======
-                <h3 className="text-lg font-semibold mb-4 text-center text-[#405862]">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
                   Executive Director
                 </h3>
                 <div className="max-w-2xl mx-auto">
@@ -751,7 +708,6 @@ export default function MembersClient() {
                         </div>
                       </div>
                       <CardContent className="md:col-span-2 p-4">
-<<<<<<< HEAD
                         <h4 className="text-xl font-semibold text-[#405862]">
                           {executiveDirector.name}
                         </h4>
@@ -759,15 +715,6 @@ export default function MembersClient() {
                           {executiveDirector.role}
                         </p>
                         <p className="text-sm md:text-base leading-relaxed text-[#405862] mb-3">
-=======
-                        <h4 className="text-lg font-semibold text-[#405862]">
-                          {executiveDirector.name}
-                        </h4>
-                        <p className="text-sm text-[#405862]/75 mb-2">
-                          {executiveDirector.role}
-                        </p>
-                        <p className="text-sm text-[#405862] mb-3">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
                           {expandedBios[executiveDirector.id]
                             ? executiveDirector.bio
                             : truncateBio(executiveDirector.bio)}
@@ -826,11 +773,7 @@ export default function MembersClient() {
 
               {/* Deputy Exec Directors */}
               <div>
-<<<<<<< HEAD
                 <h3 className="text-xl md:text-2xl font-semibold mb-4 text-center text-[#405862]">
-=======
-                <h3 className="text-lg font-semibold mb-4 text-center text-[#405862]">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
                   Deputy Executive Directors
                 </h3>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -851,7 +794,6 @@ export default function MembersClient() {
                           </div>
                         </div>
                         <CardContent className="md:col-span-2 p-4">
-<<<<<<< HEAD
                           <h4 className="text-lg font-semibold text-[#405862]">
                             {vp.name}
                           </h4>
@@ -859,15 +801,6 @@ export default function MembersClient() {
                             {vp.role}
                           </p>
                           <p className="text-sm md:text-base leading-relaxed text-[#405862] mb-3">
-=======
-                          <h4 className="text-base font-semibold text-[#405862]">
-                            {vp.name}
-                          </h4>
-                          <p className="text-sm text-[#405862]/75 mb-2">
-                            {vp.role}
-                          </p>
-                          <p className="text-sm text-[#405862] mb-3">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
                             {expandedBios[vp.id]
                               ? vp.bio
                               : truncateBio(vp.bio, 120)}
@@ -1129,7 +1062,6 @@ export default function MembersClient() {
               </div>
             </TabsContent>
 
-<<<<<<< HEAD
             <TabsContent value="departments" className="space-y-8">
               {departments.map((department) => {
                 const directorList = Array.isArray(department.director)
@@ -1147,28 +1079,6 @@ export default function MembersClient() {
                           {department.description}
                         </p>
                       </div>
-=======
-            <TabsContent value="departments" className="space-y-6">
-              {departments.map((department) => (
-                <div
-                  key={department.id}
-                  className="border rounded-lg overflow-hidden bg-white border-[#405862]/20 shadow-sm mb-4"
-                >
-                  <div className="p-4 border-b bg-[#f5f1eb]/30">
-                    <h3 className="text-lg font-semibold text-[#405862]">
-                      {department.name}
-                    </h3>
-                    <p className="text-[#405862]/80 text-sm">
-                      {department.description}
-                    </p>
-                  </div>
-
-                  <div className="p-4 border-b">
-                    <div className="flex items-center justify-between mb-3">
-                      <h4 className="text-base font-semibold text-[#405862]">
-                        Director
-                      </h4>
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
                     </div>
 
                     <div className="space-y-6">
@@ -1197,7 +1107,6 @@ export default function MembersClient() {
                                     className="object-cover object-center"
                                   />
                                 </div>
-<<<<<<< HEAD
                                 <div className="max-w-3xl">
                                   <h5 className="text-xl font-semibold text-[#405862] leading-snug break-words">
                                     {director.name}
@@ -1215,36 +1124,6 @@ export default function MembersClient() {
                                       >
                                         <Linkedin className="h-5 w-5" />
                                       </Link>
-=======
-                              </div>
-                              <CardContent className="col-span-2 p-3">
-                                <h5 className="font-semibold text-sm text-[#405862]">
-                                  {director.name}
-                                </h5>
-                                <p className="text-xs text-[#405862]/75 mb-1">
-                                  {director.role}
-                                </p>
-                                <p className="text-xs text-[#405862] mb-1">
-                                  {expandedBios[director.id]
-                                    ? director.bio
-                                    : truncateBio(director.bio, 80)}
-                                </p>
-                                {director.bio.length > 80 && (
-                                  <button
-                                    onClick={() => toggleBio(director.id)}
-                                    className="text-[#405862] text-xs font-medium hover:text-[#4ecdc4] transition-colors mb-1 flex items-center"
-                                  >
-                                    {expandedBios[director.id] ? (
-                                      <>
-                                        Show Less{" "}
-                                        <ChevronUp className="h-3 w-3 ml-1" />
-                                      </>
-                                    ) : (
-                                      <>
-                                        See More{" "}
-                                        <ChevronDown className="h-3 w-3 ml-1" />
-                                      </>
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
                                     )}
                                     {director.socialLinks?.instagram && (
                                       <Link
@@ -1282,189 +1161,10 @@ export default function MembersClient() {
                                     </button>
                                   )}
                                 </div>
-<<<<<<< HEAD
                               </div>
                             );
                           })}
                         </div>
-=======
-                              </CardContent>
-                            </div>
-                          </Card>
-                        ))
-                      ) : (
-                        <Card className="overflow-hidden border-[#405862]/20 shadow-sm hover:shadow-md transition-shadow">
-                          <div className="grid grid-cols-3">
-                            <div className="col-span-1 bg-[#f5f1eb]">
-                              <div className="relative h-full w-full aspect-square">
-                                <Image
-                                  src={
-                                    department.director.image ||
-                                    "/placeholder.svg"
-                                  }
-                                  alt={department.director.name}
-                                  fill
-                                  className="object-cover"
-                                />
-                              </div>
-                            </div>
-                            <CardContent className="col-span-2 p-3">
-                              <h5 className="font-semibold text-sm text-[#405862]">
-                                {department.director.name}
-                              </h5>
-                              <p className="text-xs text-[#405862]/75 mb-1">
-                                {department.director.role}
-                              </p>
-                              <p className="text-xs text-[#405862] mb-1">
-                                {expandedBios[department.director.id]
-                                  ? department.director.bio
-                                  : truncateBio(department.director.bio, 80)}
-                              </p>
-                              {department.director.bio.length > 80 && (
-                                <button
-                                  onClick={() =>
-                                    toggleBio(department.director.id)
-                                  }
-                                  className="text-[#405862] text-xs font-medium hover:text-[#4ecdc4] transition-colors mb-1 flex items-center"
-                                >
-                                  {expandedBios[department.director.id] ? (
-                                    <>
-                                      Show Less{" "}
-                                      <ChevronUp className="h-3 w-3 ml-1" />
-                                    </>
-                                  ) : (
-                                    <>
-                                      See More{" "}
-                                      <ChevronDown className="h-3 w-3 ml-1" />
-                                    </>
-                                  )}
-                                </button>
-                              )}
-                              <div className="flex space-x-2">
-                                {department.director.socialLinks?.linkedin && (
-                                  <Link
-                                    href={
-                                      department.director.socialLinks.linkedin
-                                    }
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
-                                  >
-                                    <Linkedin className="h-4 w-4" />
-                                  </Link>
-                                )}
-                                {department.director.socialLinks?.instagram && (
-                                  <Link
-                                    href={
-                                      department.director.socialLinks.instagram
-                                    }
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
-                                  >
-                                    <Instagram className="h-4 w-4" />
-                                  </Link>
-                                )}
-                              </div>
-                            </CardContent>
-                          </div>
-                        </Card>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="p-4">
-                    <div className="flex items-center justify-between mb-3">
-                      <h4 className="text-base font-semibold text-[#405862]">
-                        Members
-                      </h4>
-                      <Button
-                        onClick={() => toggleMembers(department.id)}
-                        variant="outline"
-                        size="sm"
-                        className="text-xs h-8"
-                      >
-                        {!visibleMembers[department.id]
-                          ? "Show Members"
-                          : "Hide Members"}
-                      </Button>
-                    </div>
-
-                    {visibleMembers[department.id] && (
-                      <div className="grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-                        {department.members.map((member) => (
-                          <Card
-                            key={member.id}
-                            className="overflow-hidden border-[#405862]/20 shadow-sm hover:shadow-md transition-shadow"
-                          >
-                            <CardContent className="p-3">
-                              <div className="flex items-center gap-2 mb-1">
-                                <div className="relative h-8 w-8 rounded-full overflow-hidden flex-shrink-0">
-                                  <Image
-                                    src={member.image || "/placeholder.svg"}
-                                    alt={member.name}
-                                    fill
-                                    className="object-cover"
-                                  />
-                                </div>
-                                <div>
-                                  <h5 className="font-semibold text-sm text-[#405862]">
-                                    {member.name}
-                                  </h5>
-                                  <p className="text-xs text-[#405862]/75">
-                                    {member.role}
-                                  </p>
-                                </div>
-                              </div>
-                              <p className="text-xs text-[#405862] mb-1">
-                                {expandedBios[member.id]
-                                  ? member.bio
-                                  : truncateBio(member.bio, 60)}
-                              </p>
-                              {member.bio.length > 60 && (
-                                <button
-                                  onClick={() => toggleBio(member.id)}
-                                  className="text-[#405862] text-xs font-medium hover:text-[#4ecdc4] transition-colors mb-1 flex items-center"
-                                >
-                                  {expandedBios[member.id] ? (
-                                    <>
-                                      Show Less{" "}
-                                      <ChevronUp className="h-3 w-3 ml-1" />
-                                    </>
-                                  ) : (
-                                    <>
-                                      See More{" "}
-                                      <ChevronDown className="h-3 w-3 ml-1" />
-                                    </>
-                                  )}
-                                </button>
-                              )}
-                              <div className="flex space-x-2 mt-1">
-                                {member.socialLinks?.linkedin && (
-                                  <Link
-                                    href={member.socialLinks.linkedin}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
-                                  >
-                                    <Linkedin className="h-4 w-4" />
-                                  </Link>
-                                )}
-                                {member.socialLinks?.instagram && (
-                                  <Link
-                                    href={member.socialLinks.instagram}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-[#405862] hover:text-[#4ecdc4] transition-colors"
-                                  >
-                                    <Instagram className="h-4 w-4" />
-                                  </Link>
-                                )}
-                              </div>
-                            </CardContent>
-                          </Card>
-                        ))}
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
                       </div>
 
                       {department.deputyDirectors?.length ? (
@@ -1529,40 +1229,15 @@ export default function MembersClient() {
                     ))}
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
-              ))}
-              <div className="mt-8 p-6 bg-[#4ecdc4]/10 border border-[#4ecdc4]/30 rounded-lg text-center">
-                <h3 className="text-lg font-semibold text-[#405862] mb-2">
-                  Interested in Joining Our Team?
-                </h3>
-                <p className="text-[#405862]/80 mb-3">
-                  Check out the{" "}
-                  <span className="font-semibold text-[#4ecdc4]">Join Us</span>{" "}
-                  tab above to learn about executive opportunities and apply to
-                  join our leadership team!
-                </p>
-                <p className="text-sm text-[#405862]/70">
-                  Applications are open year-round and reviewed on an ongoing
-                  basis.
-                </p>
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
               </div>
             </TabsContent>
 
             <TabsContent value="advisors" className="space-y-6">
               <div>
-<<<<<<< HEAD
                 <h3 className="text-xl md:text-2xl font-semibold mb-4 text-center text-[#405862]">
                   Medical Student Advisors
                 </h3>
                 <p className="text-center text-[#405862]/80 mb-6 max-w-2xl mx-auto text-sm md:text-base">
-=======
-                <h3 className="text-lg font-semibold mb-4 text-center text-[#405862]">
-                  Medical Student Advisors
-                </h3>
-                <p className="text-center text-[#405862]/80 mb-6 max-w-2xl mx-auto text-sm">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
                   Our medical student advisors provide valuable guidance and
                   mentorship, helping bridge the gap between high school and
                   medical education.
@@ -1584,7 +1259,6 @@ export default function MembersClient() {
                         </div>
                       </div>
                       <CardContent className="p-4">
-<<<<<<< HEAD
                         <h4 className="text-lg font-semibold text-[#405862]">
                           {advisor.name}
                         </h4>
@@ -1592,15 +1266,6 @@ export default function MembersClient() {
                           {advisor.role}
                         </p>
                         <p className="text-sm md:text-base leading-relaxed text-[#405862] mb-3">
-=======
-                        <h4 className="text-base font-semibold text-[#405862]">
-                          {advisor.name}
-                        </h4>
-                        <p className="text-sm text-[#405862]/75 mb-2">
-                          {advisor.role}
-                        </p>
-                        <p className="text-sm text-[#405862] mb-3">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
                           {expandedBios[advisor.id]
                             ? advisor.bio
                             : truncateBio(advisor.bio, 120)}
@@ -1660,27 +1325,16 @@ export default function MembersClient() {
                 </div>
               </div>
               <div className="mt-8 p-6 bg-[#4ecdc4]/10 border border-[#4ecdc4]/30 rounded-lg text-center">
-<<<<<<< HEAD
                 <h3 className="text-xl md:text-2xl font-semibold text-[#405862] mb-2">
                   Interested in Joining Our Team?
                 </h3>
                 <p className="text-[#405862]/80 mb-3 text-sm md:text-base">
-=======
-                <h3 className="text-lg font-semibold text-[#405862] mb-2">
-                  Interested in Joining Our Team?
-                </h3>
-                <p className="text-[#405862]/80 mb-3">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
                   Check out the{" "}
                   <span className="font-semibold text-[#4ecdc4]">Join Us</span>{" "}
                   tab above to learn about executive opportunities and apply to
                   join our leadership team!
                 </p>
-<<<<<<< HEAD
                 <p className="text-sm md:text-base text-[#405862]/70">
-=======
-                <p className="text-sm text-[#405862]/70">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
                   Applications are open year-round and reviewed on an ongoing
                   basis.
                 </p>
@@ -1690,56 +1344,34 @@ export default function MembersClient() {
             <TabsContent value="join" className="space-y-6">
               <div className="py-8 bg-[#f5f1eb]/50 rounded-lg text-center">
                 <div className="max-w-3xl mx-auto px-4">
-<<<<<<< HEAD
                  <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#405862]">
-=======
-                 <h2 className="text-2xl font-bold mb-4 text-[#405862]">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
   Join Our Executive Team
 </h2>
 
 
-<<<<<<< HEAD
 <p className="mb-6 text-base md:text-lg text-[#405862]/90 max-w-3xl">
-=======
-<p className="mb-6 text-[#405862]/90 max-w-3xl">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
   <span className="font-semibold">Dr. Interested</span> is a global youth organization active in
   <span className="font-semibold"> 70+ countries</span>, reaching
   <span className="font-semibold"> 60,000+ students</span> worldwide. We operate fully online through
   Discord, with optional in-person opportunities depending on your city.
 </p>
 
-<<<<<<< HEAD
 <p className="mb-6 text-base md:text-lg text-[#405862]/90 max-w-3xl">
-=======
-<p className="mb-6 text-[#405862]/90 max-w-3xl">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
   We’re recruiting across nearly every field right now — Finance, Tech, Coding, Design, Outreach,
   Events, and Healthcare Careers Education. If you like building things that matter, there’s a seat
   for you.
 </p>
 
-<<<<<<< HEAD
 <p className="mb-6 text-base md:text-lg text-[#405862]/90 max-w-3xl">
-=======
-<p className="mb-6 text-[#405862]/90 max-w-3xl">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
   This isn’t busywork. You’ll be part of a global team that moves fast, leads real projects, and
   creates impact you can point to proudly.
 </p>
 
 {/* WHAT YOU GET */}
 <div className="mb-6">
-<<<<<<< HEAD
   <h3 className="text-lg md:text-xl font-semibold text-[#405862] mb-3">What you get</h3>
 
   <ul className="max-w-2xl mx-auto pl-4 space-y-2 text-sm md:text-base text-[#405862]/90 text-left">
-=======
-  <h3 className="font-semibold text-[#405862] mb-3">What you get</h3>
-
-  <ul className="max-w-2xl mx-auto pl-4 space-y-2 text-sm text-[#405862]/90 text-left">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
     <li>✨ Experience working with an international organization that strengthens your résumé</li>
     <li>✨ Letters of recommendation from medical students</li>
     <li>✨ Free tickets to represent us at conferences (merit-based)</li>
@@ -1754,19 +1386,11 @@ export default function MembersClient() {
 <div className="mb-6 flex flex-col md:flex-row items-start md:items-center gap-6">
   {/* Text content */}
   <div className="flex-1">
-<<<<<<< HEAD
     <h3 className="text-lg md:text-xl font-semibold text-[#405862] mb-3">
       Extra opportunities (Canada · Under 18)
     </h3>
 
     <ul className="space-y-2 text-sm md:text-base text-[#405862]/90 pl-4 text-left">
-=======
-    <h3 className="font-semibold text-[#405862] mb-3">
-      Extra opportunities (Canada · Under 18)
-    </h3>
-
-    <ul className="space-y-2 text-sm text-[#405862]/90 pl-4 text-left">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
       <li>
         ✨ Apply for microgrants or travel grants to grow your ideas and showcase your work
       </li>
@@ -1791,11 +1415,7 @@ export default function MembersClient() {
       height={160}
       className="object-cover w-full h-full"
     />
-<<<<<<< HEAD
     <p className="text-xs md:text-sm text-center text-[#405862]/70 mt-2 mb-0">
-=======
-    <p className="text-xs text-center text-[#405862]/70 mt-2 mb-0">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
       With support from the GLOCAL Foundation of Canada
     </p>
   </div>
@@ -1803,19 +1423,11 @@ export default function MembersClient() {
 
 {/* NEW SECTION */}
 <div className="mb-8 rounded-lg border border-[#405862]/20 bg-[#405862]/5 p-5">
-<<<<<<< HEAD
   <h3 className="text-lg md:text-xl font-semibold text-[#405862] mb-3">
     NEW: Policy & Global Research Opportunities:
   </h3>
 
   <p className="text-sm md:text-base text-[#405862]/90 max-w-3xl">
-=======
-  <h3 className="font-semibold text-[#405862] mb-3">
-    NEW: Policy & Global Research Opportunities:
-  </h3>
-
-  <p className="text-sm text-[#405862]/90 max-w-3xl">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
     As an executive, you’ll have the opportunity to contribute directly to our
     <span className="font-medium"> policy and research reports</span>.
     One of our current projects is a report for the
@@ -1825,37 +1437,22 @@ export default function MembersClient() {
     </span>.
   </p>
 
-<<<<<<< HEAD
   <p className="mt-2 text-sm md:text-base text-[#405862]/90 max-w-3xl">
-=======
-  <p className="mt-2 text-sm text-[#405862]/90 max-w-3xl">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
     Executives who contribute will be credited by name, and the final report will be published on
     the official United Nations Human Rights website.
   </p>
 </div>
 
-<<<<<<< HEAD
 <p className="mb-6 text-[#405862]/80 text-sm md:text-base">
-=======
-<p className="mb-6 text-[#405862]/80 text-sm">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
   ⏳ <span className="font-medium">Time commitment:</span> 6 months · ~2 hours/week
 </p>
                   <div className="grid md:grid-cols-3 gap-4 mb-6">
                     <Card className="border-[#405862]/20 shadow-sm hover:shadow-md transition-shadow">
                       <CardContent className="p-6 text-center">
-<<<<<<< HEAD
                         <h3 className="text-base md:text-lg font-semibold text-[#405862] mb-3">
                           General Executive
                         </h3>
                         <p className="text-sm md:text-base text-[#405862]/80 mb-4">
-=======
-                        <h3 className="font-semibold text-[#405862] mb-3">
-                          General Executive
-                        </h3>
-                        <p className="text-sm text-[#405862]/80 mb-4">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
                           Join our core leadership team and help shape the
                           future of Dr. Interested at a global scale.
                         </p>
@@ -1873,17 +1470,10 @@ export default function MembersClient() {
 
                     <Card className="border-[#405862]/20 shadow-sm hover:shadow-md transition-shadow">
                       <CardContent className="p-6 text-center">
-<<<<<<< HEAD
                         <h3 className="text-base md:text-lg font-semibold text-[#405862] mb-3">
                           Org Ambassador
                         </h3>
                         <p className="text-sm md:text-base text-[#405862]/80 mb-4">
-=======
-                        <h3 className="font-semibold text-[#405862] mb-3">
-                          Org Ambassador
-                        </h3>
-                        <p className="text-sm text-[#405862]/80 mb-4">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
                           Represent Dr. Interested in your community and help
                           expand our impact worldwide.
                         </p>
@@ -1901,17 +1491,10 @@ export default function MembersClient() {
 
                     <Card className="border-[#405862]/20 shadow-sm hover:shadow-md transition-shadow">
                       <CardContent className="p-6 text-center">
-<<<<<<< HEAD
                         <h3 className="text-base md:text-lg font-semibold text-[#405862] mb-3">
                           Podcast Team
                         </h3>
                         <p className="text-sm md:text-base text-[#405862]/80 mb-4">
-=======
-                        <h3 className="font-semibold text-[#405862] mb-3">
-                          Podcast Team
-                        </h3>
-                        <p className="text-sm text-[#405862]/80 mb-4">
->>>>>>> 271cc81a919145e2a25f9ca95c109cef1c6ef028
                           Create engaging podcast content and amplify healthcare
                           stories from around the world.
                         </p>
