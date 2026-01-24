@@ -76,14 +76,14 @@ export default function HomePage() {
       <DomainAnnouncementPopup />
 
       {/* Hero Section */}
-      <section className="relative py-10 md:py-16 overflow-hidden bg-gradient-to-b from-[#f5f1eb] to-white">
+      <section className="hero-section relative py-10 md:py-16 overflow-hidden bg-gradient-to-b from-[#f5f1eb] to-white">
         <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
         <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-[#4ecdc4]/5 via-transparent to-[#405862]/5 opacity-70"></div>
 
         <div className="container relative z-10">
           <div className="grid gap-6 md:grid-cols-2 md:gap-10 items-center">
             <motion.div
-              className="space-y-4"
+              className="space-y-4 hero-fixed-colors"
               initial="hidden"
               animate={isLoaded ? "visible" : "hidden"}
               variants={fadeIn}
@@ -176,6 +176,25 @@ export default function HomePage() {
                   </Link>
                 </div>
               </div>
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-24 max-w-md w-48">
+  <div className="relative h-14 w-32 rounded-lg overflow-hidden shadow-sm">
+    <Image
+      src="/imaginecan.png"
+      alt="Imagine Canada Member"
+      fill
+      className="object-contain "
+    />
+  </div>
+
+  <div className="relative h-14 w-32 rounded-lg overflow-hidden shadow-sm">
+    <Image
+      src="/development.png"
+      alt="Youth development recognition"
+      fill
+      className="object-contain "
+    />
+  </div>
+</div>
             </motion.div>
 
             <motion.div

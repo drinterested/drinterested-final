@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Script from "next/script";
 import type { Webinar } from "@/data/webinars";
@@ -16,7 +16,9 @@ import {
   Clock,
   Eye,
   ChevronRight,
+  Forward
 } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 
 interface WatchPageClientProps {
   webinar: Webinar;
@@ -30,22 +32,27 @@ export default function WatchPageClient({ webinar }: WatchPageClientProps) {
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
   const [showControls, setShowControls] = useState(true);
-  const [isMounted, setIsMounted] = useState(false);
+  const [playbackRate, setPlaybackRate] = useState(1);
+  const [linkModalOpen, setLinkModalOpen] = useState(false);
+  const [copyUrl, setCopyUrl] = useState("");
 
-  // --- Client mount ---
-  useEffect(() => setIsMounted(true), []);
-  if (!isMounted) return null;
+  useEffect(() => {
+    setCopyUrl(window.location.href);
+  }, []);
 
-  // --- Handlers ---
-  const handleLoadedMetadata = () => {
-    if (videoRef.current) setDuration(videoRef.current.duration);
-  };
+  const query = useSearchParams();
 
-  const handleTimeUpdate = () => {
-    if (videoRef.current) setCurrentTime(videoRef.current.currentTime);
-  };
+  const toggleUseTimestamp = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const useTimestamp = e.target.checked;
+    let url = window.location.href.split("?")[0];
+    if (useTimestamp && videoRef.current) {
+      const time = Math.floor(videoRef.current.currentTime);
+      url += `?t=${time}`;
+    }
+    setCopyUrl(url);
+  }
 
-  const togglePlay = () => {
+  const togglePlay = useCallback(() => {
     const video = videoRef.current;
     if (!video) return;
     if (video.paused) {
@@ -55,12 +62,134 @@ export default function WatchPageClient({ webinar }: WatchPageClientProps) {
       video.pause();
       setIsPlaying(false);
     }
-  };
+  }, []);
 
-  const toggleMute = () => {
+  const toggleMute = useCallback(() => {
     if (!videoRef.current) return;
     videoRef.current.muted = !isMuted;
     setIsMuted(!isMuted);
+  }, [isMuted]);
+
+  const toggleFullscreen = () => {
+    if (!videoRef.current) return;
+    if (document.fullscreenElement) document.exitFullscreen();
+    else videoRef.current.requestFullscreen();
+  };
+
+  const copyLinkClicked = () => {
+    setLinkModalOpen(true);
+  }
+
+  useEffect(() => {
+    const timeoutRef = { current: null as ReturnType<typeof setTimeout> | null };
+
+    const hide = () => setShowControls(false);
+
+    const activity = () => {
+      console.log("activity detected");
+      setShowControls(true);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      timeoutRef.current = setTimeout(hide, 3000);
+    }
+
+    const leaveVideo = () => hide();
+
+    window.addEventListener("mousemove", activity);
+    window.addEventListener("mouseleave", leaveVideo);
+
+    return () => {
+      window.removeEventListener("mousemove", activity);
+      window.removeEventListener("mouseleave", leaveVideo);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    }
+  }, [])
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const setMetadata = () => {
+      if (!isNaN(video.duration) && video.duration !== Infinity && video.duration > 0) {
+        setDuration(video.duration);
+      }
+
+      const startTime = query.get('t') || localStorage.getItem(`webinar-${webinar.slug}-time`);
+      if (startTime) {
+        const time = parseFloat(startTime);
+        if (!isNaN(time) && time < video.duration) {
+          video.currentTime = time;
+          setCurrentTime(time);
+        }
+      }
+
+      const savedPlaybackRate = localStorage.getItem(`webinar-playbackRate`);
+      if (savedPlaybackRate) {
+        const rate = parseFloat(savedPlaybackRate);
+        if (!isNaN(rate)) {
+          video.playbackRate = rate;
+          setPlaybackRate(rate);
+        }
+      }
+    }
+
+    setMetadata();
+    video.addEventListener("loadedmetadata", setMetadata);
+
+    const leavePage = () => {
+      if (videoRef.current) {
+        const time = videoRef.current.currentTime;
+        localStorage.setItem(`webinar-${webinar.slug}-time`, time.toString());
+      }
+    }
+    window.addEventListener("beforeunload", leavePage);
+
+    return () => {
+      window.removeEventListener("beforeunload", leavePage);
+      video.removeEventListener("loadedmetadata", setMetadata);
+    };
+  }, [webinar.slug, query]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.code === "Space") {
+        e.preventDefault();
+        togglePlay();
+      }
+
+      if (e.code === "KeyM") {
+        e.preventDefault();
+        toggleMute();
+      }
+
+      if (e.code === "KeyF") {
+        e.preventDefault();
+        toggleFullscreen();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+
+    }
+  }, [togglePlay, toggleMute])
+
+  const changePlaybackRate = (rate: number) => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = rate;
+      setPlaybackRate(rate);
+      localStorage.setItem(`webinar-playbackRate`, rate.toString());
+    }
+  }
+
+  // --- Handlers ---
+  const handleLoadedMetadata = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    setDuration(e.currentTarget.duration);
+  };
+
+  const handleTimeUpdate = () => {
+    if (videoRef.current) setCurrentTime(videoRef.current.currentTime);
   };
 
   const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -74,12 +203,6 @@ export default function WatchPageClient({ webinar }: WatchPageClientProps) {
     const time = parseFloat(e.target.value);
     if (videoRef.current) videoRef.current.currentTime = time;
     setCurrentTime(time);
-  };
-
-  const toggleFullscreen = () => {
-    if (!videoRef.current) return;
-    if (document.fullscreenElement) document.exitFullscreen();
-    else videoRef.current.requestFullscreen();
   };
 
   const formatTime = (time: number) => {
@@ -136,7 +259,7 @@ export default function WatchPageClient({ webinar }: WatchPageClientProps) {
             >
               <video
                 ref={videoRef}
-                className="w-full h-full"
+                className="w-full h-full peer"
                 poster={webinar.thumbnailPath}
                 onLoadedMetadata={handleLoadedMetadata}
                 onTimeUpdate={handleTimeUpdate}
@@ -149,16 +272,18 @@ export default function WatchPageClient({ webinar }: WatchPageClientProps) {
               </video>
 
               {/* Overlay Play/Pause */}
-              <div
+              <button
                 onClick={togglePlay}
-                className="absolute inset-0 flex items-center justify-center bg-black/10 cursor-pointer"
+                className={`absolute inset-0 flex items-center justify-center bg-black/10 transition-opacity duration-300 ${showControls ? "opacity-100 cursor-pointer" : "opacity-0 pointer-events-none"
+                  }`}
+                aria-label={isPlaying ? "Pause" : "Play"}
               >
                 {isPlaying ? (
                   <Pause className="w-16 h-16 text-teal-400 opacity-50 fill-teal-400" />
                 ) : (
                   <Play className="w-16 h-16 text-teal-400 opacity-50 fill-teal-400" />
                 )}
-              </div>
+              </button>
 
               {/* Bottom Controls */}
               <div
@@ -167,7 +292,8 @@ export default function WatchPageClient({ webinar }: WatchPageClientProps) {
                 <input
                   type="range"
                   min={0}
-                  max={duration || 0}
+                  max={duration}
+                  disabled={duration === 0}
                   step="any"
                   value={currentTime}
                   onChange={handleSeek}
@@ -175,7 +301,23 @@ export default function WatchPageClient({ webinar }: WatchPageClientProps) {
                 />
                 <div className="flex items-center justify-between text-white text-sm">
                   <span>{formatTime(currentTime)} / {formatTime(duration)}</span>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex flex-row items-center space-x-2">
+                    <div className="bg-black/50 rounded-md px-2 py-1 text-white text-sm">
+                      <label htmlFor="playbackRate" className="mr-2">Speed:</label>
+                      <select
+                        id="playbackRate"
+                        value={playbackRate}
+                        onChange={(e) => changePlaybackRate(parseFloat(e.target.value))}
+                        className="bg-transparent text-white focus:outline-none"
+                      >
+                        <option value="0.5">0.5x</option>
+                        <option value="0.75">0.75x</option>
+                        <option value="1">1x</option>
+                        <option value="1.25">1.25x</option>
+                        <option value="1.5">1.5x</option>
+                        <option value="2">2x</option>
+                      </select>
+                    </div>
                     <button onClick={toggleMute} aria-label={isMuted ? "Unmute" : "Mute"} className="hover:text-[#4ecdc4] transition-colors">
                       {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
                     </button>
@@ -187,11 +329,55 @@ export default function WatchPageClient({ webinar }: WatchPageClientProps) {
                 </div>
               </div>
             </div>
+            <div className="flex justify-end py-2">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={copyLinkClicked}
+              >
+                Share
+                <Forward className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
           </div>
         </div>
 
+        {/*Copy link modal*/}
+        {linkModalOpen && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+            <div className="bg-white rounded-lg p-6 w-11/12 max-w-md">
+              <h2 className="text-lg font-semibold mb-4">Share Webinar Link</h2>
+              <input
+                type="text"
+                readOnly
+                value={copyUrl}
+                className="w-full p-2 border border-gray-300 rounded mb-4"
+              />
+              <div>
+                <input type="checkbox" id="startAtCheckbox" className="mr-2" onChange={toggleUseTimestamp} />
+                <label htmlFor="startAtCheckbox" className="text-sm">
+                  Include current time in link <span className="text-gray-500 text-sm">({formatTime(currentTime)})</span>
+                </label>
+              </div>
+              <div className="flex justify-end space-x-4">
+                <Button variant="outline" onClick={() => setLinkModalOpen(false)}>
+                  Close
+                </Button>
+                <Button
+                  onClick={() => {
+                    navigator.clipboard.writeText(copyUrl);
+                    setLinkModalOpen(false);
+                  }}
+                >
+                  Copy Link
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Content Section */}
-         <div className="mt-8 p-6 bg-[#4ecdc4]/10 border border-[#4ecdc4]/30 rounded-lg text-left">
+        <div className="mt-8 p-6 bg-[#4ecdc4]/10 border border-[#4ecdc4]/30 rounded-lg text-left">
           <div className="container mx-auto max-w-7xl py-8 px-4">
             <div className="grid lg:grid-cols-3 gap-8">
               {/* Main Content */}

@@ -1,6 +1,9 @@
 import type { MetadataRoute } from "next"
 import { blogPosts, blogTopics } from "@/data/blog"
 import { webinars } from "@/data/webinars"
+import {
+  getAllMembers,
+} from "@/data/members"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.drinterested.org"
@@ -146,6 +149,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
+  const teamPages: MetadataRoute.Sitemap = getAllMembers().map((member) => ({
+    url: `${baseUrl}/team/${member.id}`,
+    lastModified: currentDate,
+    changeFrequency: "monthly" as const,
+    priority: 0.5,
+  }))
+
   return [
     ...mainPages,
     ...impactReportPages,
@@ -155,5 +165,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...watchPages,
     ...blogTopicPages,
     ...blogPostPages,
+    ...teamPages,
   ]
 }
