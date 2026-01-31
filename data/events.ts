@@ -23,6 +23,7 @@ export const upcomingEvents: EventType[] = [
     image: "/Beyond the White Coat.png",
     status: "open",
     link: "https://forms.gle/raS2Gr9nynyjPnnS7",
+    featured: true,
   },
   {
     title: "Power of Opportunity: Research",
@@ -34,6 +35,7 @@ export const upcomingEvents: EventType[] = [
     image: "/Logos/Logo.png",
     status: "closed",
     link: "TBD",
+    featured: false,
   },
   {
     title: "Importance of Words in Medicine",
@@ -45,6 +47,7 @@ export const upcomingEvents: EventType[] = [
     image: "/Logos/Logo.png",
     status: "closed",
     link: "TBD",
+    featured: false,
   },
   {
     title: "Office Hours",
