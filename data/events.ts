@@ -21,7 +21,7 @@ export const upcomingEvents: EventType[] = [
     description:
       "Explore diverse medical fields and discover hidden, lesser-known healthcare professions in this interactive 2-week event. Participants engage in three sequential activities: first, review informative sheets and short videos about unique healthcare careers; next, solve puzzles and navigate a virtual escape room themed around these professions; finally, choose a healthcare profession, select a related myth to debunk, and create a one-page resource to submit. Top submissions will be featured and celebrated!",
     image: "/Beyond the White Coat.png",
-    status: "open",
+    status: "closed",
     link: "https://forms.gle/raS2Gr9nynyjPnnS7",
     featured: true,
   },
