@@ -6,6 +6,7 @@ import jsPDF from "jspdf"
 const templateMap: Record<string, string> = {
   insetpassword123: "/certificate-rpc.png",
   webinarsarefun67: "/certificate-webinar.png",
+  iloveparticipation: "/partcert.png",
 }
 
 function CertificateForm() {
