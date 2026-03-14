@@ -14,42 +14,6 @@ export type EventType = {
 // Upcoming events data
 export const upcomingEvents: EventType[] = [
   {
-    title: "Beyond the White Coat",
-    date: "February 1 - 14, 2026",
-    time: "Ongoing",
-    location: "Virtual",
-    description:
-      "Explore diverse medical fields and discover hidden, lesser-known healthcare professions in this interactive 2-week event. Participants engage in three sequential activities: first, review informative sheets and short videos about unique healthcare careers; next, solve puzzles and navigate a virtual escape room themed around these professions; finally, choose a healthcare profession, select a related myth to debunk, and create a one-page resource to submit. Top submissions will be featured and celebrated!",
-    image: "/Beyond the White Coat.png",
-    status: "closed",
-    link: "https://forms.gle/raS2Gr9nynyjPnnS7",
-    featured: true,
-  },
-  {
-    title: "Power of Opportunity: Research",
-    date: "February 21, 2026",
-    time: "Upcoming",
-    location: "Virtual",
-    description:
-      "In partnership with ColdMatchAI, Dr. Interested announces an upcoming webinar on how youth can break into research and shape their future outcomes. Through mentorship, research competitions, webinars, talks, and more, we're helping high school and young people explore and pursue specific medical careers.",
-    image: "/Power of opportunity.png",
-    status: "open",
-    link: "https://docs.google.com/forms/d/e/1FAIpQLScbAcuriZRiZKklZ3Ly6qBkXkTmL2oOJTqK9Ko-2XLF7ekH7A/viewform?pli=1",
-    featured: false,
-  },
-  {
-    title: "Importance of Words in Medicine",
-    date: "March 7, 2026",
-    time: "Upcoming",
-    location: "Virtual",
-    description:
-      "In partnership with The Kindness and Smile Zone, Dr. Interested presents a webinar on medical literacy focused on the importance of proper communication in healthcare. This workshop helps families understand and navigate the healthcare system more confidently, featuring Muhammad Awais speaking on effective communication and logistical planning with medical professionals. A Q&A session will be offered at the end for questions and follow-ups.",
-    image: "/TKASZ_Banner.png",
-    status: "open",
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSebQpmty8v4O3YNQO2PEuX5umWItU4YHFklLxa_Wjqa8owk8w/viewform",
-    featured: false,
-  },
-  {
     title: "Office Hours",
     date: "June - Ongoing",
     time: "Whenever you need help",
@@ -64,6 +28,30 @@ export const upcomingEvents: EventType[] = [
 
 // Past events data
 export const pastEvents: EventType[] = [
+   {
+    title: "Disease Discovery Day",
+    date: "February 23 - March 6, 2026",
+    time: "8 PM - 9 PM EST (Monday to Friday)",
+    location: "Virtual",
+    description:
+      "From February 23 to March 6, Monday to Friday, 8 PM to 9 PM EST, you will step into the role of a researcher. Not as a spectator. As the investigator.\n\nHere is the mission.\n\nIdentify a prevalent disease in your local area.\nBreak down its causes and risk factors.\nAnalyze its real world impact.\nPresent your findings to the community using clear, compelling storytelling.\n\nScience meets communication. Data meets purpose.",
+    image: "/Disease Discovery Day.png",
+    status: "completed",
+    link: "https://forms.gle/A9gfAvWrs2jahsYX6",
+    featured: true,
+  },
+  {
+    title: "Importance of Words in Medicine",
+    date: "March 7, 2026",
+    time: "Upcoming",
+    location: "Virtual",
+    description:
+      "In partnership with The Kindness and Smile Zone, Dr. Interested presents a webinar on medical literacy focused on the importance of proper communication in healthcare. This workshop helps families understand and navigate the healthcare system more confidently, featuring Muhammad Awais speaking on effective communication and logistical planning with medical professionals. A Q&A session will be offered at the end for questions and follow-ups.",
+    image: "/TKASZ_Banner.png",
+    status: "completed",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSebQpmty8v4O3YNQO2PEuX5umWItU4YHFklLxa_Wjqa8owk8w/viewform",
+    featured: false,
+  },
   {
     title: "From Classroom to Career: Expanding Pathways in a Changing World",
     date: "January 27, 2026",
