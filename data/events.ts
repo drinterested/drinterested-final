@@ -14,8 +14,71 @@ export type EventType = {
 // Upcoming events data
 export const upcomingEvents: EventType[] = [
   {
+    title:
+      "The Race to Fight Cancer: Documentary Watch Party & Surgeon-Scientist Q&A",
+    date: "April 17, 2026",
+    time: "5:00 PM",
+    location: "Virtual (Discord)",
+    description:
+      "Can we cut cancer diagnostic wait times from weeks to minutes? Join Dr. Interested and Curiosity Films for an exclusive virtual screening of the groundbreaking CBC The Nature of Things documentary, \"Doctor, Doctor: The Race to Fight Lung Cancer.\" We are diving deep into the world of medical innovation to see how surgeon-scientist Dr. Kazuhiro Yasufuku and his team are fighting the Canadian healthcare crisis head-on. Following the documentary, we will host a live Q&A session with the experts featured in the film from the Yasufuku Lab (UHN). This is a rare opportunity for students and aspiring MDs to go behind the scenes of life-saving research and hear directly from the doctors and researchers at the forefront of surgical innovation. What to Expect: Exclusive Screening: Watch the newly released documentary detailing the high-stakes race to innovate lung cancer diagnostics. Live Q&A: Meet Nicholas Bernards, Judy McConnell, and the team from the Yasufuku Lab to ask your questions about research, medicine, and the future of surgery. Career Insight: Learn what it’s really like to work at the intersection of clinical practice and groundbreaking lab research.",
+    image: "/The Race to Fight Cancer Documentary.png",
+    status: "open",
+    link: "https://discord.gg/yEZzREht?event=1489666317731500213",
+    featured: true,
+  },
+  {
+    title: "Canadian Innovation Week (CIW) Event",
+    date: "May 11, 2026",
+    time: "TBA",
+    location: "TBA",
+    description:
+      "Dr. Interested at Canadian Innovation Week (CIW). Full event details are still being planned.",
+    image: "/CIWEvent.png",
+    status: "open",
+    link: "https://canadianinnovationspace.ca/partners/dr-interested/",
+  },
+  {
+    title: "Code Blue Planet: Indigenous Wisdom & Climate Medicine",
+    date: "June 7, 2026",
+    time: "10:00 AM – 4:00 PM",
+    location: "Toronto, ON (Location TBA)",
+    description:
+      "As part of Toronto Climate Week, Dr. Interested is hosting Code Blue Planet. The future of medicine isn't just about new tech, it's about remembering our connection to the land. Climate change is already reshaping healthcare, from rising temperatures to disrupted ecosystems. To face these challenges, we need to look at the intersection of climate science, modern healthcare, and Indigenous medicine. Join Dr. Interested for a high-energy day at Code Blue Planet. We're bringing together high school and university students with Indigenous Elders, Knowledge Holders, and health experts to explore how we can build a climate-resilient future. This isn't just a lecture; it's an interactive dive into traditional healing, nature-based wellness, and emerging career pathways. Cost: Free. (1-hour lunch break included)",
+    image: "/Code Blue Planet.png",
+    status: "open",
+    link: "https://luma.com/svfafgrk",
+  },
+  {
+    title: "Career Exploration Summer Event",
+    date: "July 2026",
+    location: "University of Toronto Mississauga",
+    description: "Details coming soon.",
+    image: "/logo.png",
+    status: "open",
+    link: "",
+  },
+  {
+    title: "2026 Explore 3 Case Competition",
+    date: "August 2026",
+    location: "University of Toronto St George",
+    description: "Details coming soon.",
+    image: "/ex3-logo.png",
+    status: "open",
+    link: "https://www.explore3.live/",
+  },
+  {
+    title: "The Annual Dr. Interested Research Proposal Competition",
+    date: "September - October 2026",
+    location: "Virtual",
+    description:
+      "Join the annual Dr. Interested Research Proposal Competition with over $2,500 in prizes and publication opportunities. Details coming soon.",
+    image: "/logo.png",
+    status: "open",
+    link: "",
+  },
+  {
     title: "Office Hours",
-    date: "June - Ongoing",
+    date: "Forever :)",
     time: "Whenever you need help",
     location: "Virtual",
     description:
@@ -28,7 +91,18 @@ export const upcomingEvents: EventType[] = [
 
 // Past events data
 export const pastEvents: EventType[] = [
-   {
+  {
+    title: "Future Doctors Forum (Dr. Interested x HEAAL)",
+    date: "March 29, 2026",
+    time: "Webinar Panel",
+    location: "Virtual",
+    description:
+      "In collaboration with HEAAL, Dr. Interested hosted the Future Doctors Forum to give students practical insight into the journey toward medicine. The panel featured voices from multiple stages of the path: Vy Kim Pham (1st year, Wichita State University), Tasnime Ben Behaz (3rd year, Faculty of Medicine - Algiers 1), and Anika S. Goodwin, MD, FACS. The session was moderated by Evin Bradley and Calvin Lin, and included an interactive Q&A where attendees asked questions and received real, experience-based guidance.",
+    image: "/FutureDoctorsForum.png",
+    status: "completed",
+    link: "https://youtu.be/mTuFe372D3k",
+  },
+  {
     title: "Disease Discovery Day",
     date: "February 23 - March 6, 2026",
     time: "8 PM - 9 PM EST (Monday to Friday)",
@@ -37,8 +111,18 @@ export const pastEvents: EventType[] = [
       "From February 23 to March 6, Monday to Friday, 8 PM to 9 PM EST, you will step into the role of a researcher. Not as a spectator. As the investigator.\n\nHere is the mission.\n\nIdentify a prevalent disease in your local area.\nBreak down its causes and risk factors.\nAnalyze its real world impact.\nPresent your findings to the community using clear, compelling storytelling.\n\nScience meets communication. Data meets purpose.",
     image: "/diseasediscnew.png",
     status: "completed",
-    link: "https://forms.gle/A9gfAvWrs2jahsYX6",
-    featured: true,
+    link: "https://www.instagram.com/p/DU1iGLCAEan/?hl=en&img_index=1",
+  },
+  {
+    title: "Power of Opportunity: Research Webinar (Dr. Interested x ColdMatchAI)",
+    date: "February 21, 2026",
+    time: "6:30 PM - 7:30 PM EST",
+    location: "Virtual",
+    description:
+      "Dr. Interested partnered with ColdMatchAI to host this guest speaker webinar focused on the value of learning and conducting scientific research. Participants explored how to find research related opportunities through strategic cold emailing, with actionable steps explained during the session. Attendees also learned about ways to explore medical career pathways through mentorship, research competitions, webinars, and speaker talks.",
+    image: "/PowerOfOppertinuty.jpg",
+    status: "completed",
+    link: "https://www.instagram.com/p/DU0_hUdjhNP/?hl=en&img_index=1",
   },
   {
     title: "Importance of Words in Medicine",
@@ -70,10 +154,10 @@ export const pastEvents: EventType[] = [
     time: "18:00 EST",
     location: "Virtual",
     description:
-      "Hosted as part of the Learning Planet Festival, this policy focused session looks at how education systems can better support young people as they move from learning into work. Careers are changing fast. Linear pathways no longer fit reality. We explore flexibility, early exposure, interdisciplinary skills, and what real system level change can look like.",
+      "Hosted as part of the Learning Planet Festival with UNESCO, this policy focused session looks at how education systems can better support young people as they move from learning into work. Careers are changing fast. Linear pathways no longer fit reality. We explore flexibility, early exposure, interdisciplinary skills, and what real system level change can look like.",
     image: "/unesco-webinar.png",
     status: "completed",
-    link: "https://www.youtube.com/watch?v=fMrcCGrTRF8",
+    link: "https://youtu.be/fMrcCGrTRF8?t=6",
   },
   {
     title: "Dr. Interested Simmon Chang Chess (Against Cancer) Club",
@@ -96,7 +180,7 @@ export const pastEvents: EventType[] = [
     link: "https://www.instagram.com/p/DSgEZpyjh1k/",
   },
   {
-    title: "EXPLORE³ Case Competition",
+    title: "2025 EXPLORE³ Case Competition",
     date: "November 22, 2025",
     time: "9 AM – 4 PM",
     location: "TMU Ted Rogers School of Business",
