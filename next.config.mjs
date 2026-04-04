@@ -19,15 +19,32 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+
   images: {
-    unoptimized: true,
+    formats: ["image/avif", "image/webp"],
   },
+
+  async headers() {
+    return [
+      {
+        source: "/:all*(svg|jpg|jpeg|png|webp|gif|ico|js|css)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ];
+  },
+
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
-}
+};
+
 
 if (userConfig) {
   // ESM imports will have a "default" property
