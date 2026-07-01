@@ -1,13 +1,16 @@
 import type { Metadata } from "next"
 import { blogTopics as topics } from "@/data/blog"
 import BlogTopicClientPage from "./blog-topic-client"
+import { supabase } from "@/lib/supabase-client"
+
+export const revalidate = 300 // Revalidate topic pages every 5 minutes (ISR)
 
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }): Promise<Metadata> {
-  const { slug } = params
+  const { slug } = await params
   const topic = topics.find((t) => t.slug === slug)
 
   if (!topic) {
@@ -69,8 +72,57 @@ export async function generateMetadata({
 export default async function BlogTopicPage({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
-  const { slug } = params
-  return <BlogTopicClientPage slug={slug} />
+  const { slug } = await params
+  const topic = topics.find((t) => t.slug === slug)
+
+  // Fetch live posts from Supabase filtered by this topic
+  const { data: blogsData } = topic
+    ? await supabase
+        .from("blogs")
+        .select(`
+          slug, title, excerpt, cover_image, topic, reading_time, created_at, author_name,
+          author:members (
+            name,
+            image,
+            socials
+          )
+        `)
+        .eq("topic", topic.name)
+        .order("created_at", { ascending: false })
+    : { data: [] }
+
+  // Map DB shape to the shape the client component expects
+  const formattedPosts = (blogsData || []).map((blog: any) => {
+    let authorData = blog.author || {}
+    if (Array.isArray(authorData)) authorData = authorData[0] || {}
+    
+    // Priority: joined member name > manual author_name field > "Unknown Author"
+    const resolvedAuthorName = authorData.name || blog.author_name || "Unknown Author"
+
+    return {
+      slug: blog.slug,
+      title: blog.title,
+      excerpt: blog.excerpt,
+      coverImage: blog.cover_image,
+      topic: blog.topic,
+      readingTime: blog.reading_time,
+      date: new Date(blog.created_at).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      }),
+      author: {
+        name: resolvedAuthorName,
+        image: authorData.image || "/logo.png",
+        bio: authorData.bio || "",
+        linkedIn: authorData.socials?.linkedin || "",
+        twitter: authorData.socials?.twitter || "",
+        instagram: authorData.socials?.instagram || "",
+      },
+    }
+  })
+
+  return <BlogTopicClientPage slug={slug} initialPosts={formattedPosts} />
 }

@@ -19,39 +19,39 @@ import {
   ShoppingBag,
   ShoppingCart,
   Tag,
+  Link2,
 } from "lucide-react"
 import ScrollToTop from "@/components/scroll-to-top"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { getLatestOngoingEvent } from "@/data/events"
+
 import { getFeaturedPosts, getRecentPosts } from "@/data/blog"
 import NewsletterForm from "@/components/newsletter-form"
 import { motion } from "framer-motion"
 import { Quote, Users, TrendingUp, Heart, Award, BookOpen, Sparkles, Globe } from "lucide-react"
-import SeoSchema from "@/components/seo-schema"
-import { generateOrganizationSchema } from "@/lib/seo-utils"
+
+import { DomainAnnouncementPopup } from "@/components/domain-announcement-popup"
 import DiscordIcon from "@/components/icons/discord-icon"
 
+export default function HomePage({ recentPost: passedRecentPost, featuredEvent: passedFeaturedEvent, featuredPosts: passedFeaturedPosts }: { recentPost?: any, featuredEvent?: any, featuredPosts?: any[] }) {
+  const [isLoaded, setIsLoaded] = useState(false)
 
+  // A13: scaleIn moved inside component (was incorrectly at module scope)
   const scaleIn = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
   }
-export default function HomePage() {
-  const [isLoaded, setIsLoaded] = useState(false)
 
-  // Scroll to top on page load test
   useEffect(() => {
-    window.scrollTo(0, 0)
     setIsLoaded(true)
   }, [])
 
-  // Get the latest ongoing event
-  const latestEvent = getLatestOngoingEvent()
-  // Get featured blog posts
-  const featuredPosts = getFeaturedPosts().slice(0, 3)
-  // Get the most recent blog post
-  const recentPost = getRecentPosts(1)[0]
+  // Use the featured event from Supabase
+  const latestEvent = passedFeaturedEvent
+  // Get featured blog posts from Supabase (passed via props)
+  const featuredPosts = passedFeaturedPosts || []
+  // Get the most recent blog post (from Supabase)
+  const recentPost = passedRecentPost
 
   // Animation variants
   const fadeIn = {
@@ -71,18 +71,18 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <SeoSchema schema={generateOrganizationSchema()} />
       <ScrollToTop />
+      <DomainAnnouncementPopup />
 
       {/* Hero Section */}
-      <section className="hero-section relative py-10 md:py-16 overflow-hidden bg-gradient-to-b from-[#f5f1eb] to-white">
+      <section className="relative py-10 md:py-16 overflow-hidden bg-gradient-to-b from-[#f5f1eb] to-white">
         <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
         <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-[#4ecdc4]/5 via-transparent to-[#405862]/5 opacity-70"></div>
 
         <div className="container relative z-10">
           <div className="grid gap-6 md:grid-cols-2 md:gap-10 items-center">
             <motion.div
-              className="space-y-4 hero-fixed-colors order-2 md:order-1"
+              className="space-y-4"
               initial="hidden"
               animate={isLoaded ? "visible" : "hidden"}
               variants={fadeIn}
@@ -97,7 +97,7 @@ export default function HomePage() {
                 Inspiring the Next Generation of Healthcare Professionals
               </p>
               <p className="text-[#405862]/80 max-w-md">
-                Dr. Interested is a youth-led global pre-med community helping students explore the vast world of healthcare, research, and advocacy. 
+                Dr. Interested is a global organization helping students explore the vast world of healthcare, research, and advocacy. 
                 We support youth in finding their unique "spark" in medicine through interactive programs, publishing opportunities, and leadership development.
               </p>
               <div className="flex flex-wrap gap-3 items-center mt-4">
@@ -111,9 +111,6 @@ export default function HomePage() {
                 </Link>
 
                 <div className="flex items-center gap-3 flex-wrap mt-1">
-                  <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md">
-  
-</div>
                   <Link
                     href="https://discord.gg/pzbGRgsGXY"
                     target="_blank"
@@ -146,20 +143,7 @@ export default function HomePage() {
                     className="inline-flex items-center text-[#405862] hover:text-[#4ecdc4] transition-colors gap-1 hover:scale-110 duration-200"
                     aria-label="All Links"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-                    </svg>
+                    <Link2 className="h-5 w-5" />
                   </Link>
                 </div>
               </div>
@@ -169,7 +153,7 @@ export default function HomePage() {
                     src="/imaginecan.png"
                     alt="Imagine Canada Member"
                     fill
-                    className="object-contain "
+                    className="object-contain"
                   />
                 </div>
 
@@ -178,7 +162,7 @@ export default function HomePage() {
                     src="/development.png"
                     alt="Youth development recognition"
                     fill
-                    className="object-contain "
+                    className="object-contain"
                   />
                 </div>
               </div>
@@ -252,12 +236,12 @@ export default function HomePage() {
       </motion.div>
 
       <motion.div variants={scaleIn}>
-              <div className="bg-gradient-to-br from-[#4ecdc4]/10 to-[#4ecdc4]/5 p-5 rounded-xl text-center border border-[#4ecdc4]/20 hover:border-[#4ecdc4]/40 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                <Award className="w-7 h-7 text-[#4ecdc4] mx-auto mb-2" />
-                <div className="text-3xl font-bold text-[#405862] mb-1">3.7M+</div>
-                <div className="text-[#405862]/70 text-xs font-medium">Content Impressions</div>
-              </div>
-            </motion.div>
+        <div className="bg-gradient-to-br from-[#4ecdc4]/10 to-[#4ecdc4]/5 p-5 rounded-xl text-center border border-[#4ecdc4]/20 hover:border-[#4ecdc4]/40 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+          <Award className="w-7 h-7 text-[#4ecdc4] mx-auto mb-2" />
+          <div className="text-3xl font-bold text-[#405862] mb-1">3.7M+</div>
+          <div className="text-[#405862]/70 text-xs font-medium">Content Impressions</div>
+        </div>
+      </motion.div>
     </motion.div>
 
     {/* PURPOSE SECTION — FIXED NESTING */}
@@ -525,11 +509,12 @@ export default function HomePage() {
                           Registration Closed
                         </Button>
                       ) : (
-                        <Button className="w-full bg-[#4ecdc4] hover:bg-[#3dbdb5] group" asChild>
-                          <Link href={latestEvent.link}>
-                            See Impact
-                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                          </Link>
+                        <Button
+                          className="w-full bg-[#405862]/20 text-[#405862]/50 cursor-not-allowed"
+                          disabled
+                        >
+                          <AlertCircle className="mr-2 h-4 w-4" />
+                          Event Completed
                         </Button>
                       )}
                     </div>
@@ -684,8 +669,8 @@ export default function HomePage() {
               className="mb-10"
             >
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-[#405862]">Latest from Our Blog</h3>
-                <Link href="/blog" className="text-[#405862] hover:text-[#4ecdc4] text-sm flex items-center group">
+                <h3 className="text-lg font-semibold text-[#405862]">Latest from Our Publications</h3>
+                <Link href="/publications" className="text-[#405862] hover:text-[#4ecdc4] text-sm flex items-center group">
                   <span>View all posts</span>
                   <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
@@ -932,7 +917,7 @@ export default function HomePage() {
 
             <motion.div variants={fadeIn}>
               <Link
-                href="/blog"
+                href="/publications"
                 className="flex flex-col items-center p-4 rounded-lg border border-[#405862]/10 hover:border-[#4ecdc4]/30 hover:bg-[#f5f1eb]/30 transition-all duration-300 h-full group"
               >
                 <div className="w-12 h-12 rounded-full bg-[#4ecdc4]/10 flex items-center justify-center mb-3 group-hover:bg-[#4ecdc4]/20 transition-colors">

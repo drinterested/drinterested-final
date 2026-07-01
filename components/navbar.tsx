@@ -14,7 +14,7 @@ const routes = [
   { href: "/", label: "Home" },
   { href: "/our-work", label: "Our Work" },
   { href: "/events", label: "Events" },
-  { href: "/blog", label: "Blog" },
+  { href: "/publications", label: "Publications" },
   { href: "/members", label: "Members" },
   { href: "/sponsorships", label: "Sponsorships" },
   { href: "/contact", label: "Contact" },
@@ -120,9 +120,16 @@ export default function Navbar() {
                     </Link>
                   ))}
                 </nav>
-                <div className="p-4 border-t mt-auto">
+                <div className="p-4 border-t mt-auto flex flex-col gap-2">
                   <Link
-                    href="https://discord.gg/pzbGRgsGXY"
+                    href="/members/join"
+                    className="flex w-full justify-center border border-[#405862] text-[#405862] hover:bg-[#405862]/10 px-4 py-3 rounded-md text-sm font-medium transition-all"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Join Us
+                  </Link>
+                  <Link
+                    href="https://forms.gle/UMyitptfyXvdSCtz7"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex w-full justify-center bg-[#405862] text-white hover:bg-[#334852] px-4 py-3 rounded-md text-sm font-medium transition-all hover:shadow-md"
@@ -196,6 +203,12 @@ export default function Navbar() {
           ))}
         </nav>
         <div className="flex items-center gap-3">
+          <Link
+            href="/members/join"
+            className="hidden md:inline-flex border border-[#405862] text-[#405862] hover:bg-[#405862]/10 px-3 py-1.5 rounded-md text-sm font-medium transition-all hover:shadow-md hover:scale-105 duration-300"
+          >
+            Join Us
+          </Link>
           <Link
             href="https://discord.gg/pzbGRgsGXY"
             target="_blank"

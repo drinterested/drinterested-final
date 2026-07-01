@@ -1,11 +1,8 @@
 import type { MetadataRoute } from "next"
-import { blogPosts, blogTopics } from "@/data/blog"
-import { webinars } from "@/data/webinars"
-import {
-  getAllMembers,
-} from "@/data/members"
+import { supabase } from "@/lib/supabase-client"
+import { blogTopics } from "@/data/blog"
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://www.drinterested.org"
   const currentDate = new Date()
 
@@ -23,10 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/members/join`,
+      url: `${baseUrl}/members/apply`,
       lastModified: currentDate,
       changeFrequency: "monthly",
-      priority: 1.0,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/members`,
@@ -42,6 +39,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/blog`,
+      lastModified: currentDate,
+      changeFrequency: "daily",
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/publications`,
       lastModified: currentDate,
       changeFrequency: "daily",
       priority: 1.0,
@@ -144,6 +147,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
+  // Fetch blogs (only need slug and created_at for the blog post pages)
+  const { data: blogs } = await supabase.from('blogs').select('slug, created_at')
+
+  // Blog topic pages — derived from static slugs (guaranteed to match actual routes)
   const blogTopicPages: MetadataRoute.Sitemap = blogTopics.map((topic) => ({
     url: `${baseUrl}/blog/topic/${topic.slug}`,
     lastModified: currentDate,
@@ -151,23 +158,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }))
 
-  // Use current date for lastModified to avoid invalid date strings
-  const blogPostPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: currentDate,
+  const blogPostPages: MetadataRoute.Sitemap = (blogs || []).map((post) => ({
+    url: `${baseUrl}/publications/${post.slug}`,
+    lastModified: new Date(post.created_at),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }))
 
-  // Some webinar dates include times/timezones and are not ISO. Avoid parsing.
-  const watchPages: MetadataRoute.Sitemap = webinars.map((webinar) => ({
-    url: `${baseUrl}/watch/${webinar.slug}`,
-    lastModified: currentDate,
+  // Fetch webinars
+  const { data: webinars } = await supabase.from('webinars').select('id, created_at')
+  const watchPages: MetadataRoute.Sitemap = (webinars || []).map((webinar) => ({
+    url: `${baseUrl}/watch/${webinar.id}`,
+    lastModified: new Date(webinar.created_at),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }))
 
-  const teamPages: MetadataRoute.Sitemap = getAllMembers().map((member) => ({
+  // Fetch all members from supabase
+  const { data: members } = await supabase.from('members').select('id')
+  const teamPages: MetadataRoute.Sitemap = (members || []).map((member) => ({
     url: `${baseUrl}/team/${member.id}`,
     lastModified: currentDate,
     changeFrequency: "monthly" as const,

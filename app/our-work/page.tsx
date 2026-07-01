@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import OurWorkClient from "./OurWorkClient"
+import OurWorkClient from "@/components/our-work/OurWorkClient"
 
 export const metadata: Metadata = {
   title: "Our Work",

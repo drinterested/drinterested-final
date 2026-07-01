@@ -18,6 +18,7 @@ yarn-error.log*
 
 # env files
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -25,3 +26,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# original static project (reference copy, not part of build)
+/drinterested-final-main/
+
+# dev/migration scripts (not needed in production)
+/scripts/
+
+# temporary agent scratch files
+/scratch/

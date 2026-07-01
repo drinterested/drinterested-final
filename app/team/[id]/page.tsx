@@ -2,27 +2,24 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
-import {
-  getAllMembers,
-  getMemberById,
-} from "@/data/members"
 import SeoSchema from "@/components/seo-schema"
+import { supabase } from "@/lib/supabase-client"
 
 const baseUrl = "https://www.drinterested.org"
 
 const truncate = (text: string, maxLength = 160) =>
   text.length > maxLength ? `${text.slice(0, maxLength - 3)}...` : text
 
-export async function generateStaticParams() {
-  return getAllMembers().map((member) => ({ id: member.id }))
-}
+export const dynamic = 'force-dynamic'
+export const revalidate = 3600 // revalidate every hour
 
 export async function generateMetadata({
   params,
 }: {
-  params: { id: string }
+  params: Promise<{ id: string }>
 }): Promise<Metadata> {
-  const member = getMemberById(params.id)
+  const { id } = await params
+  const { data: member } = await supabase.from('members').select('*').eq('id', id).single()
 
   if (!member) {
     return {
@@ -31,8 +28,8 @@ export async function generateMetadata({
     }
   }
 
-  const description = truncate(member.bio)
-  const imageUrl = `${baseUrl}${member.image}`
+  const description = truncate(member.bio || "")
+  const imageUrl = member.image?.startsWith('http') ? member.image : `${baseUrl}${member.image || '/logo.png'}`
   const url = `${baseUrl}/team/${member.id}`
 
   return {
@@ -67,18 +64,19 @@ export async function generateMetadata({
   }
 }
 
-export default function MemberPage({ params }: { params: { id: string } }) {
-  const member = getMemberById(params.id)
+export default async function MemberPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const { data: member } = await supabase.from('members').select('*').eq('id', id).single()
 
   if (!member) {
     notFound()
   }
 
-  const sameAs = member.socialLinks
-    ? Object.values(member.socialLinks).filter(Boolean)
+  const sameAs = member.socials
+    ? Object.values(member.socials).filter(Boolean)
     : []
   const memberUrl = `${baseUrl}/team/${member.id}`
-  const memberImage = `${baseUrl}${member.image}`
+  const memberImage = member.image?.startsWith('http') ? member.image : `${baseUrl}${member.image || '/logo.png'}`
 
   const personSchema = {
     "@context": "https://schema.org",
@@ -118,6 +116,7 @@ export default function MemberPage({ params }: { params: { id: string } }) {
                   src={member.image || "/logo.png"}
                   alt={member.name}
                   fill
+                  sizes="(max-width: 768px) 224px, 256px"
                   className="object-cover"
                 />
               </div>
@@ -131,11 +130,11 @@ export default function MemberPage({ params }: { params: { id: string } }) {
               </h1>
               <p className="text-lg text-[#405862]/80 mb-4">{member.role}</p>
               <p className="text-[#405862]/80">{member.bio}</p>
-              {member.socialLinks && (
+              {member.socials && (
                 <div className="flex flex-wrap gap-3 mt-4">
-                  {member.socialLinks.linkedin && (
+                  {member.socials.linkedin && (
                     <Link
-                      href={member.socialLinks.linkedin}
+                      href={member.socials.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#405862] hover:text-[#4ecdc4] underline"
@@ -143,9 +142,9 @@ export default function MemberPage({ params }: { params: { id: string } }) {
                       LinkedIn
                     </Link>
                   )}
-                  {member.socialLinks.instagram && (
+                  {member.socials.instagram && (
                     <Link
-                      href={member.socialLinks.instagram}
+                      href={member.socials.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#405862] hover:text-[#4ecdc4] underline"
@@ -153,24 +152,14 @@ export default function MemberPage({ params }: { params: { id: string } }) {
                       Instagram
                     </Link>
                   )}
-                  {member.socialLinks.website && (
+                  {member.socials.website && (
                     <Link
-                      href={member.socialLinks.website}
+                      href={member.socials.website}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#405862] hover:text-[#4ecdc4] underline"
                     >
                       Website
-                    </Link>
-                  )}
-                  {member.socialLinks.other && (
-                    <Link
-                      href={member.socialLinks.other}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#405862] hover:text-[#4ecdc4] underline"
-                    >
-                      More
                     </Link>
                   )}
                 </div>

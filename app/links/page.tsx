@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import LinksPageClient from "./links-client"
+import LinksPageClient from "@/components/links/links-client"
 
 export const metadata: Metadata = {
   title: "Links | Dr. Interested",

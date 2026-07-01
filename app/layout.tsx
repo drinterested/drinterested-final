@@ -167,7 +167,6 @@ export default function RootLayout({
           `}
         </Script>
         <Script src="https://f.convertkit.com/ckjs/ck.5.js" strategy="lazyOnload" />
-        <link rel="canonical" href="https://www.drinterested.org" />
         <link
           rel="alternate"
           type="application/rss+xml"
@@ -175,7 +174,7 @@ export default function RootLayout({
           href="https://www.drinterested.org/rss.xml"
         />
       </head>
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
           <AccessibilityWidget />
           <SeoSchema schema={generateOrganizationSchema()} />

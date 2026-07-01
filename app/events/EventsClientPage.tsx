@@ -5,11 +5,10 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Calendar, Clock, MapPin, AlertCircle, CheckCircle, ExternalLink, ArrowRight } from "lucide-react"
-import { upcomingEvents, pastEvents } from "@/data/events"
 import NewsletterForm from "@/components/newsletter-form"
 import { motion } from "framer-motion"
 
-export default function EventsClientPage() {
+export default function EventsClientPage({ upcomingEvents, pastEvents }: { upcomingEvents: any[], pastEvents: any[] }) {
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -124,11 +123,13 @@ export default function EventsClientPage() {
                         Registration Closed
                       </Button>
                     ) : (
-                      <Button className="w-full bg-[#4ecdc4] hover:bg-[#3dbdb5] text-xs h-8 group" size="sm" asChild>
-                        <Link href={event.link}>
-                          See Impact
-                          <CheckCircle className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-                        </Link>
+                      <Button
+                        className="w-full bg-[#405862]/20 text-[#405862]/50 cursor-not-allowed text-xs h-8"
+                        size="sm"
+                        disabled
+                      >
+                        <AlertCircle className="mr-1.5 h-3.5 w-3.5" />
+                        Event Completed
                       </Button>
                     )}
                   </CardFooter>
@@ -179,14 +180,14 @@ export default function EventsClientPage() {
                       {event.date}
                     </div>
                     <p className="text-xs text-[#405862]/80 mb-3 line-clamp-3">{event.description}</p>
-                    <Button
+                     <Button
                       variant="outline"
-                      className="border-[#405862] text-[#405862] hover:bg-[#405862] hover:text-white h-8 text-xs group bg-transparent"
+                      className="w-full md:w-auto border-[#405862] text-[#405862] hover:bg-[#405862] hover:text-white h-8 text-xs group bg-transparent"
                       size="sm"
                       asChild
                     >
                       {event.title === "Dr. Interested Medical-Technological Internship" ? (
-                        <Link href="/events/internship-recap" className="inline-flex items-center">
+                        <Link href="/events/internship-recap" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center">
                           View Recap
                           <ArrowRight className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                         </Link>
@@ -195,7 +196,7 @@ export default function EventsClientPage() {
                           href={event.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center"
+                          className="inline-flex items-center justify-center"
                         >
                           View Recap
                           <ExternalLink className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
@@ -212,7 +213,21 @@ export default function EventsClientPage() {
 
       {/* Stay Updated */}
       <section className="py-10 bg-[#405862] text-white">
-        <div className="container max-w-4xl">
+        <div className="container max-w-4xl text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">Stay in the Loop</h2>
+          <p className="text-white/80 mb-8 max-w-xl mx-auto">
+            Get notified about upcoming events, new initiatives, and opportunities — delivered straight to your inbox.
+          </p>
+          <div className="max-w-md mx-auto mb-6">
+            <NewsletterForm darkMode={true} showFirstName={false} compact={true} />
+          </div>
+          <p className="text-white/60 text-sm">
+            Or join our{" "}
+            <Link href="https://discord.gg/pzbGRgsGXY" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">
+              Discord community
+            </Link>{" "}
+            for real-time updates.
+          </p>
         </div>
       </section>
     </div>

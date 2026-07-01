@@ -1,14 +1,9 @@
-import { blogPosts } from "@/data/blog"
-import { webinars } from "@/data/webinars"
-import {
-  getAllMembers,
-  MemberType,
-} from "@/data/members"
-import { upcomingEvents, pastEvents, EventType } from "@/data/events"
+import { supabase } from "@/lib/supabase-client"
 
 // Helper function to escape XML special characters
 function escapeXml(unsafe: string): string {
-  return unsafe
+  if (!unsafe) return ""
+  return String(unsafe)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
@@ -210,11 +205,25 @@ export async function GET() {
 
   const items: string[] = []
 
+  // Fetch blogs
+  const { data: blogs } = await supabase.from("blogs").select("*")
+  const blogPosts = blogs || []
+
+  // Fetch webinars
+  const { data: webinarsData } = await supabase.from("webinars").select("*")
+  const webinars = webinarsData || []
+
+  // Fetch events
+  const { data: eventsData } = await supabase.from("events").select("*")
+  const events = eventsData || []
+
+  // Fetch members
+  const { data: allMembers } = await supabase.from('members').select('*').eq('approved', true)
+
   blogPosts.forEach((post) => {
     const postUrl = `${baseUrl}/blog/${post.slug}`
-    const imageUrl = `${baseUrl}${post.coverImage}`
-    const authorImageUrl = `${baseUrl}${post.author.image}`
-    const pubDate = new Date(post.date).toUTCString()
+    const imageUrl = post.cover_image?.startsWith('http') ? post.cover_image : `${baseUrl}${post.cover_image || '/websitebanner.jpg'}`
+    const pubDate = new Date(post.created_at || new Date()).toUTCString()
 
     items.push(`
     <item>
@@ -223,27 +232,22 @@ export async function GET() {
       <guid isPermaLink="true">${escapeXml(postUrl)}</guid>
       <description><![CDATA[${post.excerpt}]]></description>
       <pubDate>${pubDate}</pubDate>
-      <author><![CDATA[${post.author.name}]]></author>
-      <category>${escapeXml(post.topic)}</category>
+      <category>${escapeXml(post.topic || "Blog")}</category>
       <media:content url="${escapeXml(imageUrl)}" medium="image" type="image/jpeg">
         <media:title><![CDATA[${post.title} - Cover Image]]></media:title>
-        <media:description><![CDATA[${imageDescriptions[post.coverImage] || `Cover image for ${post.title} - ${post.excerpt}`}]]></media:description>
-      </media:content>
-      <media:content url="${escapeXml(authorImageUrl)}" medium="image" type="image/jpeg">
-        <media:title><![CDATA[${post.author.name} - Author Photo]]></media:title>
-        <media:description><![CDATA[${imageDescriptions[post.author.image] || `${post.author.name} - ${post.author.bio}`}]]></media:description>
+        <media:description><![CDATA[${imageDescriptions[post.cover_image] || `Cover image for ${post.title} - ${post.excerpt}`}]]></media:description>
       </media:content>
       <content:encoded><![CDATA[
         <img src="${escapeXml(imageUrl)}" alt="${escapeXml(post.title)}" />
-        ${post.content}
+        <p>${post.excerpt}</p>
       ]]></content:encoded>
     </item>`)
   })
 
   webinars.forEach((webinar) => {
-    const webinarUrl = `${baseUrl}/watch/${webinar.slug}`
-    const thumbnailUrl = `${baseUrl}${webinar.thumbnailPath}`
-    const pubDate = new Date(webinar.date).toUTCString()
+    const webinarUrl = `${baseUrl}/watch/${webinar.id}`
+    const thumbnailUrl = webinar.image?.startsWith('http') ? webinar.image : `${baseUrl}${webinar.image}`
+    const pubDate = new Date(webinar.created_at || new Date()).toUTCString()
 
     items.push(`
     <item>
@@ -254,47 +258,34 @@ export async function GET() {
       <pubDate>${pubDate}</pubDate>
       <category>Webinar</category>
       <category>Medical Education</category>
-      ${webinar.tags.map((tag) => `<category>${escapeXml(tag)}</category>`).join("\n      ")}
       ${webinar.speaker ? `<author><![CDATA[${webinar.speaker}]]></author>` : ""}
       <media:content url="${escapeXml(thumbnailUrl)}" medium="image" type="image/jpeg">
         <media:title><![CDATA[${webinar.title} - Thumbnail]]></media:title>
-        <media:description><![CDATA[${imageDescriptions[webinar.thumbnailPath] || webinar.description}]]></media:description>
-      </media:content>
-      <media:content url="${escapeXml(webinar.youtubeUrl)}" medium="video" type="video/mp4" duration="${escapeXml(webinar.duration)}">
-        <media:title><![CDATA[${webinar.title}]]></media:title>
-        <media:description><![CDATA[${webinar.longDescription}]]></media:description>
+        <media:description><![CDATA[${imageDescriptions[webinar.image] || webinar.description}]]></media:description>
       </media:content>
       <content:encoded><![CDATA[
         <img src="${escapeXml(thumbnailUrl)}" alt="${escapeXml(webinar.title)}" />
-        <p>${webinar.longDescription}</p>
-        <p><strong>Duration:</strong> ${escapeXml(webinar.duration)}</p>
-        <p><strong>Views:</strong> ${webinar.views}</p>
+        <p>${webinar.description}</p>
         ${webinar.speaker ? `<p><strong>Speaker:</strong> ${escapeXml(webinar.speaker)}</p>` : ""}
-        <p><a href="${escapeXml(webinar.youtubeUrl)}" target="_blank">Watch on YouTube</a></p>
-        ${webinar.spotifyUrl ? `<p><a href="${escapeXml(webinar.spotifyUrl)}" target="_blank">Listen on Spotify</a></p>` : ""}
       ]]></content:encoded>
     </item>`)
   })
 
 // ===== Add Members =====
-  const allMembers: MemberType[] = getAllMembers()
-
-  allMembers.forEach((member) => {
+  ;(allMembers || []).forEach((member) => {
     const memberUrl = `${baseUrl}/team/${member.id}`
-    const imageUrl = `${baseUrl}${member.image}`
-    const memberImageDescription =
-      member.image === "/logo.png"
-        ? `${member.name}, ${member.role}`
-        : imageDescriptions[member.image] || `${member.name}, ${member.role}`
-    // Use a fixed valid date for team members instead of current date
-    const pubDate = new Date("2025-01-01T00:00:00Z").toUTCString()
+    const imageUrl = member.image?.startsWith('http') ? member.image : `${baseUrl}${member.image || '/logo.png'}`
+    const memberImageDescription = member.image === '/logo.png' 
+      ? `${member.name}, ${member.role}` 
+      : (imageDescriptions[member.image] || `${member.name}, ${member.role}`)
+    const pubDate = new Date(member.created_at || "2025-01-01T00:00:00Z").toUTCString()
 
     items.push(`
     <item>
       <title><![CDATA[${member.name} - ${member.role}]]></title>
       <link>${escapeXml(memberUrl)}</link>
       <guid isPermaLink="true">${escapeXml(memberUrl)}</guid>
-      <description><![CDATA[${member.bio}]]></description>
+      <description><![CDATA[${member.bio || ''}]]></description>
       <pubDate>${pubDate}</pubDate>
       <category>Team Member</category>
       <media:content url="${escapeXml(imageUrl)}" medium="image" type="image/jpeg">
@@ -304,50 +295,22 @@ export async function GET() {
       <content:encoded><![CDATA[
         <img src="${escapeXml(imageUrl)}" alt="${escapeXml(member.name)}" />
         <p><strong>${escapeXml(member.role)}</strong></p>
-        <p>${member.bio}</p>
-        ${
-          member.socialLinks
-            ? Object.entries(member.socialLinks)
-                .map(([key, url]) =>
-                  url
-                    ? `<p><a href="${escapeXml(url)}" target="_blank">${escapeXml(key)}</a></p>`
-                    : ""
-                )
-                .join("")
-            : ""
-        }
+        <p>${member.bio || ''}</p>
       ]]></content:encoded>
     </item>`)
   })
 
   // ===== Add Events =====
-  const events: EventType[] = [...upcomingEvents, ...pastEvents]
-
-  events.forEach((event: EventType) => {
-    // Check if the link is already an absolute URL
-    const isExternalLink = event.link.startsWith('http://') || event.link.startsWith('https://')
-    const eventUrl = isExternalLink ? event.link : `${baseUrl}${event.link}`
+  events.forEach((event) => {
+    const isExternalLink = event.link?.startsWith('http://') || event.link?.startsWith('https://')
+    const eventUrl = isExternalLink ? event.link : `${baseUrl}${event.link || '/events'}`
     
-    // Skip external links to comply with sitemap/RSS feed standards
-    // External URLs (from different domains) should not be in sitemaps
     if (isExternalLink) {
       return
     }
     
-    const imageUrl = `${baseUrl}${event.image}`
-    // Ensure event.date is a valid date string
-    let pubDate: string
-    try {
-      const eventDate = new Date(event.date)
-      // Check if date is valid
-      if (isNaN(eventDate.getTime())) {
-        pubDate = new Date("2025-01-01T00:00:00Z").toUTCString()
-      } else {
-        pubDate = eventDate.toUTCString()
-      }
-    } catch {
-      pubDate = new Date("2025-01-01T00:00:00Z").toUTCString()
-    }
+    const imageUrl = event.image?.startsWith('http') ? event.image : `${baseUrl}${event.image}`
+    const pubDate = new Date(event.created_at || new Date()).toUTCString()
 
     items.push(`
     <item>
@@ -366,7 +329,6 @@ export async function GET() {
         <p>${event.description}</p>
         <p><strong>Date:</strong> ${escapeXml(event.date)}</p>
         <p><strong>Location:</strong> ${escapeXml(event.location)}</p>
-        <p><a href="${escapeXml(eventUrl)}" target="_blank">Learn more</a></p>
       ]]></content:encoded>
     </item>`)
   })

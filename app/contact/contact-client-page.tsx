@@ -36,6 +36,7 @@ export default function ContactClientPage() {
   })
 
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -64,17 +65,31 @@ export default function ContactClientPage() {
 
       // Check if the form submission was successful
       if (response.ok) {
-        console.log("Form submitted successfully")
         setIsSubmitted(true)
+        setSubmitError(null)
+        
+        // Securely trigger the Discord webhook notification via our API route
+        try {
+          await fetch("/api/contact/notify", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          })
+        } catch (notifyErr) {
+          console.error("Discord contact notification failed:", notifyErr)
+        }
+
         setFormData({ name: "", email: "", subject: "", message: "" })
-        setTimeout(() => setIsSubmitted(false), 5000) // Hide success message after 5 seconds
+        setTimeout(() => setIsSubmitted(false), 5000)
       } else {
         console.error("Form submission failed")
-        alert("There was an error submitting the form. Please try again.")
+        setSubmitError("There was an error submitting the form. Please try again.")
       }
     } catch (error) {
       console.error("Error:", error)
-      alert("There was an error submitting the form. Please try again.")
+      setSubmitError("There was an error submitting the form. Please try again.")
     }
   }
 
@@ -343,6 +358,13 @@ export default function ContactClientPage() {
               {isSubmitted && (
                 <div className="mt-4 p-3 text-center text-green-600 bg-green-50 rounded-lg border border-green-200">
                   <p className="text-sm font-medium">Message sent successfully! We will get back to you soon.</p>
+                </div>
+              )}
+
+              {/* Show error message */}
+              {submitError && (
+                <div className="mt-4 p-3 text-center text-red-600 bg-red-50 rounded-lg border border-red-200">
+                  <p className="text-sm font-medium">{submitError}</p>
                 </div>
               )}
             </motion.div>
